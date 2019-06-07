@@ -11,7 +11,8 @@ export default class JsForm extends Component {
         jsTitle: "",
         jsURL: "",
         jsSnippet: "",
-        jsNotes: ""
+        jsNotes: "",
+      noteTypeId: "",
   };
 
   // Update state whenever an input field is edited
@@ -26,22 +27,26 @@ export default class JsForm extends Component {
         Local method for validation, creating article object, and
         invoking the function reference passed from parent component
      */
-  constructNewEvent = e => {
-    e.preventDefault();
-    // let userId = sessionStorage.getItem('userId')
-    const newObj = {
-        title: this.state.jsTitle,
-        URL: this.state.jsURL,
-        snippet: this.state.jsSnippet,
-        notes: this.state.jsNotes,
-        // userId: parseInt(userId)
-    };
+    constructNewEvent = e => {
+        e.preventDefault();
+        // let userId = sessionStorage.getItem('userId')
+        if (this.state.noteTypes === "") {
+            window.alert("Please select technology")
+        } else {
+            const newObj = {
+                title: this.state.jsTitle,
+                URL: this.state.jsURL,
+                snippet: this.state.jsSnippet,
+                notes: this.state.jsNotes,
+                noteTypeId: parseInt(this.state.noteTypeId)
+                // userId: parseInt(userId)
+            };
 
-    // Create the article and redirect user to article list
-    this.props
-      .addForm(newObj)
-      .then(() => this.props.history.push("/javascript"));
-  }
+            // Create the article and redirect user to article list
+            this.props.addForm(newObj)
+                .then(() => this.props.history.push("/javascript"));
+        }
+    };
 
   render() {
 
@@ -91,6 +96,22 @@ export default class JsForm extends Component {
               id="jsNotes"
               placeholder="notes"
             />
+                </div>
+                <div className="form-group">
+            <label htmlFor="noteType"></label>
+            <select
+              defaultValue=""
+              name="noteTypes"
+              id="noteTypeId"
+              onChange={this.handleFieldChange}
+            >
+              <option value="">Selecter</option>
+              {this.props.noteTypes.map(e => (
+                <option key={e.id} id={e.id} value={e.id}>
+                  {e.name}
+                </option>
+              ))}
+            </select>
           </div>
           <Button variant="outlined" color="primary" size="large"
             type="submit"
