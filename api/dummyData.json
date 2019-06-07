@@ -45,18 +45,28 @@
       "noteTypeId": 1
     },
     {
-      "title": "fdfd",
-      "URL": "dfdf",
-      "snippet": "dfdfd",
-      "notes": "fdf",
+      "title": "yoooow",
+      "URL": "whats good man",
+      "snippet": "you alright",
+      "notes": "nooteees",
+      "noteTypeId": 1,
       "id": 3
     },
     {
-      "title": "haha",
-      "URL": "its working man",
-      "snippet": "LOL its happening",
-      "notes": "yeeesss",
+      "title": "sdfsdfasd",
+      "URL": "dddd",
+      "snippet": "ddddd",
+      "notes": "dddddddddd",
+      "noteTypeId": 2,
       "id": 4
+    },
+    {
+      "title": "gfgfff",
+      "URL": "ali",
+      "snippet": "ali",
+      "notes": "ali",
+      "noteTypeId": 1,
+      "id": 5
     }
   ],
   "noteTypes": [
@@ -67,6 +77,14 @@
     {
       "name": "react",
       "id": 2
+    },
+    {
+      "name": "bootstrap",
+      "id": 3
+    },
+    {
+      "name": "others",
+      "id": 4
     }
   ]
 }
