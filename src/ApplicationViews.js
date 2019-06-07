@@ -3,6 +3,7 @@ import { Route,  Redirect } from 'react-router-dom'
 import { withRouter } from "react-router";
 import dbCalls from "./modules/dbCalls"
 import JsForm from "./components/jsFile/JsForm"
+import JsList from "./components/jsFile/JsList";
 
 
 const remoteURL = "http://localhost:5002"
@@ -35,6 +36,16 @@ class ApplicationViews extends Component {
         this.setState({
             notes: notes})
         );
+
+        deleteForm = id => {
+            const newState = {};
+            dbCalls
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes`))
+            .then(notes => (newState.notes = notes))
+            .then(() => this.setState(newState));
+        };
+
     render() {
         console.log("note types",this.state.notes)
         console.log("dbcalls",dbCalls.all)
@@ -51,7 +62,13 @@ class ApplicationViews extends Component {
             );
                 }} />
                 <Route path="/javascript" render={(props) => {
-
+                    return (
+                            <JsList
+                                {...props}
+                                notes={this.state.notes}
+                                deleteForm={this.deleteForm}
+                            />
+                        );
                 }} />
                 <Route path="/react" render={(props) => {
 

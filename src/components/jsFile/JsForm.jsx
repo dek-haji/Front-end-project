@@ -37,7 +37,7 @@ export default class JsForm extends Component {
                 title: this.state.jsTitle,
                 URL: this.state.jsURL,
                 snippet: this.state.jsSnippet,
-                notes: this.state.jsNotes,
+                note: this.state.jsNotes,
                 noteTypeId: parseInt(this.state.noteTypeId)
                 // userId: parseInt(userId)
             };
