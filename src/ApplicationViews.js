@@ -47,8 +47,6 @@ class ApplicationViews extends Component {
         };
 
     render() {
-        console.log("note types",this.state.notes)
-        console.log("dbcalls",dbCalls.all)
         return (
                     <React.Fragment>
                 <Route exact path="/" render={(props) => {

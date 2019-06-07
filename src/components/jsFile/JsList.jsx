@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"
+import { Embed } from 'semantic-ui-react'
+import "./Js.css"
 
 class JsList extends Component {
     handleClick = (event)=> {
@@ -17,6 +18,7 @@ class JsList extends Component {
                 {
                     this.props.notes.map(note=>
                     <div key={note.id}>
+                            <Embed id='O6Xo21L0ybE' placeholder='empty' source='youtube' />
                             <h5>{note.title}</h5>
                             <p>{note.URL}</p>
                             <p>{note.snippet}</p>
