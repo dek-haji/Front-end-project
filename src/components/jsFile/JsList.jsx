@@ -18,7 +18,7 @@ class JsList extends Component {
                 {
                     this.props.notes.map(note=>
                     <div key={note.id}>
-                            <Embed id='O6Xo21L0ybE' placeholder='empty' source='youtube' />
+                            <Embed id='3M_5oYU-IsU' placeholder='empty' source='youtube' />
                             <h5>{note.title}</h5>
                             <p>{note.URL}</p>
                             <p>{note.snippet}</p>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import { Embed } from 'semantic-ui-react'
 
 
 
@@ -66,13 +67,14 @@ export default class JsForm extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="jsURL">URL</label>
-            <TextField
-              type="text"
+            <input
+              type="URL"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="jsURL"
-              placeholder="URL"
+                placeholder="https://example.com"
+                pattern="https://.*" 
             />
           </div>
           <div className="form-group">
