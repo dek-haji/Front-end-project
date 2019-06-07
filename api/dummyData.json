@@ -27,28 +27,12 @@
   ],
   "notes": [
     {
-      "title": "yoooow",
-      "URL": "whats good man",
-      "snippet": "you alright",
-      "notes": "nooteees",
-      "noteTypeId": 1,
-      "id": 3
-    },
-    {
-      "title": "tes test test",
-      "URL": "www.test.com",
-      "snippet": "function function function",
-      "note": "function sucks yall",
-      "noteTypeId": 1,
-      "id": 6
-    },
-    {
-      "title": "joel",
-      "URL": "joel.com",
-      "snippet": "joel function",
-      "note": "joel is awesome",
-      "noteTypeId": 3,
-      "id": 7
+      "title": "yooow whats good",
+      "URL": "https://www.youtube.com/watch?v=Mtb-Q9N3GRY&list=RDMtb-Q9N3GRY&start_radio=1",
+      "snippet": "its working",
+      "note": "yeah ts working",
+      "noteTypeId": 2,
+      "id": 1
     }
   ],
   "noteTypes": [
