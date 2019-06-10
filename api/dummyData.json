@@ -1,54 +1,26 @@
 {
   "users": [
     {
-      "userName": "Joel",
-      "email": "joel@example.com",
-      "password": "1234",
-      "id": 1
-    },
-    {
-      "userName": "Jim",
-      "email": "jim@example.com",
-      "password": "1234",
-      "id": 2
-    },
-    {
-      "userName": "Jack",
-      "email": "jack@example.com",
-      "password": "1234",
+      "userName": "dek",
+      "email": "dek@example.com",
+      "password": "password",
       "id": 3
     },
     {
       "userName": "Johnny",
       "email": "johnny@example.com",
-      "password": "1234",
+      "password": "password",
       "id": 4
     }
   ],
   "notes": [
     {
-      "title": "yoooow",
-      "URL": "whats good man",
-      "snippet": "you alright",
-      "notes": "nooteees",
-      "noteTypeId": 1,
-      "id": 3
-    },
-    {
-      "title": "tes test test",
-      "URL": "www.test.com",
-      "snippet": "function function function",
-      "note": "function sucks yall",
-      "noteTypeId": 1,
-      "id": 6
-    },
-    {
-      "title": "joel",
-      "URL": "joel.com",
-      "snippet": "joel function",
-      "note": "joel is awesome",
-      "noteTypeId": 3,
-      "id": 7
+      "title": "tttt",
+      "URL": "1O19AK4Vp_M",
+      "snippet": "vvvv",
+      "note": "vvvvv",
+      "noteTypeId": 2,
+      "id": 1
     }
   ],
   "noteTypes": [

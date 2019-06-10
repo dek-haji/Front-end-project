@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import { Embed } from 'semantic-ui-react'
+
 
 
 
@@ -24,6 +24,16 @@ export default class JsForm extends Component {
     this.setState(stateToChange);
   };
 
+  embedURL = (event) => {
+    // const URL = this.state.jsURL;
+    // const parts = URL.split("v=");
+    // return parts[1]
+    const stateToChange = {};
+    stateToChange[event.target.id] = event.target.value.split("v=")[1]
+    console.log(stateToChange)
+    this.setState(stateToChange);
+
+}
   /*
         Local method for validation, creating article object, and
         invoking the function reference passed from parent component
@@ -71,10 +81,10 @@ export default class JsForm extends Component {
               type="URL"
               required
               className="form-control"
-              onChange={this.handleFieldChange}
+              onChange={this.embedURL}
               id="jsURL"
                 placeholder="https://example.com"
-                pattern="https://.*" 
+                pattern="https://.*"
             />
           </div>
           <div className="form-group">
