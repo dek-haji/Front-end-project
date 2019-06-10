@@ -4,6 +4,7 @@ import { withRouter } from "react-router";
 import dbCalls from "./modules/dbCalls"
 import JsForm from "./components/jsFile/JsForm"
 import JsList from "./components/jsFile/JsList";
+import JsDetails from "./components/jsFile/JsDetails";
 
 
 const remoteURL = "http://localhost:5002"
@@ -14,7 +15,7 @@ class ApplicationViews extends Component {
         users: [],
     }
     componentDidMount() {
-            console.log(dbCalls.all)
+            // ;
             console.log("didmount fired up")
             const newState = {};
             // let sessionId = sessionStorage.getItem("userId")
@@ -59,7 +60,7 @@ class ApplicationViews extends Component {
               />
             );
                 }} />
-                <Route path="/javascript" render={(props) => {
+                <Route path="/notes" render={(props) => {
                     return (
                             <JsList
                                 {...props}
@@ -68,6 +69,23 @@ class ApplicationViews extends Component {
                             />
                         );
                 }} />
+
+
+                <Route path="/notes/:noteId(\d+)" render={(props) => {
+                    // Find the animal with the id of the route parameter
+                    let note = this.state.notes.find(note =>
+                        note.id === parseInt(props.match.params.noteId)
+                    )
+
+                    // If the note wasn't found, create a default one
+                    if (!note) {
+                        note = { id: 404, title: "404" }
+                    }
+
+                    return <JsDetails note={note}
+                        deleteForm={this.deleteForm} />
+                }} />
+
                 <Route path="/react" render={(props) => {
 
                 }} />
