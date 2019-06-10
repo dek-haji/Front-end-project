@@ -20,7 +20,7 @@ class JsList extends Component {
                     <div key={note.id}>
                             {/* <Embed id='3M_5oYU-IsU' placeholder='empty' source='youtube' /> */}
                             <h5>{note.title}</h5>
-                            <Embed id = {note.URL} placeholder='empty' source='youtube' />
+                            <Embed id = {note.URL} placeholder='' source='youtube' />
                             <p>{note.snippet}</p>
                             <p>{note.note}</p>
                             <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
