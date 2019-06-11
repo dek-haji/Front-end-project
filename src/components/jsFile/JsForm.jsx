@@ -27,7 +27,7 @@ export default class JsForm extends Component {
   embedURL = (event) => {
     //this function gets the user input then splits in two, and gets the ID of the URL
     const stateToChange = {};
-    stateToChange[event.target.id] = event.target.value.split("v=")[1]
+    stateToChange[event.target.id] = event.target.value.split("v=")[1].split("&list=")[0]
     console.log(stateToChange)
     this.setState(stateToChange);
 

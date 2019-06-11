@@ -6,6 +6,8 @@ import JsForm from "./components/jsFile/JsForm"
 import JsList from "./components/jsFile/JsList";
 import JsDetails from "./components/jsFile/JsDetails";
 import JsEditForm from "./components/jsFile/JsEditForm";
+import ReactList from "./components/reactFile/ReactList"
+import BootstrapList from "./components/bootstrapFile/BootstrapList";
 
 
 const remoteURL = "http://localhost:5002"
@@ -14,6 +16,10 @@ class ApplicationViews extends Component {
         notes: [],
         noteTypes: [],
         users: [],
+        javascript: [],
+        react: [],
+        bootstrap: [],
+        others: []
     }
     componentDidMount() {
             // ;
@@ -21,13 +27,21 @@ class ApplicationViews extends Component {
             const newState = {};
             // let sessionId = sessionStorage.getItem("userId")
             dbCalls
-                .all(`${remoteURL}/notes`)
+                .all("http://localhost:5002/notes?noteTypeId=1")
                 .then(notes => (newState.notes = notes))
                 .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
                 .then(noteTypes => (newState.noteTypes = noteTypes))
                 .then((console.log(this.state.noteTypes)))
                 .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
                 .then(users => (newState.users = users))
+                // .then(() => fetch("http://localhost:5002/notes?noteTypeId=1").then(r => r.json()))
+                // .then(notes => (newState.notes = notes))
+                .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
+                .then(react => (newState.react = react))
+                .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
+                .then(bootstrap => (newState.bootstrap = bootstrap))
+                .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+                .then(others => (newState.others = others))
                 .then(() => this.setState(newState))
     }
 
@@ -71,12 +85,14 @@ class ApplicationViews extends Component {
               />
             );
                 }} />
-                <Route exact  path="/notes" render={(props) => {
+                <Route exact path="/notes" render={(props) => {
+                    
                     return (
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
-                                deleteForm={this.deleteForm}
+                            deleteForm={this.deleteForm}
+                            updateForm={this.updateForm}
                             />
                         );
                 }} />
@@ -114,12 +130,22 @@ class ApplicationViews extends Component {
                             noteTypes={this.state.noteTypes}/>
                     }} />
 
-                {/* <Route path="/react" render={(props) => {
-
-                }} /> */}
-                {/* <Route path="/bootstrap" render={(props) => {
-
-                }} /> */}
+                <Route path="/react" render={(props) => {
+                           return (  <ReactList
+                                {...props}
+                               react={this.state.react}
+                            deleteForm={this.deleteForm}
+                            updateForm={this.updateForm}/>
+                        );
+                }} />
+                 <Route path="/bootstrap" render={(props) => {
+                     return (  <BootstrapList
+                                {...props}
+                               bootstrap={this.state.bootstrap}
+                            deleteForm={this.deleteForm}
+                            updateForm={this.updateForm}/>
+                        );
+                }} />
             </React.Fragment>
         )
     }
