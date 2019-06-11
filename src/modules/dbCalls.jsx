@@ -11,6 +11,12 @@ export default Object.create(null, {
             return fetch(`${URL}/${id}`).then(e => e.json())
         }
     },
+
+    getNoteType: {
+        value: function (remoteURL, id) {
+            return fetch(`${remoteURL}/notes?noteTypeId=${id}`).then(e => e.json())
+        }
+    },
     all: {
         value: function (URL) {
             console.log("url", URL)

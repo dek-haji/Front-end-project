@@ -5,6 +5,7 @@ import dbCalls from "./modules/dbCalls"
 import JsForm from "./components/jsFile/JsForm"
 import JsList from "./components/jsFile/JsList";
 import JsDetails from "./components/jsFile/JsDetails";
+import JsEditForm from "./components/jsFile/JsEditForm";
 
 
 const remoteURL = "http://localhost:5002"
@@ -46,6 +47,16 @@ class ApplicationViews extends Component {
             .then(notes => (newState.notes = notes))
             .then(() => this.setState(newState));
         };
+        updateForm = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes`))
+                .then(notes => {
+                    this.props.history.push("/notes")
+                    this.setState({
+                notes: notes
+              })
+            });
+        };
 
     render() {
         return (
@@ -60,7 +71,7 @@ class ApplicationViews extends Component {
               />
             );
                 }} />
-                <Route path="/notes" render={(props) => {
+                <Route exact  path="/notes" render={(props) => {
                     return (
                             <JsList
                                 {...props}
@@ -70,9 +81,20 @@ class ApplicationViews extends Component {
                         );
                 }} />
 
+}} />
+                <Route exact  path="/react" render={(props) => {
+                    return (
+                            <JsList
+                                {...props}
+                                notes={this.state.notes}
+                            deleteForm={this.deleteForm}
+                            updateForm={this.updateForm}
+                            />
+                        );
+                }} />
 
                 <Route path="/notes/:noteId(\d+)" render={(props) => {
-                    // Find the animal with the id of the route parameter
+                    // Find the notes with the id of the route parameter
                     let note = this.state.notes.find(note =>
                         note.id === parseInt(props.match.params.noteId)
                     )
@@ -86,9 +108,18 @@ class ApplicationViews extends Component {
                         deleteForm={this.deleteForm} />
                 }} />
 
-                <Route path="/react" render={(props) => {
+<Route
+                    exact path="/notes/:noteId(\d+)/edit" render={props => {
+                        return <JsEditForm {...props}
+                            notes={this.state.notes}
+                            updateForm={this.updateForm}
+                            noteTypes={this.state.noteTypes}
+                        />
+                    }} />
 
-                }} />
+                {/* <Route path="/react" render={(props) => {
+
+                }} /> */}
                 <Route path="/bootstrap" render={(props) => {
 
                 }} />
