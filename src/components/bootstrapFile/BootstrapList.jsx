@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 class BootstrapList extends Component {
     handleClick = (event)=> {
-        console.log("its working", this.props.notes.id)
+        console.log("its working", this.props.boo.id)
         console.log(event)
-        this.props.deleteForm(this.props.notes.id)
+        this.props.deleteForm(this.props.bootstrap.id)
     }
     render() {
         // console.log('this is the props in notes List',this.props)
         return (
             <>
             <section className="notes">
-                    <h1>Bootstrapnotes</h1>
+                    <h1>Bootstrap notes</h1>
                 {
                     this.props.bootstrap.map(note=>
                     <div key={note.id}>
@@ -25,7 +25,7 @@ class BootstrapList extends Component {
                         <button type="button"
                         className="btn btn-info"
                         onClick={() => {
-                            this.props.history.push(`/bootstrap/${note.id}/edit`);
+                            this.props.history.push(`/notes/${note.id}/edit`);
                         }}>
                         Edit
                         </button>

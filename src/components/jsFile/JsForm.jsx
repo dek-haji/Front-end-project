@@ -65,7 +65,7 @@ export default class JsForm extends Component {
         <form className="JsForm">
           <div className="form-group">
             <label htmlFor="jsTitle">Title:</label>
-            <TextField
+            <input
               type="text"
               required
               className="form-control"
@@ -88,7 +88,7 @@ export default class JsForm extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="jsSnippet">Snippet</label>
-            <TextField
+            <input
               type="text"
               required
               className="form-control"
@@ -99,7 +99,7 @@ export default class JsForm extends Component {
                 </div>
                 <div className="form-group">
             <label htmlFor="jsNotes">Notes</label>
-            <TextField
+            <input
               type="text"
               required
               className="form-control"
@@ -124,13 +124,13 @@ export default class JsForm extends Component {
               ))}
             </select>
           </div>
-          <Button variant="outlined" color="primary" size="large"
+          <button variant="outlined" color="primary" size="large"
             type="submit"
             onClick={this.constructNewEvent}
             className="btn btn-primary"
           >
             Submit New File
-          </Button>
+          </button>
         </form>
       </React.Fragment>
     );

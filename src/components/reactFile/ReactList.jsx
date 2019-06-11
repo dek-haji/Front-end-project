@@ -7,7 +7,7 @@ class ReactList extends Component {
     handleClick = (event)=> {
         console.log("its working", this.props.notes.id)
         console.log(event)
-        this.props.deleteForm(this.props.notes.id)
+        this.props.deleteReact(this.props.react.id)
     }
     render() {
         // console.log('this is the props in notes List',this.props)
@@ -19,8 +19,8 @@ class ReactList extends Component {
                     this.props.react.map(note=>
                     <div key={note.id}>
                             <h3>{note.title}</h3>
-                            <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
-                        <button onClick={()=> {this.props.deleteForm(note.id)}} >DELETE</button>
+                            <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br/>
+                        <button onClick={()=> {this.props.deleteReact(note.id)}} >DELETE</button>
 
                         <button type="button"
                         className="btn btn-info"

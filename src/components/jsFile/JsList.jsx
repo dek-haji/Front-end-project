@@ -14,7 +14,7 @@ class JsList extends Component {
         return (
             <>
             <section className="notes">
-                    <h1>notes</h1>
+                    <h1>JS notes</h1>
                 {
                     this.props.notes.map(note=>
                     <div key={note.id}>
