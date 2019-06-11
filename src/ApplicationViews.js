@@ -81,15 +81,13 @@ class ApplicationViews extends Component {
                         );
                 }} />
 
-}} />
                 <Route exact  path="/react" render={(props) => {
                     return (
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
                             deleteForm={this.deleteForm}
-                            updateForm={this.updateForm}
-                            />
+                            updateForm={this.updateForm}/>
                         );
                 }} />
 
@@ -113,16 +111,15 @@ class ApplicationViews extends Component {
                         return <JsEditForm {...props}
                             notes={this.state.notes}
                             updateForm={this.updateForm}
-                            noteTypes={this.state.noteTypes}
-                        />
+                            noteTypes={this.state.noteTypes}/>
                     }} />
 
                 {/* <Route path="/react" render={(props) => {
 
                 }} /> */}
-                <Route path="/bootstrap" render={(props) => {
+                {/* <Route path="/bootstrap" render={(props) => {
 
-                }} />
+                }} /> */}
             </React.Fragment>
         )
     }

@@ -6,10 +6,10 @@ import dbCalls from '../../modules/dbCalls';
 class JsEditForm extends Component {
      // Set initial state
      state = {
-        jsTitle: "",
-        jsURL: "",
-        jsSnippet: "",
-        jsNotes: "",
+        title: "",
+        URL: "",
+        snippet: "",
+        notes: "",
       noteTypeId: "",
      }
     
@@ -26,10 +26,11 @@ class JsEditForm extends Component {
             window.alert("Please select technology")
         } else {
             const editedObj = {
-                title: this.state.jsTitle,
-                URL: this.state.jsURL,
-                snippet: this.state.jsSnippet,
-                note: this.state.jsNotes,
+                id: this.props.match.params.noteId,
+                title: this.state.title,
+                URL: this.state.URL,
+                snippet: this.state.snippet,
+                notes: this.state.notes,
                 noteTypeId: parseInt(this.state.noteTypeId)
                 // userId: parseInt(userId)
             };
@@ -39,13 +40,14 @@ class JsEditForm extends Component {
         }
     };
     componentDidMount() {
-        dbCalls.get(this.props.match.params.noteId)
+        dbCalls.get("http://localhost:5002/notes",this.props.match.params.noteId)
         .then(note => {
-          this.setState({
-            jsTitle: note.title,
-              jsURL: note.URL,
-              "jsSnippet": note.snippet,
-            "jsNotes": note.note,
+            this.setState({
+               
+            title: note.title,
+              URL: note.URL,
+              "snippet": note.snippet,
+            "notes": note.note,
             noteTypeId: note.noteTypeId
           });
         });
@@ -63,48 +65,45 @@ class JsEditForm extends Component {
             <React.Fragment >
               <form className="JsForm">
                 <div className="form-group">
-                  <label htmlFor="jsTitle">Title:</label>
                   <TextField
                     type="text"
                     required
                     className="form-control"
                     onChange={this.handleFieldChange}
-                    id="jsTitle"
-                    placeholder="title"
+                    id="title"
+                   value = {this.state.title}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="jsURL">URL</label>
                   <input
-                    type="URL"
-                    required
+                    type="text"
+                    // required
                     className="form-control"
                     onChange={this.embedURL}
-                    id="jsURL"
+                    id="URL"
                       placeholder="https://example.com"
-                      pattern="https://.*"
+                            // pattern="https://.*"
+                    value = {this.state.URL}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="jsSnippet">Snippet</label>
                   <TextField
                     type="text"
                     required
                     className="form-control"
                     onChange={this.handleFieldChange}
-                    id="jsSnippet"
-                    placeholder="snippet"
+                    id="snippet"
+                    value = {this.state.snippet}
                   />
                       </div>
                       <div className="form-group">
-                  <label htmlFor="jsNotes">Notes</label>
                   <TextField
                     type="text"
                     required
                     className="form-control"
                     onChange={this.handleFieldChange}
-                    id="jsNotes"
-                    placeholder="notes"
+                    id="notes"
+                    value = {this.state.notes}
                   />
                       </div>
                       <div className="form-group">
@@ -115,7 +114,7 @@ class JsEditForm extends Component {
                     id="noteTypeId"
                     onChange={this.handleFieldChange}
                   >
-                    <option value="">Selecter</option>
+                    <option value="">Selectuh</option>
                     {this.props.noteTypes.map(e => (
                       <option key={e.id} id={e.id} value={e.id}>
                         {e.name}

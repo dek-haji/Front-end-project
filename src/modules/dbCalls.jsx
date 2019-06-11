@@ -1,8 +1,8 @@
 const remoteURL = "http://localhost:5002"
-const jsURL = `${remoteURL}/js`
-const reactURL = `${remoteURL}/react`
-const bootstrapURL = `${remoteURL}/bootstrap`
-const othersURL = `${remoteURL}/others`
+// const jsURL = `${remoteURL}/js`
+// const reactURL = `${remoteURL}/react`
+// const bootstrapURL = `${remoteURL}/bootstrap`
+// const othersURL = `${remoteURL}/others`
 
 
 export default Object.create(null, {
