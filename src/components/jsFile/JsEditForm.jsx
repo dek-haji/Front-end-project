@@ -124,7 +124,7 @@ class JsEditForm extends Component {
                 </div>
                 <button variant="outlined" color="primary" size="large"
                   type="submit"
-                  onClick={this.constructNewEvent}
+                  onClick={this.updateNewEvent}
                   className="btn btn-primary"
                 >
                   edit
