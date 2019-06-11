@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import "./Js.css"
+// import "./Js.css"
 
-class JsList extends Component {
+class BootstrapList extends Component {
     handleClick = (event)=> {
-        console.log("its working", this.props.notes.id)
+        console.log("its working", this.props.boo.id)
         console.log(event)
-        this.props.deleteForm(this.props.notes.id)
+        this.props.deleteForm(this.props.bootstrap.id)
     }
     render() {
         // console.log('this is the props in notes List',this.props)
         return (
             <>
             <section className="notes">
-                    <h1>JS notes</h1>
+                    <h1>Bootstrap notes</h1>
                 {
-                    this.props.notes.map(note=>
+                    this.props.bootstrap.map(note=>
                     <div key={note.id}>
                             <h3>{note.title}</h3>
                             <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
@@ -38,4 +38,4 @@ class JsList extends Component {
     }
 }
 
-export default JsList;
+export default BootstrapList;

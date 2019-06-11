@@ -43,7 +43,6 @@ class JsEditForm extends Component {
         dbCalls.get("http://localhost:5002/notes",this.props.match.params.noteId)
         .then(note => {
             this.setState({
-               
             title: note.title,
               URL: note.URL,
               "snippet": note.snippet,
