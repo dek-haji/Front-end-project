@@ -1,14 +1,20 @@
 const remoteURL = "http://localhost:5002"
-const jsURL = `${remoteURL}/js`
-const reactURL = `${remoteURL}/react`
-const bootstrapURL = `${remoteURL}/bootstrap`
-const othersURL = `${remoteURL}/others`
+// const jsURL = `${remoteURL}/js`
+// const reactURL = `${remoteURL}/react`
+// const bootstrapURL = `${remoteURL}/bootstrap`
+// const othersURL = `${remoteURL}/others`
 
 
 export default Object.create(null, {
     get: {
         value: function (URL, id) {
             return fetch(`${URL}/${id}`).then(e => e.json())
+        }
+    },
+
+    getNoteType: {
+        value: function (remoteURL, id) {
+            return fetch(`${remoteURL}/notes?noteTypeId=${id}`).then(e => e.json())
         }
     },
     all: {

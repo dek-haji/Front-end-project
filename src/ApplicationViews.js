@@ -4,6 +4,8 @@ import { withRouter } from "react-router";
 import dbCalls from "./modules/dbCalls"
 import JsForm from "./components/jsFile/JsForm"
 import JsList from "./components/jsFile/JsList";
+import JsDetails from "./components/jsFile/JsDetails";
+import JsEditForm from "./components/jsFile/JsEditForm";
 
 
 const remoteURL = "http://localhost:5002"
@@ -14,7 +16,7 @@ class ApplicationViews extends Component {
         users: [],
     }
     componentDidMount() {
-            console.log(dbCalls.all)
+            // ;
             console.log("didmount fired up")
             const newState = {};
             // let sessionId = sessionStorage.getItem("userId")
@@ -45,6 +47,16 @@ class ApplicationViews extends Component {
             .then(notes => (newState.notes = notes))
             .then(() => this.setState(newState));
         };
+        updateForm = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes`))
+                .then(notes => {
+                    this.props.history.push("/notes")
+                    this.setState({
+                notes: notes
+              })
+            });
+        };
 
     render() {
         return (
@@ -59,7 +71,7 @@ class ApplicationViews extends Component {
               />
             );
                 }} />
-                <Route path="/javascript" render={(props) => {
+                <Route exact  path="/notes" render={(props) => {
                     return (
                             <JsList
                                 {...props}
@@ -68,12 +80,46 @@ class ApplicationViews extends Component {
                             />
                         );
                 }} />
-                <Route path="/react" render={(props) => {
 
+                <Route exact  path="/react" render={(props) => {
+                    return (
+                            <JsList
+                                {...props}
+                                notes={this.state.notes}
+                            deleteForm={this.deleteForm}
+                            updateForm={this.updateForm}/>
+                        );
                 }} />
-                <Route path="/bootstrap" render={(props) => {
 
+                <Route path="/notes/:noteId(\d+)" render={(props) => {
+                    // Find the notes with the id of the route parameter
+                    let note = this.state.notes.find(note =>
+                        note.id === parseInt(props.match.params.noteId)
+                    )
+
+                    // If the note wasn't found, create a default one
+                    if (!note) {
+                        note = { id: 404, title: "404" }
+                    }
+
+                    return <JsDetails note={note}
+                        deleteForm={this.deleteForm} />
                 }} />
+
+<Route
+                    exact path="/notes/:noteId(\d+)/edit" render={props => {
+                        return <JsEditForm {...props}
+                            notes={this.state.notes}
+                            updateForm={this.updateForm}
+                            noteTypes={this.state.noteTypes}/>
+                    }} />
+
+                {/* <Route path="/react" render={(props) => {
+
+                }} /> */}
+                {/* <Route path="/bootstrap" render={(props) => {
+
+                }} /> */}
             </React.Fragment>
         )
     }

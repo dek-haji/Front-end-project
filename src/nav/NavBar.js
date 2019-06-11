@@ -13,7 +13,7 @@ class NavBar extends Component {
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/javascript">JS</Link>
+                        <Link className="nav-link" to="/notes">JS</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/react">React</Link>

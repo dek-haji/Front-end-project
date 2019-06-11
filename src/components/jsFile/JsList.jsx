@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Embed } from 'semantic-ui-react'
+
 import "./Js.css"
 
 class JsList extends Component {
@@ -10,7 +10,7 @@ class JsList extends Component {
         this.props.deleteForm(this.props.notes.id)
     }
     render() {
-        console.log('this is the props in notes List',this.props)
+        // console.log('this is the props in notes List',this.props)
         return (
             <>
             <section className="notes">
@@ -18,11 +18,7 @@ class JsList extends Component {
                 {
                     this.props.notes.map(note=>
                     <div key={note.id}>
-                            {/* <Embed id='3M_5oYU-IsU' placeholder='empty' source='youtube' /> */}
-                            <h5>{note.title}</h5>
-                            <Embed id = {note.URL} placeholder='' source='youtube' />
-                            <p>{note.snippet}</p>
-                            <p>{note.note}</p>
+                            <h3>{note.title}</h3>
                             <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
                         <button onClick={()=> {this.props.deleteForm(note.id)}} >DELETE</button>
 

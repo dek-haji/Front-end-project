@@ -25,9 +25,7 @@ export default class JsForm extends Component {
   };
 
   embedURL = (event) => {
-    // const URL = this.state.jsURL;
-    // const parts = URL.split("v=");
-    // return parts[1]
+    //this function gets the user input then splits in two, and gets the ID of the URL
     const stateToChange = {};
     stateToChange[event.target.id] = event.target.value.split("v=")[1]
     console.log(stateToChange)
@@ -55,7 +53,8 @@ export default class JsForm extends Component {
 
             // Create the article and redirect user to article list
             this.props.addForm(newObj)
-                .then(() => this.props.history.push("/javascript"));
+              .then(() => this.props.history.push("/notes"))
+              .then(() => this.props.history.push("/react"));
         }
     };
 
