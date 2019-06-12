@@ -46,15 +46,24 @@ class ApplicationViews extends Component {
                 .then(() => this.setState(newState))
     }
 
-    addForm = newObj =>
-    dbCalls.post(newObj, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
-    .then(notes =>
-        this.setState({
-            notes: notes})
-        );
+    addForm = newObj => {
+        const newState = {};
+        return dbCalls.post(newObj, "http://localhost:5002/notes")
+        .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
+        .then(notes => (newState.notes = notes))
+        .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
+        .then(noteTypes => (newState.noteTypes = noteTypes))
+        .then((console.log(this.state.noteTypes)))
+        .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
+        .then(users => (newState.users = users))
+        .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
+        .then(react => (newState.react = react))
+        .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
+        .then(bootstrap => (newState.bootstrap = bootstrap))
+        .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+        .then(others => (newState.others = others))
+        .then(() => this.setState(newState))
+    };
 
         deletejs = id => {
             const newState = {};
