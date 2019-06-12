@@ -48,7 +48,9 @@ class ApplicationViews extends Component {
 
     addForm = newObj =>
     dbCalls.post(newObj, `${remoteURL}/notes`)
-    .then(() => dbCalls.all(`${remoteURL}/notes`))
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
     .then(notes =>
         this.setState({
             notes: notes})
@@ -65,8 +67,8 @@ class ApplicationViews extends Component {
         deleteReact = id => {
             const newState = {};
             dbCalls
-            .delete(id, `${remoteURL}/react`)
-            .then(() => dbCalls.all(`${remoteURL}/react`))
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
             .then(react => (newState.react = react))
             .then(() => this.setState(newState));
         };
