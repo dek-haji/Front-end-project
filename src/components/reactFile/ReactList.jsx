@@ -25,7 +25,7 @@ class ReactList extends Component {
                         <button type="button"
                         className="btn btn-info"
                         onClick={() => {
-                            this.props.history.push(`/notes/${note.id}/edit`);
+                            this.props.history.push(`/react/${note.id}/edit`);
                         }}>
                         Edit
                         </button>

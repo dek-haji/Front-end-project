@@ -9,6 +9,7 @@ import JsEditForm from "./components/jsFile/JsEditForm";
 import ReactList from "./components/reactFile/ReactList"
 import BootstrapList from "./components/bootstrapFile/BootstrapList";
 import ReactDetails from "./components/reactFile/ReactDetails"
+import ReactEditForm from "./components/reactFile/ReactEditForm"
 
 
 const remoteURL = "http://localhost:5002"
@@ -91,6 +92,17 @@ class ApplicationViews extends Component {
               })
             });
         };
+    
+        updateReact = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
+                .then(react => {
+                    this.props.history.push("/react")
+                    this.setState({
+                react: react
+              })
+            });
+        };
 
     render() {
         console.log("react state", this.state.react)
@@ -163,6 +175,14 @@ class ApplicationViews extends Component {
                             updateJs={this.updateJs}
                             noteTypes={this.state.noteTypes}/>
                     }} />
+                
+                <Route
+                    exact path="/react/:reactId(\d+)/edit" render={props => {
+                        return <ReactEditForm {...props}
+                            notes={this.state.notes}
+                            updateReact={this.updateReact}
+                            noteTypes={this.state.noteTypes}/>
+                    }} />
 
                 <Route exact path="/react" render={(props) => {
                            return (  <ReactList
@@ -170,7 +190,7 @@ class ApplicationViews extends Component {
                                react={this.state.react}
                                notes={this.state.notes}
                                 deleteReact={this.deleteReact}
-                               updateForm={this.updateForm}
+                               updateReact={this.updateReact}
                             />
                         );
                 }} />
