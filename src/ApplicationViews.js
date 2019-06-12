@@ -54,11 +54,11 @@ class ApplicationViews extends Component {
             notes: notes})
         );
 
-        deleteForm = id => {
+        deletejs = id => {
             const newState = {};
             dbCalls
             .delete(id, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes`))
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
             .then(notes => (newState.notes = notes))
             .then(() => this.setState(newState));
         };
@@ -104,7 +104,7 @@ class ApplicationViews extends Component {
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
-                            deleteForm={this.deleteForm}
+                            deletejs={this.deletejs}
                             updateForm={this.updateForm}
                             />
                         );
@@ -125,7 +125,7 @@ class ApplicationViews extends Component {
 
                     return <JsDetails note={note}
                         react={react}
-                        deleteForm={this.deleteForm} />
+                        deletejs={this.deletejs} />
                 }} />
 
 
@@ -142,7 +142,7 @@ class ApplicationViews extends Component {
 
                     return <ReactDetails
                         react={react}
-                        deleteForm={this.deleteForm} />
+                        deletejs={this.deletejs} />
                 }} />
 
 <Route
@@ -167,7 +167,7 @@ class ApplicationViews extends Component {
                      return (  <BootstrapList
                                 {...props}
                                bootstrap={this.state.bootstrap}
-                                deleteForm={this.deleteForm}
+                                deletejs={this.deletejs}
                                 updateForm={this.updateForm}/>
                         );
                 }} />
