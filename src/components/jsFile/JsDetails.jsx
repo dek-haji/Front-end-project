@@ -21,7 +21,7 @@ class JsDetails extends Component {
                             () => {
                                 this.setState(
                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,
-                                    () => this.props.deleteForm(this.props.note.id)
+                                    () => this.props.deletejs(this.props.note.id)
                                 )
                             }
                         }

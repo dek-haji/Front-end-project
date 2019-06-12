@@ -31,30 +31,6 @@
       "noteTypeId": 2
     },
     {
-      "title": "new js",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 1,
-      "id": 36
-    },
-    {
-      "title": "js test",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "sfdgsfds",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 1,
-      "id": 37
-    },
-    {
-      "title": "new js test",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 1,
-      "id": 38
-    },
-    {
       "title": "react react react",
       "URL": "d0eUMnJ5kTA",
       "snippet": "another snippet",
@@ -69,14 +45,6 @@
       "note": "yeah i think its another snippet",
       "noteTypeId": 1,
       "id": 40
-    },
-    {
-      "title": "react react test test",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 2,
-      "id": 41
     },
     {
       "title": "bootsss baby",
@@ -117,6 +85,30 @@
       "note": "yeah i think its another snippet",
       "noteTypeId": 3,
       "id": 53
+    },
+    {
+      "title": "yoooow",
+      "URL": "RALexj9J5u0",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 3,
+      "id": 54
+    },
+    {
+      "title": "you are unfogetBLE",
+      "URL": "RALexj9J5u0",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 1,
+      "id": 55
+    },
+    {
+      "title": "reactstrap",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 3,
+      "id": 56
     }
   ],
   "noteTypes": [

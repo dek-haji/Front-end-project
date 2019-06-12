@@ -36,7 +36,7 @@ class JsEditForm extends Component {
             };
 
             // Create the article and redirect user to article list
-            this.props.updateForm(editedObj)
+            this.props.updateJs(editedObj)
         }
     };
     componentDidMount() {
@@ -52,12 +52,13 @@ class JsEditForm extends Component {
         });
       }
 
-    embedURL = (event) => {
+      embedURL = (event) => {
         //this function gets the user input then splits in two, and gets the ID of the URL
         const stateToChange = {};
-        stateToChange[event.target.id] = event.target.value.split("v=")[1]
+        stateToChange[event.target.id] = event.target.value.split("v=")[1].split("&list=")[0]
         console.log(stateToChange)
         this.setState(stateToChange);
+    
     }
     render() {
         return (
