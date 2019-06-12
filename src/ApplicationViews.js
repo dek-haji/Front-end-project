@@ -81,9 +81,9 @@ class ApplicationViews extends Component {
             .then(react => (newState.react = react))
             .then(() => this.setState(newState));
         };
-        updateForm = (editedNotesObject) => {
+        updateJs = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes`))
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
                 .then(notes => {
                     this.props.history.push("/notes")
                     this.setState({
@@ -115,8 +115,8 @@ class ApplicationViews extends Component {
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
+                            updateJs={this.updateJs}
                             deletejs={this.deletejs}
-                            updateForm={this.updateForm}
                             />
                         );
                 }} />
@@ -136,7 +136,7 @@ class ApplicationViews extends Component {
 
                     return <JsDetails note={note}
                         react={react}
-                        deletejs={this.deletejs} />
+                        updateJs={this.updateJs} />
                 }} />
 
 
@@ -153,14 +153,14 @@ class ApplicationViews extends Component {
 
                     return <ReactDetails
                         react={react}
-                        deletejs={this.deletejs} />
+                        updateJs={this.updateJs} />
                 }} />
 
 <Route
                     exact path="/notes/:noteId(\d+)/edit" render={props => {
                         return <JsEditForm {...props}
                             notes={this.state.notes}
-                            updateForm={this.updateForm}
+                            updateJs={this.updateJs}
                             noteTypes={this.state.noteTypes}/>
                     }} />
 
@@ -187,4 +187,4 @@ class ApplicationViews extends Component {
     }
 }
 
-export default ApplicationViews
+export default withRouter(ApplicationViews)
