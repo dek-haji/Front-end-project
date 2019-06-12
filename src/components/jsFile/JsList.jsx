@@ -7,7 +7,7 @@ class JsList extends Component {
     handleClick = (event)=> {
         console.log("its working", this.props.notes.id)
         console.log(event)
-        this.props.deleteForm(this.props.notes.id)
+        this.props.deletejs(this.props.notes.id)
     }
     render() {
         // console.log('this is the props in notes List',this.props)
@@ -20,7 +20,7 @@ class JsList extends Component {
                     <div key={note.id}>
                             <h3>{note.title}</h3>
                             <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
-                        <button onClick={()=> {this.props.deleteForm(note.id)}} >DELETE</button>
+                        <button onClick={()=> {this.props.deletejs(note.id)}} >DELETE</button>
 
                         <button type="button"
                         className="btn btn-info"

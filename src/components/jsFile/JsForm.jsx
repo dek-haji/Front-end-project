@@ -54,7 +54,7 @@ export default class JsForm extends Component {
             // Create the article and redirect user to article list
             this.props.addForm(newObj)
               .then(() => this.props.history.push("/notes"))
-              .then(() => this.props.history.push("/react"));
+              // .then(() => this.props.history.push("/react"));
         }
     };
 

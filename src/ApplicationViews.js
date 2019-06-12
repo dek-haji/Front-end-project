@@ -46,27 +46,38 @@ class ApplicationViews extends Component {
                 .then(() => this.setState(newState))
     }
 
-    addForm = newObj =>
-    dbCalls.post(newObj, `${remoteURL}/notes`)
-    .then(() => dbCalls.all(`${remoteURL}/notes`))
-    .then(notes =>
-        this.setState({
-            notes: notes})
-        );
+    addForm = newObj => {
+        const newState = {};
+        return dbCalls.post(newObj, "http://localhost:5002/notes")
+        .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
+        .then(notes => (newState.notes = notes))
+        .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
+        .then(noteTypes => (newState.noteTypes = noteTypes))
+        .then((console.log(this.state.noteTypes)))
+        .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
+        .then(users => (newState.users = users))
+        .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
+        .then(react => (newState.react = react))
+        .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
+        .then(bootstrap => (newState.bootstrap = bootstrap))
+        .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+        .then(others => (newState.others = others))
+        .then(() => this.setState(newState))
+    };
 
-        deleteForm = id => {
+        deletejs = id => {
             const newState = {};
             dbCalls
             .delete(id, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes`))
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
             .then(notes => (newState.notes = notes))
             .then(() => this.setState(newState));
         };
         deleteReact = id => {
             const newState = {};
             dbCalls
-            .delete(id, `${remoteURL}/react`)
-            .then(() => dbCalls.all(`${remoteURL}/react`))
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
             .then(react => (newState.react = react))
             .then(() => this.setState(newState));
         };
@@ -104,7 +115,7 @@ class ApplicationViews extends Component {
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
-                            deleteForm={this.deleteForm}
+                            deletejs={this.deletejs}
                             updateForm={this.updateForm}
                             />
                         );
@@ -125,7 +136,7 @@ class ApplicationViews extends Component {
 
                     return <JsDetails note={note}
                         react={react}
-                        deleteForm={this.deleteForm} />
+                        deletejs={this.deletejs} />
                 }} />
 
 
@@ -142,7 +153,7 @@ class ApplicationViews extends Component {
 
                     return <ReactDetails
                         react={react}
-                        deleteForm={this.deleteForm} />
+                        deletejs={this.deletejs} />
                 }} />
 
 <Route
@@ -167,7 +178,7 @@ class ApplicationViews extends Component {
                      return (  <BootstrapList
                                 {...props}
                                bootstrap={this.state.bootstrap}
-                                deleteForm={this.deleteForm}
+                                deletejs={this.deletejs}
                                 updateForm={this.updateForm}/>
                         );
                 }} />

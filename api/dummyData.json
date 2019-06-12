@@ -15,22 +15,6 @@
   ],
   "notes": [
     {
-      "title": "fffffffffffffffff",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 4,
-      "id": 13
-    },
-    {
-      "title": "NEW SONG",
-      "URL": "Mtb-Q9N3GRY&list=RDMMMtb-Q9N3GRY&start_radio=1",
-      "snippet": "NO ITS NOT SNIPPET",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 2,
-      "id": 18
-    },
-    {
       "id": 26,
       "title": "bootsatrap baby yyy",
       "URL": "d0eUMnJ5kTA",
@@ -47,20 +31,92 @@
       "noteTypeId": 2
     },
     {
-      "title": "javascript",
+      "title": "new js",
       "URL": "d0eUMnJ5kTA",
       "snippet": "another snippet",
       "note": "yeah i think its another snippet",
       "noteTypeId": 1,
-      "id": 30
+      "id": 36
     },
     {
-      "title": "react react react react react react",
+      "title": "js test",
       "URL": "d0eUMnJ5kTA",
-      "snippet": "snippet snippet",
-      "note": "maybe he made sense",
+      "snippet": "sfdgsfds",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 1,
+      "id": 37
+    },
+    {
+      "title": "new js test",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 1,
+      "id": 38
+    },
+    {
+      "title": "react react react",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "loops wi;;  ",
       "noteTypeId": 2,
-      "id": 31
+      "id": 39
+    },
+    {
+      "title": "js test new new",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "sfdgsfds",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 1,
+      "id": 40
+    },
+    {
+      "title": "react react test test",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 2,
+      "id": 41
+    },
+    {
+      "title": "bootsss baby",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 3,
+      "id": 43
+    },
+    {
+      "title": "new boosttrap man",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 3,
+      "id": 45
+    },
+    {
+      "title": "js js js",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "sfdgsfds",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 3,
+      "id": 47
+    },
+    {
+      "title": "js weeye",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 1,
+      "id": 48
+    },
+    {
+      "title": "ITS BOOTSTRAP MAN",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah i think its another snippet",
+      "noteTypeId": 3,
+      "id": 53
     }
   ],
   "noteTypes": [
