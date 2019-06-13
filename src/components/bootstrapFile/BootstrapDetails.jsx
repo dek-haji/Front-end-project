@@ -8,20 +8,20 @@ class BootstrapDetails extends Component {
     render() {
         return (
             <section className="notes">
-            <div key={this.props.note.id} className="card">
+            <div key={this.props.bootstrap.id} className="card">
                 <div className="card-body">
                     <h4 className="card-title">
-                        {this.props.note.title }
+                        {this.props.bootstrap.title }
                         </h4>
-                        <Embed id = {this.props.note.URL} placeholder='' source='youtube' />
-                            <p>{this.props.note.snippet}</p>
-                            <p>{this.props.note.note}</p>
+                        <Embed id = {this.props.bootstrap.URL} placeholder='' source='youtube' />
+                            <p>{this.props.bootstrap.snippet}</p>
+                            <p>{this.props.bootstrap.bootstrap}</p>
                     {/* <h6 className="card-title">{ this.props.note.snippet }</h6> */}
                     <button onClick={
                             () => {
                                 this.setState(
                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,
-                                    () => this.props.deletejs(this.props.note.id)
+                                    () => this.props.deletejs(this.props.bootstrap.id)
                                 )
                             }
                         }

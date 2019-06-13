@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 class BootstrapList extends Component {
     handleClick = (event)=> {
-        console.log("its working", this.props.boo.id)
+        console.log("its working", this.props.bootstrap.id)
         console.log(event)
         this.props.deleteForm(this.props.bootstrap.id)
     }
