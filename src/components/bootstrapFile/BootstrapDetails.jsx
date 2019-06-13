@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Embed } from 'semantic-ui-react'
-
+import bootstrap from "./bootstrap.png"
 class BootstrapDetails extends Component {
     state = {
         saveDisabled: false //initail state of the button before it clicks
@@ -13,11 +13,11 @@ class BootstrapDetails extends Component {
                     <h4 className="card-title">
                         {this.props.bootstrap.title }
                         </h4>
-                        <Embed id = {this.props.bootstrap.URL} placeholder='' source='youtube' />
+                        <Embed id = {this.props.bootstrap.URL} placeholder= {bootstrap} source='youtube' />
                             <p>{this.props.bootstrap.snippet}</p>
                             <p>{this.props.bootstrap.bootstrap}</p>
                     {/* <h6 className="card-title">{ this.props.note.snippet }</h6> */}
-                    <button onClick={
+                    {/* <button onClick={
                             () => {
                                 this.setState(
                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,
@@ -26,7 +26,7 @@ class BootstrapDetails extends Component {
                             }
                         }
                         disabled={ this.state.saveDisabled }
-                        className="card-link">Delete</button>
+                        className="card-link">Delete</button> */}
                 </div>
             </div>
         </section>

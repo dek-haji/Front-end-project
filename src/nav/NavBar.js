@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-
+import { Input, Menu, Segment } from 'semantic-ui-react'
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
@@ -23,6 +23,11 @@ class NavBar extends Component {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/others">Others</Link>
+                    </li>
+                    <li className="nav-item">
+                    <Menu.Item>
+              <Input icon='search' placeholder='Search...' />
+            </Menu.Item>
                     </li>
                 </ul>
             </nav>

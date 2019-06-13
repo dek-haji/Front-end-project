@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-
+import { Button } from 'semantic-ui-react'
 
 
 
@@ -86,7 +84,7 @@ export default class JsForm extends Component {
                 pattern="https://.*"
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-snippet">
             <label htmlFor="jsSnippet">Snippet</label>
             <input
               type="text"
@@ -99,7 +97,7 @@ export default class JsForm extends Component {
                 </div>
                 <div className="form-group">
             <label htmlFor="jsNotes">Notes</label>
-            <input
+            <textarea
               type="text"
               required
               className="form-control"
@@ -124,13 +122,13 @@ export default class JsForm extends Component {
               ))}
             </select>
           </div>
-          <button variant="outlined" color="primary" size="large"
+          <Button variant="outlined" color="primary" size="large"
             type="submit"
             onClick={this.constructNewEvent}
             className="btn btn-primary"
           >
             Submit New File
-          </button>
+          </Button>
         </form>
       </React.Fragment>
     );

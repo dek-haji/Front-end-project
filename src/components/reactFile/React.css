@@ -1,0 +1,20 @@
+.react-notes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.card-body{
+    width: 500px;
+    border: 1px solid blue
+}
+.snippet {
+    border: 1px solid black;
+    width: 462px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 20px;
+    margin: 1px
+}
