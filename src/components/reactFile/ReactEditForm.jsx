@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
 
-class JsEditForm extends Component {
+class ReactEditForm extends Component {
      // Set initial state
      state = {
         title: "",
@@ -136,4 +136,4 @@ class JsEditForm extends Component {
     }
 }
 
-export default JsEditForm;
+export default ReactEditForm;

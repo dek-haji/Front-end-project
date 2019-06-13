@@ -11,6 +11,7 @@ import BootstrapList from "./components/bootstrapFile/BootstrapList";
 import BootstrapDetails from "./components/bootstrapFile/BootstrapDetails";
 import ReactDetails from "./components/reactFile/ReactDetails"
 import ReactEditForm from "./components/reactFile/ReactEditForm"
+import BootstrapEditForm from "./components/bootstrapFile/BootstrapEditForm";
 
 
 const remoteURL = "http://localhost:5002"
@@ -112,6 +113,16 @@ class ApplicationViews extends Component {
             });
         };
 
+        updateBootstrap = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+                .then(bootstrap => {
+                    this.props.history.push("/bootstrap")
+                    this.setState({
+                bootstrap: bootstrap
+              })
+            });
+        };
     render() {
         console.log("react state", this.state.react)
         console.log("bootstrap state", this.state.bootstrap)
@@ -207,9 +218,16 @@ class ApplicationViews extends Component {
                          bootstrap={this.state.bootstrap}
                          notes={this.state.notes}
                                 deleteBootstrap={this.deleteBootstrap}
-                                updateForm={this.updateForm}/>
+                                updateBootstrap={this.updateBootstrap}/>
                         );
                 }} />
+                 <Route
+                    exact path="/bootstrap/:bootstrapId(\d+)/edit" render={props => {
+                        return <BootstrapEditForm {...props}
+                            notes={this.state.notes}
+                            updateBootstrap={this.updateBootstrap}
+                            noteTypes={this.state.noteTypes}/>
+                    }} />
 
     <Route path="/bootstrap/:bootstrapId(\d+)" render={(props) => {
                     // Find the bootstrap with the id of the route parameter
