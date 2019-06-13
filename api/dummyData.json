@@ -23,14 +23,6 @@
       "noteTypeId": 3
     },
     {
-      "id": 27,
-      "title": "fadedeeeddddd",
-      "URL": "h-H6YrID8zI",
-      "snippet": "yeah yeah   jjjj",
-      "notes": "asdsdsdsdsdsdsd",
-      "noteTypeId": 2
-    },
-    {
       "title": "js test new new",
       "URL": "d0eUMnJ5kTA",
       "snippet": "sfdgsfds",
@@ -103,12 +95,20 @@
       "id": 56
     },
     {
-      "title": "react new form",
+      "id": 57,
+      "title": "react new formss",
       "URL": "h-H6YrID8zI",
       "snippet": "lets see creating new stuff man ok dheh",
-      "note": "iyaa iyaa iyaa",
-      "noteTypeId": 2,
-      "id": 57
+      "notes": "iyaa iyaa iyaa",
+      "noteTypeId": 2
+    },
+    {
+      "id": 58,
+      "title": "react react reat",
+      "URL": "06rgaTpTji0",
+      "snippet": "sayin never leave mrm",
+      "notes": "ahhahaha thatss soo funny",
+      "noteTypeId": 2
     }
   ],
   "noteTypes": [
