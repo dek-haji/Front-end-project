@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
 
-class ReactEditForm extends Component {
+class BootstrapEditForm extends Component {
      // Set initial state
      state = {
         title: "",
@@ -26,7 +26,7 @@ class ReactEditForm extends Component {
             window.alert("Please select technology")
         } else {
             const editedObj = {
-                id: this.props.match.params.reactId,
+                id: this.props.match.params.bootstrapId,
                 title: this.state.title,
                 URL: this.state.URL,
                 snippet: this.state.snippet,
@@ -36,11 +36,11 @@ class ReactEditForm extends Component {
             };
 
             // Create the article and redirect user to article list
-            this.props.updateReact(editedObj)
+            this.props.updateBootstrap(editedObj)
         }
     };
     componentDidMount() {
-        dbCalls.get("http://localhost:5002/notes",this.props.match.params.reactId)
+        dbCalls.get("http://localhost:5002/notes",this.props.match.params.bootstrapId)
         .then(note => {
             this.setState({
             title: note.title,
@@ -136,4 +136,4 @@ class ReactEditForm extends Component {
     }
 }
 
-export default ReactEditForm;
+export default BootstrapEditForm;

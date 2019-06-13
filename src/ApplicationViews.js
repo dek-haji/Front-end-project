@@ -8,8 +8,10 @@ import JsDetails from "./components/jsFile/JsDetails";
 import JsEditForm from "./components/jsFile/JsEditForm";
 import ReactList from "./components/reactFile/ReactList"
 import BootstrapList from "./components/bootstrapFile/BootstrapList";
+import BootstrapDetails from "./components/bootstrapFile/BootstrapDetails";
 import ReactDetails from "./components/reactFile/ReactDetails"
 import ReactEditForm from "./components/reactFile/ReactEditForm"
+import BootstrapEditForm from "./components/bootstrapFile/BootstrapEditForm";
 
 
 const remoteURL = "http://localhost:5002"
@@ -82,6 +84,14 @@ class ApplicationViews extends Component {
             .then(react => (newState.react = react))
             .then(() => this.setState(newState));
         };
+        deleteBootstrap = id => {
+            const newState = {};
+            dbCalls
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+            .then(bootstrap => (newState.bootstrap = bootstrap))
+            .then(() => this.setState(newState));
+        };
         updateJs = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
             .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
@@ -92,7 +102,6 @@ class ApplicationViews extends Component {
               })
             });
         };
-    
         updateReact = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
             .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
@@ -104,6 +113,16 @@ class ApplicationViews extends Component {
             });
         };
 
+        updateBootstrap = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+                .then(bootstrap => {
+                    this.props.history.push("/bootstrap")
+                    this.setState({
+                bootstrap: bootstrap
+              })
+            });
+        };
     render() {
         console.log("react state", this.state.react)
         console.log("bootstrap state", this.state.bootstrap)
@@ -165,7 +184,7 @@ class ApplicationViews extends Component {
 
                     return <ReactDetails
                         react={react}
-                        updateJs={this.updateJs} />
+                      />
                 }} />
 
 <Route
@@ -175,7 +194,6 @@ class ApplicationViews extends Component {
                             updateJs={this.updateJs}
                             noteTypes={this.state.noteTypes}/>
                     }} />
-                
                 <Route
                     exact path="/react/:reactId(\d+)/edit" render={props => {
                         return <ReactEditForm {...props}
@@ -194,13 +212,36 @@ class ApplicationViews extends Component {
                             />
                         );
                 }} />
-                 <Route path="/bootstrap" render={(props) => {
+                 <Route exact path="/bootstrap" render={(props) => {
                      return (  <BootstrapList
                                 {...props}
-                               bootstrap={this.state.bootstrap}
-                                deletejs={this.deletejs}
-                                updateForm={this.updateForm}/>
+                         bootstrap={this.state.bootstrap}
+                         notes={this.state.notes}
+                                deleteBootstrap={this.deleteBootstrap}
+                                updateBootstrap={this.updateBootstrap}/>
                         );
+                }} />
+                 <Route
+                    exact path="/bootstrap/:bootstrapId(\d+)/edit" render={props => {
+                        return <BootstrapEditForm {...props}
+                            notes={this.state.notes}
+                            updateBootstrap={this.updateBootstrap}
+                            noteTypes={this.state.noteTypes}/>
+                    }} />
+
+    <Route path="/bootstrap/:bootstrapId(\d+)" render={(props) => {
+                    // Find the bootstrap with the id of the route parameter
+                    let bootstrap = this.state.bootstrap.find(boots =>
+                        boots.id === parseInt(props.match.params.bootstrapId)
+                        )
+                    // If the note wasn't found, create a default one
+                    if (!bootstrap){
+                        bootstrap = { id: 505, title: "505"}
+                    }
+
+                    return <BootstrapDetails
+                        bootstrap={bootstrap}
+                      />
                 }} />
             </React.Fragment>
         )

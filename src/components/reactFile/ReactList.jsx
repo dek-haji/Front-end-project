@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 class ReactList extends Component {
     handleClick = (event)=> {
-        console.log("its working", this.props.notes.id)
+        console.log("its working", this.props.react.id)
         console.log(event)
         this.props.deleteReact(this.props.react.id)
     }
