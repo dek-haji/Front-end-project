@@ -20,7 +20,7 @@ class BootstrapList extends Component {
                     <div key={note.id}>
                             <h3>{note.title}</h3>
                             <Link className="nav-link" to={`/bootstrap/${note.id}`}>Details</Link> <br/>
-                        <button onClick={()=> {this.props.deleteForm(note.id)}} >DELETE</button>
+                        <button onClick={()=> {this.props.deleteBootstrap(note.id)}} >DELETE</button>
 
                         <button type="button"
                         className="btn btn-info"

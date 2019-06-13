@@ -83,6 +83,14 @@ class ApplicationViews extends Component {
             .then(react => (newState.react = react))
             .then(() => this.setState(newState));
         };
+        deleteBootstrap = id => {
+            const newState = {};
+            dbCalls
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+            .then(bootstrap => (newState.bootstrap = bootstrap))
+            .then(() => this.setState(newState));
+        };
         updateJs = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
             .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
@@ -198,7 +206,7 @@ class ApplicationViews extends Component {
                                 {...props}
                          bootstrap={this.state.bootstrap}
                          notes={this.state.notes}
-                                deletejs={this.deletejs}
+                                deleteBootstrap={this.deleteBootstrap}
                                 updateForm={this.updateForm}/>
                         );
                 }} />
