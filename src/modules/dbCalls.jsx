@@ -91,5 +91,9 @@ export default Object.create(null, {
                 }).then(data => data.json())
             }
         }
+    },
+    search: {
+        value: function(input) {
+      return fetch(`${remoteURL}/notes?title_like=${input}`).then(e => e.json());
     }
-})
+  }})

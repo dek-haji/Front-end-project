@@ -39,46 +39,6 @@
       "id": 45
     },
     {
-      "title": "js weeye",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 1,
-      "id": 48
-    },
-    {
-      "title": "ITS BOOTSTRAP MAN",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 3,
-      "id": 53
-    },
-    {
-      "title": "yoooow",
-      "URL": "RALexj9J5u0",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 3,
-      "id": 54
-    },
-    {
-      "title": "you are unfogetBLE",
-      "URL": "RALexj9J5u0",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 1,
-      "id": 55
-    },
-    {
-      "id": 57,
-      "title": "react new formss",
-      "URL": "h-H6YrID8zI",
-      "snippet": "lets see creating new stuff man ok dheh",
-      "notes": "iyaa iyaa iyaa",
-      "noteTypeId": 2
-    },
-    {
       "id": 58,
       "title": "react react reat",
       "URL": "06rgaTpTji0",
@@ -93,6 +53,86 @@
       "snippet": "body on me part two baby",
       "notes": "baby  ph yeah yeah",
       "noteTypeId": 3
+    },
+    {
+      "id": 61,
+      "title": "switch statement",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "switch (new Date().getDay()) {      // input is current day     case 6:                         // if (day == 6)         text = \"Saturday\";                   break;     case 0:                         // if (day == 0)         text = \"Sunday\";         break;     default:                        // else...         text = \"Whatever\"; } ",
+      "notes": "yeah i think its another snippetwww",
+      "noteTypeId": 2
+    },
+    {
+      "id": 62,
+      "title": "yoooow this is react",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "switch (new Date().getDay()) {      // input is current day     case 6:                         // if (day == 6)         text = \"Saturday\";                   break;     case 0:                         // if (day == 0)         text = \"Sunday\";         break;     default:                        // else...         text = \"Whatever\"; } ",
+      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
+      "noteTypeId": 2
+    },
+    {
+      "title": "functions",
+      "URL": "AY6X5jZZ_JE",
+      "snippet": "function addNumbers(a, b) {     return a + b; ; } x = addNumbers(1, 2);",
+      "note": "functions work in numerious ways, there is different types of functions.\n1. factory function\n2. constractor function\n3. unenumoues function",
+      "noteTypeId": 1,
+      "id": 63
+    },
+    {
+      "title": "Loops",
+      "URL": "s9wW2PpJsmQ",
+      "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); } var sum = 0; for (var i = 0; i < a.length; i++) {     sum + = a[i]; }               // parsing an array html = \"\"; for (var i of custOrder) {     html += \"<li>\" + i + \"</li>\"; }",
+      "note": "so this is for loop example but loops have soo many other kinds of stuff. and a variety of loops in general.",
+      "noteTypeId": 1,
+      "id": 64
+    },
+    {
+      "title": "react notes agaoin",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "asdfhlskdjfas;dlfjk asdkfj;lgjas;dlf afasjhga sldgjas askjv askjghaskdf",
+      "noteTypeId": 2,
+      "id": 65
+    },
+    {
+      "id": 66,
+      "title": "react one more baby",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "notes": "ajhsflakdjhg ajsfalskdjgf aadnflaskdfha sakjsfhasdkfhas ",
+      "noteTypeId": 2
+    },
+    {
+      "title": "more react",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "yeah lets have as much as we can of react",
+      "noteTypeId": 2,
+      "id": 67
+    },
+    {
+      "title": "yoooow",
+      "URL": "",
+      "snippet": "",
+      "note": "",
+      "noteTypeId": 1,
+      "id": 68
+    },
+    {
+      "title": "js js js js man",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "",
+      "note": "",
+      "noteTypeId": 2,
+      "id": 69
+    },
+    {
+      "title": "yoooow",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "",
+      "note": "",
+      "noteTypeId": 2,
+      "id": 70
     }
   ],
   "noteTypes": [

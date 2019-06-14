@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Embed } from 'semantic-ui-react'
+import js from  "./js.jpg"
 
 class JsDetails extends Component {
     state = {
@@ -13,7 +14,7 @@ class JsDetails extends Component {
                     <h4 className="card-title">
                         {this.props.note.title }
                         </h4>
-                        <Embed id = {this.props.note.URL} placeholder='' source='youtube' />
+                        <Embed id = {this.props.note.URL} placeholder= {js} source='youtube' />
                             <p>{this.props.note.snippet}</p>
                             <p>{this.props.note.note}</p>
                     {/* <h6 className="card-title">{ this.props.note.snippet }</h6> */}
