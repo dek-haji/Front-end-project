@@ -12,6 +12,7 @@ import BootstrapDetails from "./components/bootstrapFile/BootstrapDetails";
 import ReactDetails from "./components/reactFile/ReactDetails"
 import ReactEditForm from "./components/reactFile/ReactEditForm"
 import BootstrapEditForm from "./components/bootstrapFile/BootstrapEditForm";
+import SearchResults from "./components/search/SearchResults"
 
 
 const remoteURL = "http://localhost:5002"
@@ -243,6 +244,13 @@ class ApplicationViews extends Component {
                         bootstrap={bootstrap}
                       />
                 }} />
+
+<Route
+          path="/search"
+          render={props => {
+            return <SearchResults searchResults={this.props.searchResults} />;
+          }}
+        />
             </React.Fragment>
         )
     }
