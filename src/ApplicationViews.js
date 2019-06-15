@@ -155,6 +155,7 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route exact path="/" render={(props) => {
+                    if (this.isAuthenticated()) {
             return (
               <JsForm
                 {...props}
@@ -164,17 +165,24 @@ class ApplicationViews extends Component {
                     addForm={this.addForm}
                     noteTypes={this.state.noteTypes}
               />
-            );
+            )
+        } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route exact path="/notes" render={(props) => {
-                    return (
+                    if (this.isAuthenticated()) {
+                        return (
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
-                            updateJs={this.updateJs}
-                            deletejs={this.deletejs}
+                                updateJs={this.updateJs}
+                                deletejs={this.deletejs}
                             />
-                        );
+                        )
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route path="/notes/:noteId(\d+)" render={(props) => {
                     // Find the notes with the id of the route parameter
@@ -189,10 +197,13 @@ class ApplicationViews extends Component {
                         note = { id: 404, title: "404" }
                         react = { id: 505, title: "505"}
                     }
-
+                    if (this.isAuthenticated()) {
                     return <JsDetails note={note}
                         react={react}
                         updateJs={this.updateJs} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
 
 
@@ -228,6 +239,7 @@ class ApplicationViews extends Component {
                     }} />
 
                 <Route exact path="/react" render={(props) => {
+                    if (this.isAuthenticated()) {
                            return (  <ReactList
                                 {...props}
                                react={this.state.react}
@@ -235,16 +247,24 @@ class ApplicationViews extends Component {
                                 deleteReact={this.deleteReact}
                                updateReact={this.updateReact}
                             />
-                        );
+                        )
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                  <Route exact path="/bootstrap" render={(props) => {
-                     return (  <BootstrapList
+                      if (this.isAuthenticated()) {
+                    return (<BootstrapList
+                     
                                 {...props}
                          bootstrap={this.state.bootstrap}
                          notes={this.state.notes}
                                 deleteBootstrap={this.deleteBootstrap}
                                 updateBootstrap={this.updateBootstrap}/>
-                        );
+                    )
+                } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                  <Route
                     exact path="/bootstrap/:bootstrapId(\d+)/edit" render={props => {
@@ -271,7 +291,8 @@ class ApplicationViews extends Component {
 
 <Route
           path="/search"
-          render={props => {
+                    render={props => {
+              
             return <SearchResults searchResults={this.props.searchResults} />;
           }}
         />
