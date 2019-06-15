@@ -13,24 +13,27 @@ import ReactDetails from "./components/reactFile/ReactDetails"
 import ReactEditForm from "./components/reactFile/ReactEditForm"
 import BootstrapEditForm from "./components/bootstrapFile/BootstrapEditForm";
 import SearchResults from "./components/search/SearchResults"
+import Login from "./components/Auth/Login"
+import Registration from "./components/Auth/Registration"
+const remoteURL = "http://localhost:5002";
+const usersURL = `${remoteURL}/users`
 
-
-const remoteURL = "http://localhost:5002"
 class ApplicationViews extends Component {
+    isAuthenticated = () => sessionStorage.getItem("username") !== null
     state = {
         notes: [],
         noteTypes: [],
         users: [],
-        // javascript: [],
         react: [],
         bootstrap: [],
-        others: []
+        others: [],
+        sessionId: sessionStorage.getItem("userId")
     }
     componentDidMount() {
             // ;
             console.log("didmount fired up")
             const newState = {};
-            // let sessionId = sessionStorage.getItem("userId")
+            let sessionId = sessionStorage.getItem("userId")
             dbCalls
                 .all("http://localhost:5002/notes?noteTypeId=1")
                 .then(notes => (newState.notes = notes))
@@ -49,7 +52,7 @@ class ApplicationViews extends Component {
                 .then(others => (newState.others = others))
                 .then(() => this.setState(newState))
     }
-
+    
     addForm = newObj => {
         const newState = {};
         return dbCalls.post(newObj, "http://localhost:5002/notes")
@@ -68,7 +71,18 @@ class ApplicationViews extends Component {
         .then(others => (newState.others = others))
         .then(() => this.setState(newState))
     };
-
+    addUser = (user) => dbCalls.post(user, usersURL)
+    .then(() => dbCalls.all(usersURL))
+    .then(Allusers => this.setState({
+        users: Allusers             //added this three line of codes today to set the new user.
+    }))
+    updateComponent = () => {
+                        
+        dbCalls.getUsers().then(allUsers => {
+            this.setState({ users: allUsers });
+            console.log(allUsers)
+        })
+    }
         deletejs = id => {
             const newState = {};
             dbCalls
@@ -129,8 +143,19 @@ class ApplicationViews extends Component {
         console.log("bootstrap state", this.state.bootstrap)
         console.log("javascript state",this.state.notes)
         return (
-                    <React.Fragment>
+            <React.Fragment>
+                  <Route path="/login" render={(props) => {
+                    return <Login {...props}
+                        users={this.state.users}
+                        updateComponent={this.updateComponent} />
+                }} />
+                <Route path="/register" render={(props) => {
+                return <Registration {...props}
+                         users={this.state.users}
+                        addUser={this.addUser} />
+                }} />
                 <Route exact path="/" render={(props) => {
+                    if (this.isAuthenticated()) {
             return (
               <JsForm
                 {...props}
@@ -140,17 +165,24 @@ class ApplicationViews extends Component {
                     addForm={this.addForm}
                     noteTypes={this.state.noteTypes}
               />
-            );
+            )
+        } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route exact path="/notes" render={(props) => {
-                    return (
+                    if (this.isAuthenticated()) {
+                        return (
                             <JsList
                                 {...props}
                                 notes={this.state.notes}
-                            updateJs={this.updateJs}
-                            deletejs={this.deletejs}
+                                updateJs={this.updateJs}
+                                deletejs={this.deletejs}
                             />
-                        );
+                        )
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route path="/notes/:noteId(\d+)" render={(props) => {
                     // Find the notes with the id of the route parameter
@@ -165,10 +197,13 @@ class ApplicationViews extends Component {
                         note = { id: 404, title: "404" }
                         react = { id: 505, title: "505"}
                     }
-
+                    if (this.isAuthenticated()) {
                     return <JsDetails note={note}
                         react={react}
                         updateJs={this.updateJs} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
 
 
@@ -204,6 +239,7 @@ class ApplicationViews extends Component {
                     }} />
 
                 <Route exact path="/react" render={(props) => {
+                    if (this.isAuthenticated()) {
                            return (  <ReactList
                                 {...props}
                                react={this.state.react}
@@ -211,16 +247,24 @@ class ApplicationViews extends Component {
                                 deleteReact={this.deleteReact}
                                updateReact={this.updateReact}
                             />
-                        );
+                        )
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                  <Route exact path="/bootstrap" render={(props) => {
-                     return (  <BootstrapList
+                      if (this.isAuthenticated()) {
+                    return (<BootstrapList
+                     
                                 {...props}
                          bootstrap={this.state.bootstrap}
                          notes={this.state.notes}
                                 deleteBootstrap={this.deleteBootstrap}
                                 updateBootstrap={this.updateBootstrap}/>
-                        );
+                    )
+                } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                  <Route
                     exact path="/bootstrap/:bootstrapId(\d+)/edit" render={props => {
@@ -247,7 +291,8 @@ class ApplicationViews extends Component {
 
 <Route
           path="/search"
-          render={props => {
+                    render={props => {
+              
             return <SearchResults searchResults={this.props.searchResults} />;
           }}
         />
