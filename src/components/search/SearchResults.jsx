@@ -13,7 +13,7 @@ class SearchResults extends Component {
                     <h3>{result.title}</h3>
                     </Card.Content>
                 <Link className="nav-link" to={`/react/${result.id}`}>Details</Link> <br/>
-            <Button basic color='orange' onClick={()=> {this.props.deleteReact(result.id)}} >DELETE</Button>
+            {/* <Button basic color='orange' onClick={()=> {this.props.deleteReact(result.id)}} >DELETE</Button>
         
             <Button basic color='teal' type="button"
             className="btn btn-info"
@@ -21,7 +21,7 @@ class SearchResults extends Component {
                 this.props.history.push(`/react/${result.id}/edit`);
             }}>
             Edit
-            </Button>
+            </Button> */}
         </Card>
         )
         }
