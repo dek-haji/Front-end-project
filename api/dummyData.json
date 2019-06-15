@@ -11,6 +11,11 @@
       "email": "johnny@example.com",
       "password": "password",
       "id": 4
+    },
+    {
+      "name": "deek",
+      "email": "deeeqhaji@gmail.com",
+      "id": 5
     }
   ],
   "notes": [
