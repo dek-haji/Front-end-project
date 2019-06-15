@@ -292,8 +292,12 @@ class ApplicationViews extends Component {
 <Route
           path="/search"
                     render={props => {
-              
-            return <SearchResults searchResults={this.props.searchResults} />;
+                        if (this.isAuthenticated()) {
+            return (<SearchResults searchResults={this.props.searchResults}/>
+            )
+            } else {
+                        return <Redirect to="/login" />
+                    }
           }}
         />
             </React.Fragment>
