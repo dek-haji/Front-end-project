@@ -16,8 +16,8 @@ class ReactDetails extends Component {
                     <h2 className="card-title">
                         {this.props.react.title }
                         </h2>
-                            <p className= "snippet">{this.props.react.snippet}</p>
-                            <p>{this.props.react.notes}</p>
+                            <pre className= "snippet">{this.props.react.snippet}</pre>
+                            <pre>{this.props.react.note}</pre>
                     {/* <h6 className="card-title">{ this.props.react.snippet }</h6> */}
                     {/* <button onClick={
                             () => {

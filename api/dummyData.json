@@ -36,30 +36,6 @@
       "id": 45
     },
     {
-      "id": 58,
-      "title": "react react reat",
-      "URL": "06rgaTpTji0",
-      "snippet": "sayin never leave mrm",
-      "notes": "ahhahaha thatss soo funny",
-      "noteTypeId": 2
-    },
-    {
-      "id": 59,
-      "title": "boots tpain baby bbay",
-      "URL": "YE3O508mbgo",
-      "snippet": "body on me part two baby",
-      "notes": "baby  ph yeah yeah",
-      "noteTypeId": 3
-    },
-    {
-      "id": 61,
-      "title": "switch statement",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "switch (new Date().getDay()) {      // input is current day     case 6:                         // if (day == 6)         text = \"Saturday\";                   break;     case 0:                         // if (day == 0)         text = \"Sunday\";         break;     default:                        // else...         text = \"Whatever\"; } ",
-      "notes": "yeah i think its another snippetwww",
-      "noteTypeId": 2
-    },
-    {
       "title": "functions",
       "URL": "AY6X5jZZ_JE",
       "snippet": "function addNumbers(a, b) {     return a + b; ; } x = addNumbers(1, 2);",
@@ -76,38 +52,6 @@
       "id": 64
     },
     {
-      "title": "react notes agaoin",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "asdfhlskdjfas;dlfjk asdkfj;lgjas;dlf afasjhga sldgjas askjv askjghaskdf",
-      "noteTypeId": 2,
-      "id": 65
-    },
-    {
-      "id": 66,
-      "title": "react one more baby",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "notes": "ajhsflakdjhg ajsfalskdjgf aadnflaskdfha sakjsfhasdkfhas ",
-      "noteTypeId": 2
-    },
-    {
-      "title": "more react",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah lets have as much as we can of react",
-      "noteTypeId": 2,
-      "id": 67
-    },
-    {
-      "id": 68,
-      "title": "yoooow",
-      "URL": "",
-      "snippet": "yeah yeah   jjjj",
-      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
-      "noteTypeId": 1
-    },
-    {
       "id": 72,
       "title": "react",
       "URL": "",
@@ -122,6 +66,62 @@
       "note": "fdsjhflkdfg sldkjg;slg slkdjfh;asdklgfa aklsjfa;sdlfa",
       "noteTypeId": 1,
       "id": 73
+    },
+    {
+      "id": 74,
+      "title": "react strap",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "jhaflksehfals safkjhalsdkf adslkfjha;sdlf asfjhasdl fasdfnasdl fasdkljjfha sdflasdkjhfa asljhf;asd fasdfhas dfas;dlfjshf;sda .  skjfdhsad fasdf sdfjha;sd fasd",
+      "notes": "yeah man as i was sYING UTS REACT BITCH",
+      "noteTypeId": 2
+    },
+    {
+      "title": "yoooow",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
+      "note": "adaDfadf",
+      "noteTypeId": 2,
+      "id": 75
+    },
+    {
+      "title": "constructor",
+      "URL": "3b07XMGs0hM",
+      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
+      "note": "Text in a pre element\nis displayed in a fixed-width\nfont, and it preserves\nboth      spaces and\nline breaks",
+      "noteTypeId": 2,
+      "id": 79
+    },
+    {
+      "id": 80,
+      "title": "render",
+      "URL": "",
+      "snippet": "render() {   return <div />; }",
+      "notes": "this is how render in react works.",
+      "noteTypeId": 2
+    },
+    {
+      "title": "componentWillReceiveProps",
+      "URL": "",
+      "snippet": "componentWillReceiveProps(nextProps) {   // invoked every time component recieves new props.   // does not before initial 'render' }",
+      "note": "one green house",
+      "noteTypeId": 2,
+      "id": 81
+    },
+    {
+      "title": "navBar",
+      "URL": "",
+      "snippet": "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">   <a class=\"navbar-brand\" href=\"#\">Navbar</a>   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">     <span class=\"navbar-toggler-icon\"></span>   </button>    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">     <ul class=\"navbar-nav mr-auto\">       <li class=\"nav-item active\">         <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>       </li>       <li class=\"nav-item\">         <a class=\"nav-link\" href=\"#\">Link</a>       </li>       <li class=\"nav-item\">         <a class=\"nav-link disabled\" href=\"#\">Disabled</a>       </li>     </ul>     <form class=\"form-inline my-2 my-lg-0\">       <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">       <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>     </form>   </div> </nav>",
+      "note": "this note is for you to check it",
+      "noteTypeId": 3,
+      "id": 82
+    },
+    {
+      "title": "nav-brand",
+      "URL": "",
+      "snippet": "<nav class=\"navbar navbar-light bg-light\">   <a class=\"navbar-brand\" href=\"#!\">Navbar</a> </nav>",
+      "note": "this is navbar ",
+      "noteTypeId": 3,
+      "id": 83
     }
   ],
   "noteTypes": [

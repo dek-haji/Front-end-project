@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
 import "./Js.css"
 
@@ -13,23 +14,25 @@ class JsList extends Component {
         // console.log('this is the props in notes List',this.props)
         return (
             <>
-            <section className="notes">
+            <section className="Js-notes">
                     <h1>JS notes</h1>
                 {
                     this.props.notes.map(note=>
-                    <div key={note.id}>
+                    <Card key={note.id}>
+                    <Card.Content>
                             <h3>{note.title}</h3>
+                            </Card.Content>
                             <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
-                        <button onClick={()=> {this.props.deletejs(note.id)}} >DELETE</button>
+                        <Button basic color='orange' onClick={()=> {this.props.deletejs(note.id)}} >DELETE</Button>
 
-                        <button type="button"
+                        <Button basic color='teal' type="button"
                         className="btn btn-info"
                         onClick={() => {
                             this.props.history.push(`/notes/${note.id}/edit`);
                         }}>
                         Edit
-                        </button>
-                </div>
+                        </Button>
+                </Card>
                 )
            }
                 </section>

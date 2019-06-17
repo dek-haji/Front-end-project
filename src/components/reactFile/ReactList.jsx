@@ -23,7 +23,6 @@ class ReactList extends Component {
                                 </Card.Content>
                             <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br/>
                         <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}} >DELETE </Button>
-                        {/* <Icon color='black' name='user' /> */}
                         <Button basic color='teal' type="button"
                         className="btn btn-info"
                         onClick={() => {
@@ -35,7 +34,6 @@ class ReactList extends Component {
                 )
            }
                     </section>
-                   
                 </>
         );
     }
