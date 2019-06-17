@@ -36,12 +36,11 @@
       "id": 45
     },
     {
+      "id": 63,
       "title": "functions",
       "URL": "AY6X5jZZ_JE",
       "snippet": "function addNumbers(a, b) {     return a + b; ; } x = addNumbers(1, 2);",
-      "note": "functions work in numerious ways, there is different types of functions.\n1. factory function\n2. constractor function\n3. unenumoues function",
-      "noteTypeId": 1,
-      "id": 63
+      "noteTypeId": 1
     },
     {
       "title": "Loops",
@@ -50,14 +49,6 @@
       "note": "so this is for loop example but loops have soo many other kinds of stuff. and a variety of loops in general.",
       "noteTypeId": 1,
       "id": 64
-    },
-    {
-      "id": 72,
-      "title": "react",
-      "URL": "",
-      "snippet": "import React from 'react';  function MyComponent(props) {   /* ... */ }",
-      "notes": "this is test",
-      "noteTypeId": 2
     },
     {
       "title": "for in Loop",
@@ -72,7 +63,7 @@
       "title": "react strap",
       "URL": "d0eUMnJ5kTA",
       "snippet": "jhaflksehfals safkjhalsdkf adslkfjha;sdlf asfjhasdl fasdfnasdl fasdkljjfha sdflasdkjhfa asljhf;asd fasdfhas dfas;dlfjshf;sda .  skjfdhsad fasdf sdfjha;sd fasd",
-      "notes": "yeah man as i was sYING UTS REACT BITCH",
+      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
       "noteTypeId": 2
     },
     {
@@ -122,11 +113,27 @@
       "note": "this is navbar ",
       "noteTypeId": 3,
       "id": 83
+    },
+    {
+      "title": "yoooow",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "etertewrter",
+      "note": "ertrewt",
+      "noteTypeId": 2,
+      "id": 84
+    },
+    {
+      "title": "javascript",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "dafdf afsdf fasdfa sfasf asdf",
+      "noteTypeId": 1,
+      "id": 85
     }
   ],
   "noteTypes": [
     {
-      "name": "notes",
+      "name": "Javascript",
       "id": 1
     },
     {

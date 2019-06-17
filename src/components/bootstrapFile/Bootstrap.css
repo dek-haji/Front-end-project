@@ -44,7 +44,10 @@ pre{
     font-family: monospace;
     white-space: pre-wrap;
     margin: 1em 1; 
-    color: black;
-    background-color: gold
+    color: white;
+   
 
+}
+.btn-info{
+    width: 10px
 }

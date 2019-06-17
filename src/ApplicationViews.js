@@ -144,12 +144,12 @@ class ApplicationViews extends Component {
         console.log("javascript state",this.state.notes)
         return (
             <React.Fragment>
-                  <Route path="/login" render={(props) => {
+                  <Route exact path="/login" render={(props) => {
                     return <Login {...props}
                         users={this.state.users}
                         updateComponent={this.updateComponent} />
                 }} />
-                <Route path="/register" render={(props) => {
+                <Route exact path="/register" render={(props) => {
                 return <Registration {...props}
                          users={this.state.users}
                         addUser={this.addUser} />
@@ -184,7 +184,7 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route path="/notes/:noteId(\d+)" render={(props) => {
+                <Route exact path="/notes/:noteId(\d+)" render={(props) => {
                     // Find the notes with the id of the route parameter
                     let note = this.state.notes.find(note =>
                         note.id === parseInt(props.match.params.noteId)
@@ -208,7 +208,7 @@ class ApplicationViews extends Component {
 
 
 
-<Route path="/react/:reactId(\d+)" render={(props) => {
+<Route exact path="/react/:reactId(\d+)" render={(props) => {
                     // Find the react with the id of the route parameter
                     let react = this.state.react.find(reacct =>
                         reacct.id === parseInt(props.match.params.reactId)
@@ -274,7 +274,7 @@ class ApplicationViews extends Component {
                             noteTypes={this.state.noteTypes}/>
                     }} />
 
-    <Route path="/bootstrap/:bootstrapId(\d+)" render={(props) => {
+    <Route exact path="/bootstrap/:bootstrapId(\d+)" render={(props) => {
                     // Find the bootstrap with the id of the route parameter
                     let bootstrap = this.state.bootstrap.find(boots =>
                         boots.id === parseInt(props.match.params.bootstrapId)
@@ -290,7 +290,7 @@ class ApplicationViews extends Component {
                 }} />
 
 <Route
-          path="/search"
+    exact path="/search"
                     render={props => {
                         if (this.isAuthenticated()) {
                             return (<SearchResults {...props}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
-
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 class JsEditForm extends Component {
      // Set initial state
      state = {
@@ -122,13 +122,13 @@ class JsEditForm extends Component {
                     ))}
                   </select>
                 </div>
-                <button variant="outlined" color="primary" size="large"
+                <Button variant="outlined" color="facebook" size="large"
                   type="submit"
                   onClick={this.updateNewEvent}
                   className="btn btn-primary"
                 >
                   edit
-                </button>
+                </Button>
               </form>
             </React.Fragment>
           );

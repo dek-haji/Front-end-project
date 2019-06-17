@@ -22,13 +22,13 @@ class ReactList extends Component {
                                 <h3>{note.title}</h3>
                                 </Card.Content>
                             <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br/>
-                        <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}} >DELETE </Button>
+                        <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}}> <i className="delete icon"></i> </Button>
                         <Button basic color='teal' type="button"
-                        className="btn btn-info"
+                        className="btn btn-info" 
                         onClick={() => {
                             this.props.history.push(`/react/${note.id}/edit`);
                         }}>
-                        Edit
+                        <i className="edit icon"></i>
                         </Button>
                 </Card>
                 )

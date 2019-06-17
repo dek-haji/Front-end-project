@@ -34,10 +34,12 @@ export default class NavBar extends Component {
               </li>
                     <li className="nav-item">
             <div className="input-group input-group-sm mb-2 mt-1 ml-4">
-            <Link className="nav-link" to="/search">search</Link>
+            <Link className="nav-link" to="/search" >
+      <i className="search icon"  ></i></Link>
               <input
                 type="text"
                 className="form-control"
+                placeholder="Search..."
                 aria-label="Small"
                 aria-describedby="inputGroup-sizing-sm"
                 onKeyUp={e => this.handleSearch(e)}
