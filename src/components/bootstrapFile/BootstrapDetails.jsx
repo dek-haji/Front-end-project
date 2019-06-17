@@ -10,12 +10,12 @@ class BootstrapDetails extends Component {
             <section className="notes">
             <div key={this.props.bootstrap.id} className="card">
                 <div className="card-body">
+                        <Embed id = {this.props.bootstrap.URL} placeholder= {bootstrap} source='youtube' />
                     <h4 className="card-title">
                         {this.props.bootstrap.title }
                         </h4>
-                        <Embed id = {this.props.bootstrap.URL} placeholder= {bootstrap} source='youtube' />
-                            <p>{this.props.bootstrap.snippet}</p>
-                            <p>{this.props.bootstrap.bootstrap}</p>
+                            <pre>{this.props.bootstrap.snippet}</pre>
+                            <pre>{this.props.bootstrap.bootstrap}</pre>
                     {/* <h6 className="card-title">{ this.props.note.snippet }</h6> */}
                     {/* <button onClick={
                             () => {

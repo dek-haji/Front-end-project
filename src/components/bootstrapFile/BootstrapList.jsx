@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
-// import "./Js.css"
+ import "./Bootstrap.css"
 
 class BootstrapList extends Component {
     handleClick = (event)=> {
@@ -17,19 +18,21 @@ class BootstrapList extends Component {
                     <h1>Bootstrap notes</h1>
                 {
                     this.props.bootstrap.map(note=>
-                    <div key={note.id}>
-                            <h3>{note.title}</h3>
+                    <Card key={note.id}>
+                    <Card.Content>
+                                <h3>{note.title}</h3>
+                                </Card.Content>
                             <Link className="nav-link" to={`/bootstrap/${note.id}`}>Details</Link> <br/>
-                        <button onClick={()=> {this.props.deleteBootstrap(note.id)}} >DELETE</button>
+                        <Button basic color='orange' onClick={()=> {this.props.deleteBootstrap(note.id)}} >DELETE</Button>
 
-                        <button type="button"
+                        <Button basic color='teal'  type="button"
                         className="btn btn-info"
                         onClick={() => {
                             this.props.history.push(`/bootstrap/${note.id}/edit`);
                         }}>
                         Edit
-                        </button>
-                </div>
+                        </Button>
+                </Card>
                 )
            }
                 </section>
