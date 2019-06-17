@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Card, Icon, Image, Button } from 'semantic-ui-react'
-
 import "./React.css"
-
 class ReactList extends Component {
     handleClick = (event)=> {
         console.log("its working", this.props.react.id)
@@ -24,8 +22,8 @@ class ReactList extends Component {
                                 <h3>{note.title}</h3>
                                 </Card.Content>
                             <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br/>
-                        <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}} >DELETE</Button>
-
+                        <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}} >DELETE </Button>
+                        {/* <Icon color='black' name='user' /> */}
                         <Button basic color='teal' type="button"
                         className="btn btn-info"
                         onClick={() => {
@@ -44,3 +42,4 @@ class ReactList extends Component {
 }
 
 export default ReactList;
+
