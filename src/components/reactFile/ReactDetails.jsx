@@ -12,10 +12,10 @@ class ReactDetails extends Component {
             <section className="notes">
             <div key={this.props.react.id} className="card">
                 <div className="card-body">
+                        <Embed id={this.props.react.URL} placeholder= {react} source='youtube' />
                     <h2 className="card-title">
                         {this.props.react.title }
                         </h2>
-                        <Embed id={this.props.react.URL} placeholder= {react} source='youtube' />
                             <p className= "snippet">{this.props.react.snippet}</p>
                             <p>{this.props.react.notes}</p>
                     {/* <h6 className="card-title">{ this.props.react.snippet }</h6> */}

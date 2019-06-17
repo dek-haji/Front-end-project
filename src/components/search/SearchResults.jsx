@@ -11,10 +11,17 @@ class SearchResults extends Component {
             <Card key={result.id}>
             <Card.Content>
                     <h3>{result.title}</h3>
-                    </Card.Content>
-                <Link className="nav-link" to={`/react/${result.id}`}>Details</Link> <br/>
+                </Card.Content>
+                {this.props.noteTypes.filter(note => {
+                  if (note.id === result.noteTypeId) {
+                    return true
+                  } else {
+                    return false
+                  }
+                }).map(noteType =>
+                  <Link className="nav-link" key= {result.id} to={`/${noteType.name}/${result.id}`}>Details</Link>
+                 ) }
             {/* <Button basic color='orange' onClick={()=> {this.props.deleteReact(result.id)}} >DELETE</Button>
-        
             <Button basic color='teal' type="button"
             className="btn btn-info"
             onClick={() => {
@@ -25,6 +32,7 @@ class SearchResults extends Component {
         </Card>
         )
         }
+
         </section>
     );
   }

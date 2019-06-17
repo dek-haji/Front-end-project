@@ -122,7 +122,7 @@ export default class JsForm extends Component {
               ))}
             </select>
           </div>
-          <Button variant="outlined" color="primary" size="large"
+          <Button variant="outlined" color="facebook" size="large"
             type="submit"
             onClick={this.constructNewEvent}
             className="btn btn-primary"

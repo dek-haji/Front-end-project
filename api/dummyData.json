@@ -20,14 +20,6 @@
   ],
   "notes": [
     {
-      "title": "js test new new",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "sfdgsfds",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 1,
-      "id": 40
-    },
-    {
       "title": "bootsss baby",
       "URL": "d0eUMnJ5kTA",
       "snippet": "another snippet",
@@ -65,14 +57,6 @@
       "URL": "d0eUMnJ5kTA",
       "snippet": "switch (new Date().getDay()) {      // input is current day     case 6:                         // if (day == 6)         text = \"Saturday\";                   break;     case 0:                         // if (day == 0)         text = \"Sunday\";         break;     default:                        // else...         text = \"Whatever\"; } ",
       "notes": "yeah i think its another snippetwww",
-      "noteTypeId": 2
-    },
-    {
-      "id": 62,
-      "title": "yoooow this is react",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "switch (new Date().getDay()) {      // input is current day     case 6:                         // if (day == 6)         text = \"Saturday\";                   break;     case 0:                         // if (day == 0)         text = \"Sunday\";         break;     default:                        // else...         text = \"Whatever\"; } ",
-      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
       "noteTypeId": 2
     },
     {
@@ -116,41 +100,33 @@
       "id": 67
     },
     {
+      "id": 68,
       "title": "yoooow",
       "URL": "",
-      "snippet": "",
-      "note": "",
-      "noteTypeId": 1,
-      "id": 68
+      "snippet": "yeah yeah   jjjj",
+      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
+      "noteTypeId": 1
     },
     {
-      "title": "js js js js man",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "",
-      "note": "",
-      "noteTypeId": 2,
-      "id": 69
+      "id": 72,
+      "title": "react",
+      "URL": "",
+      "snippet": "import React from 'react';  function MyComponent(props) {   /* ... */ }",
+      "notes": "this is test",
+      "noteTypeId": 2
     },
     {
-      "title": "yoooow",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "",
-      "note": "",
-      "noteTypeId": 2,
-      "id": 70
-    },
-    {
-      "title": "HEY THIS IS JAVASCRIPT NOT JAVA",
+      "title": "for in Loop",
       "URL": "d0eUMnJ5kTA",
       "snippet": "another snippet",
-      "note": "HAHSAKJHDKJASHFLAF LDFSLDAFKJ AKLSDJFHASDL;KF KJDHFLASDKJFASD DKJFHASDLKJFASD FKDJFHA;SDFKHJ",
+      "note": "fdsjhflkdfg sldkjg;slg slkdjfh;asdklgfa aklsjfa;sdlfa",
       "noteTypeId": 1,
-      "id": 71
+      "id": 73
     }
   ],
   "noteTypes": [
     {
-      "name": "javascript",
+      "name": "notes",
       "id": 1
     },
     {

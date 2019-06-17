@@ -27,6 +27,7 @@ class ApplicationViews extends Component {
         react: [],
         bootstrap: [],
         others: [],
+        allNotes: [],
         sessionId: sessionStorage.getItem("userId")
     }
     componentDidMount() {
@@ -42,8 +43,8 @@ class ApplicationViews extends Component {
                 .then((console.log(this.state.noteTypes)))
                 .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
                 .then(users => (newState.users = users))
-                // .then(() => fetch("http://localhost:5002/notes?noteTypeId=1").then(r => r.json()))
-                // .then(notes => (newState.notes = notes))
+                .then(() => fetch("http://localhost:5002/notes").then(r => r.json()))
+                .then(allNotes => (newState.allNotes = allNotes))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
                 .then(react => (newState.react = react))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
@@ -77,7 +78,6 @@ class ApplicationViews extends Component {
         users: Allusers             //added this three line of codes today to set the new user.
     }))
     updateComponent = () => {
-                        
         dbCalls.getUsers().then(allUsers => {
             this.setState({ users: allUsers });
             console.log(allUsers)
@@ -293,7 +293,10 @@ class ApplicationViews extends Component {
           path="/search"
                     render={props => {
                         if (this.isAuthenticated()) {
-            return (<SearchResults searchResults={this.props.searchResults}/>
+                            return (<SearchResults {...props}
+                                searchResults={this.props.searchResults} 
+                                noteTypes={this.state.noteTypes}/>
+                                
             )
             } else {
                         return <Redirect to="/login" />
