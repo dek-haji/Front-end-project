@@ -52,7 +52,7 @@ export default class Registration extends Component {
 
             this.props.addUser(user).then(response => {
                 console.log(response)
-                this.props.history.push("/articles")
+                this.props.history.push("/")
             })
     }
 

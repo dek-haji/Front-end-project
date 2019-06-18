@@ -19,7 +19,7 @@ class JsDetails extends Component {
                             <p className = "snippet">{this.props.note.snippet}</p>
                             <pre>{this.props.note.note}</pre>
                     {/* <h6 className="card-title">{ this.props.note.snippet }</h6> */}
-                    <Button onClick={
+                    {/* <Button onClick={
                             () => {
                                 this.setState(
                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,
@@ -28,7 +28,7 @@ class JsDetails extends Component {
                             }
                         }
                         disabled={ this.state.saveDisabled }
-                        className="card-link">Delete</Button>
+                        className="card-link">Delete</Button> */}
                 </div>
             </div>
         </section>

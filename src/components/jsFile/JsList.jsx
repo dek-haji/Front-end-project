@@ -14,8 +14,8 @@ class JsList extends Component {
         // console.log('this is the props in notes List',this.props)
         return (
             <>
-            <section className="Js-notes">
                     <h1>JS notes</h1>
+            <section className="Js-notes">
                 {
                     this.props.notes.map(note=>
                     <Card key={note.id}>

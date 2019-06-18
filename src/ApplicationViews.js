@@ -184,7 +184,7 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route exact path="/notes/:noteId(\d+)" render={(props) => {
+                <Route exact path="/notes/:(\d+)" render={(props) => {
                     // Find the notes with the id of the route parameter
                     let note = this.state.notes.find(note =>
                         note.id === parseInt(props.match.params.noteId)

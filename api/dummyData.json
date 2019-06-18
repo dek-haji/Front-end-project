@@ -16,6 +16,16 @@
       "name": "deek",
       "email": "deeeqhaji@gmail.com",
       "id": 5
+    },
+    {
+      "name": "deeq",
+      "email": "deeeqhaji@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Haji",
+      "email": "haji@email.com",
+      "id": 7
     }
   ],
   "notes": [
@@ -67,12 +77,12 @@
       "noteTypeId": 2
     },
     {
+      "id": 75,
       "title": "yoooow",
       "URL": "d0eUMnJ5kTA",
       "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
-      "note": "adaDfadf",
-      "noteTypeId": 2,
-      "id": 75
+      "notes": "adaDfadf",
+      "noteTypeId": 2
     },
     {
       "title": "constructor",
@@ -87,7 +97,7 @@
       "title": "render",
       "URL": "",
       "snippet": "render() {   return <div />; }",
-      "notes": "this is how render in react works.",
+      "notes": "tretert etetyeter etetertetwertre",
       "noteTypeId": 2
     },
     {
@@ -129,11 +139,123 @@
       "note": "dafdf afsdf fasdfa sfasf asdf",
       "noteTypeId": 1,
       "id": 85
+    },
+    {
+      "title": "4r34r4r",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "another snippet",
+      "note": "43r34r34",
+      "noteTypeId": 3,
+      "id": 86
+    },
+    {
+      "title": "r34r34r34",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "34r34r43r43r34",
+      "note": "34r43r43r43r34r34r34",
+      "noteTypeId": 3,
+      "id": 87
+    },
+    {
+      "title": "34r43r34r34r",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "34r34r43r43r43r",
+      "note": "34r43r43r43r34r34r43r34",
+      "noteTypeId": 3,
+      "id": 88
+    },
+    {
+      "title": "4r34r43r43r34",
+      "URL": "Mtb-Q9N3GRY",
+      "snippet": "34r3r34r34r34r43 34r34r433",
+      "note": "4r43rt34 34rnlwkrow wrh owerhwo rwrh weurhwrhwkerwrehuworwoeurwoir wirweoriu",
+      "noteTypeId": 3,
+      "id": 89
+    },
+    {
+      "title": "rfwr.flwrfwrj wlr wrweklrjlwe",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "werfrefree",
+      "note": "rfwref wnf wef q wfh . ewhkjefhlaksdfaldsf sf dlsfhsdlkfhds dfasdj fdf alsdfskdk fsdfh sdfalsd fdsf adshf",
+      "noteTypeId": 3,
+      "id": 90
+    },
+    {
+      "title": "adsfasdfads",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "adsfasdfasd sdfasdfadsf asdfds dsfasdfsd sdfadsf dsfdasfa",
+      "note": "afadsfdsf adfddsfasdf",
+      "noteTypeId": 3,
+      "id": 91
+    },
+    {
+      "title": "react baby",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": ",mweflwefnwlef wnflwekfj lkfw;lfjqew;l qkfqwl;efkwe wf;wlefwe; kfjw;lfjsd;lf sldkajfasdfas afkj;sdfjads sdkfjadslkf",
+      "note": "fnjsdkfjasd;lkf sadfas;dlkfna asdfknas;dklfasd sdafna;sdfads sdkfnads;kfnads asdknfa;sdnfas asdklfn;daslfndsa",
+      "noteTypeId": 2,
+      "id": 92
+    },
+    {
+      "title": "yoooow",
+      "URL": "Mtb-Q9N3GRY",
+      "snippet": "klasjdf;lkds;f asdfna;dskfla ask;dfads;lkf fasdfna;dslkf aks;dfas;dlfks sdfas;dkfnasd",
+      "note": "dsfnasdnfasd, sdfnas;dlkf asdknfasd;f laskdfadslkfas dsnf;asdnfads sdjnfa;dsnfasd",
+      "noteTypeId": 2,
+      "id": 93
+    },
+    {
+      "title": "normal",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "fdsfsdf sdfnsdlkf sdfkasd;f asdfskdf asdfa;sdkf adsfads;lkfas;df dsafn;sdfsd sdfkna;sdf",
+      "note": "asldfa;sdlfk asdfn;asdf sdfnsd;fnasd fsadfn;sdlkfsad fsadfna;sd fasdf daskfjnasd;kfj asdfas;dknfsad;fnas asdfn;dsanfasd;fnsd sdfn;asdnfsda; d;jnas;df;sdlf",
+      "noteTypeId": 2,
+      "id": 94
+    },
+    {
+      "title": "asdfn;sdfma;sdlfas",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "asdfasdfsa",
+      "note": "asdf,asdfnads, as,mdf;asdf d;asdlkfn;alsdkf asdfklasdnf;adlskf asdfadsfn;asldkfas as;dkfasdlnfasd fasd,fns;adlknfasd f",
+      "noteTypeId": 2,
+      "id": 95
+    },
+    {
+      "title": "a,msdfnasdf",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "sdafsadf asdfasdfa",
+      "note": "fsdafna;dsfnsd sd,fndsa;,mf d sfds,nfs;adkfnsd sadfnsa;dkfns as;dkfnasd;lkfnsa sdnf;asdlkfn",
+      "noteTypeId": 2,
+      "id": 96
+    },
+    {
+      "title": "anfsm,fas",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": ",ams f.sdfasd.,f dfnas;dfnas;d dsf;asdfnasd; asd;kfasdklfmasd sdlkfas;dlfnksdafadsmf",
+      "note": "sldknf;asdf ;asdklfnasdlkf ;skdlfanas;dfn ,dsnfs;dnf dsnfa;dsnfds sdnfladsnfksd sdnfs;dlnfsd sdnf;sdlnf ;asdnfsdnf a,smdnf;sdanfas",
+      "noteTypeId": 2,
+      "id": 97
+    },
+    {
+      "title": "react 123",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
+      "note": "ddsadsds",
+      "noteTypeId": 2,
+      "id": 98
+    },
+    {
+      "title": "react test test test test test tt",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "import React, { Component } from 'react'; import { Embed } from 'semantic-ui-react' import \"./React.css\" import react from \"./react.png\" import Highlight from 'react-highlight' class ReactDetails extends Component {     state = {         saveDisabled: false //initail state of the button before it clicks     }      render() {         return (              <section className=\"notes\">               <div key={this.props.react.id} className=\"card\">                 <div className=\"card-body\">                         <Embed id={this.props.react.URL} placeholder= {react} source='youtube' />                     <h2 className=\"card-title\">                         {this.props.react.title }                         </h2>                         <Highlight language={\"javascript\"}>{this.props.react.snippet}</Highlight>                             <pre>{this.props.react.note}</pre>                     {/* <h6 className=\"card-title\">{ this.props.react.snippet }</h6> */}                     {/* <button onClick={                             () => {                                 this.setState(                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,                                     () => this.props.deleteReact(this.props.react.id)                                 )                             }                         }                         disabled={ this.state.saveDisabled }                         className=\"card-link\">Delete</button> */}                 </div>             </div>         </section>         );     } }  export default ReactDetails;",
+      "note": "yeah so this is a test so lets see.",
+      "noteTypeId": 2,
+      "id": 99
     }
   ],
   "noteTypes": [
     {
-      "name": "Javascript",
+      "name": "Notes",
       "id": 1
     },
     {

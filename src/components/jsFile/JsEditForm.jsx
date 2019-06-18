@@ -12,13 +12,11 @@ class JsEditForm extends Component {
         notes: "",
       noteTypeId: "",
      }
-    
      handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
      }
-    
     updateNewEvent = e => {
         e.preventDefault();
         // let userId = sessionStorage.getItem('userId')
@@ -58,7 +56,6 @@ class JsEditForm extends Component {
         stateToChange[event.target.id] = event.target.value.split("v=")[1].split("&list=")[0]
         console.log(stateToChange)
         this.setState(stateToChange);
-    
     }
     render() {
         return (

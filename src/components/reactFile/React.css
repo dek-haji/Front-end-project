@@ -33,6 +33,7 @@ pre{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    
 
 }
 .card-body{
@@ -47,4 +48,17 @@ pre{
     color: white;
     background-color: black
 
+}
+h1{
+   color: #3b5998 ;
+   text-align: center;
+}
+.uunsi{
+    color: black;
+    /* background-color: lightgray; */
+    position: sticky;
+}
+.react-snippet{
+    width: 400px;
+    height: 400px;
 }
