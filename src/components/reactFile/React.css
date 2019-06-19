@@ -20,8 +20,8 @@ pre{
     display: block;
     font-family: monospace;
     border: 1px solid grey;
-    /* width: 462px;
-    height: 500px; */
+     width: 600px;
+    /* height: 500px;  */
     padding: 20px;
      margin: 1px;
      white-space: pre-wrap;
@@ -47,7 +47,7 @@ h1{
    text-align: center;
 }
 .react-snippet{
-    /* width: 500px; */
+    width: 600px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: wrap;

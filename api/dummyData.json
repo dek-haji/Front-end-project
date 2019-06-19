@@ -74,14 +74,6 @@
       "noteTypeId": 2
     },
     {
-      "id": 75,
-      "title": "yoooow",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
-      "notes": "adaDfadf",
-      "noteTypeId": 2
-    },
-    {
       "title": "constructor",
       "URL": "3b07XMGs0hM",
       "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
