@@ -26,6 +26,11 @@
       "name": "Haji",
       "email": "haji@email.com",
       "id": 7
+    },
+    {
+      "name": "dek.haji",
+      "email": "deeeqhaji@gmail.com",
+      "id": 8
     }
   ],
   "notes": [
@@ -46,27 +51,19 @@
       "id": 45
     },
     {
-      "id": 63,
-      "title": "functions",
-      "URL": "AY6X5jZZ_JE",
-      "snippet": "function addNumbers(a, b) {     return a + b; ; } x = addNumbers(1, 2);",
+      "id": 64,
+      "title": "for in Loops",
+      "URL": "s9wW2PpJsmQ",
+      "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); } var sum = 0; for (var i = 0; i < a.length; i++) {     sum + = a[i]; }               // parsing an array html = \"\"; for (var i of custOrder) {     html += \"<li>\" + i + \"</li>\"; }",
       "noteTypeId": 1
     },
     {
-      "title": "Loops",
-      "URL": "s9wW2PpJsmQ",
-      "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); } var sum = 0; for (var i = 0; i < a.length; i++) {     sum + = a[i]; }               // parsing an array html = \"\"; for (var i of custOrder) {     html += \"<li>\" + i + \"</li>\"; }",
-      "note": "so this is for loop example but loops have soo many other kinds of stuff. and a variety of loops in general.",
-      "noteTypeId": 1,
-      "id": 64
-    },
-    {
-      "title": "for in Loop",
+      "id": 73,
+      "title": "for in Loopssss",
       "URL": "d0eUMnJ5kTA",
       "snippet": "another snippet",
-      "note": "fdsjhflkdfg sldkjg;slg slkdjfh;asdklgfa aklsjfa;sdlfa",
-      "noteTypeId": 1,
-      "id": 73
+      "notes": "fdsjhflkdfg sldkjg;slg slkdjfh;asdklgfa aklsjfa;sdlfa",
+      "noteTypeId": 1
     },
     {
       "id": 74,
@@ -131,14 +128,6 @@
       "note": "ertrewt",
       "noteTypeId": 2,
       "id": 84
-    },
-    {
-      "title": "javascript",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "dafdf afsdf fasdfa sfasf asdf",
-      "noteTypeId": 1,
-      "id": 85
     },
     {
       "title": "4r34r4r",
@@ -251,11 +240,27 @@
       "note": "yeah so this is a test so lets see.",
       "noteTypeId": 2,
       "id": 99
+    },
+    {
+      "title": "React Array",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "function DataList({ isOrdered, data }) {   const list = data.map((val, i) => <li key={`${i}_${val}`}>{val}</li>);   return isOrdered ? <ol>{list}</ol> : <ul>{list}</ul>; }",
+      "note": "Use the value of the isOrdered prop to conditionally render a <ol> or <ul> list.\nUse Array.prototype.map to render every item in data as a <li> element, give it a key produced from the concatenation of the its index and value.\nOmit the isOrdered prop to render a <ul> list by default.",
+      "noteTypeId": 2,
+      "id": 100
+    },
+    {
+      "title": "React lovers",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "function DataList({ isOrdered, data }) {   const list = data.map((val, i) => <li key={`${i}_${val}`}>{val}</li>);   return isOrdered ? <ol>{list}</ol> : <ul>{list}</ul>; }",
+      "note": "joe",
+      "noteTypeId": 2,
+      "id": 101
     }
   ],
   "noteTypes": [
     {
-      "name": "Notes",
+      "name": "notes",
       "id": 1
     },
     {

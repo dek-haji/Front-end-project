@@ -8,10 +8,11 @@ class ReactList extends Component {
         console.log(event)
         this.props.deleteReact(this.props.react.id)
     }
-    render() {
+    render()
+    {
+        const currentUser = sessionStorage.getItem('username')
         return (
-            <div className = "uunsi">
-
+            <>
                     <h1>React notes</h1>
             <section className="react-notes">
                 {
@@ -21,8 +22,9 @@ class ReactList extends Component {
                         <i className="right floated like icon"></i>
                                 <h3>{note.title}</h3>
                                 </Card.Content>
-                            <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br/>
-                        <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}}> <i className="delete icon"></i> </Button>
+                            <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br />
+                            <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}}> <i className="delete icon"></i> </Button>  
+
                         <Button basic color='teal' type="button"
                         className="btn btn-info"
                         onClick={() => {
@@ -35,7 +37,7 @@ class ReactList extends Component {
                 )
                     }
                     </section>
-                </div>
+                </>
         );
     }
 }

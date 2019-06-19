@@ -1,4 +1,4 @@
-.notes {
+/* .notes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,7 +13,7 @@
 .JsForm{
     width: 500px;
     height: 700px;
-    /* border: 1px solid grey */
+    border: 1px solid grey 
     justify-items: center
 }
 pre{
@@ -26,7 +26,7 @@ pre{
      margin: 1px;
      white-space: pre-wrap;
      color: white;
-     /* background-color: grey */
+      background-color: grey 
 }
 
 .Js-notes{
@@ -52,4 +52,4 @@ pre{
 }
 .form-control{
     background-color: lightgray
-}
+} */

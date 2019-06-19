@@ -8,18 +8,20 @@
 
 }
 .card-body{
-    width: 500px;
-}
+    width: 600px;
+    height: 500px;
+   
+ }
 .JsForm{
     width: 500px;
     height: 700px;
-}
+}  
 pre{
     display: block;
     font-family: monospace;
     border: 1px solid grey;
-    width: 462px;
-    height: 100px;
+    /* width: 462px;
+    height: 500px; */
     padding: 20px;
      margin: 1px;
      white-space: pre-wrap;
@@ -32,33 +34,25 @@ pre{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
     
 
 }
 .card-body{
-    width: 500px;
-    border: 1px solid lightgray
+    width: 100%;
+    border: 1px solid lightgray;
 }
-.snippet{
- display: block;
-    font-family: monospace;
-    white-space: pre-wrap;
-    margin: 1em 1;
-    color: white;
-    background-color: black
 
-}
 h1{
    color: #3b5998 ;
    text-align: center;
 }
-.uunsi{
-    color: black;
-    /* background-color: lightgray; */
-    position: sticky;
-}
 .react-snippet{
-    width: 400px;
-    height: 400px;
-}
+    /* width: 500px; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+    padding: 10px;
+    overflow: auto;
+    position: relative
+} 
+ 

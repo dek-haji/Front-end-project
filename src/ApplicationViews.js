@@ -49,8 +49,8 @@ class ApplicationViews extends Component {
                 .then(react => (newState.react = react))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
                 .then(bootstrap => (newState.bootstrap = bootstrap))
-                .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
-                .then(others => (newState.others = others))
+                .then(() => fetch("http://localhost:5002/users").then(r => r.json()))
+                .then(users => (newState.users = users))
                 .then(() => this.setState(newState))
     }
     
@@ -184,7 +184,7 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route exact path="/notes/:(\d+)" render={(props) => {
+                <Route exact path="/notes/:noteId(\d+)" render={(props) => {
                     // Find the notes with the id of the route parameter
                     let note = this.state.notes.find(note =>
                         note.id === parseInt(props.match.params.noteId)
@@ -246,6 +246,7 @@ class ApplicationViews extends Component {
                                notes={this.state.notes}
                                 deleteReact={this.deleteReact}
                                updateReact={this.updateReact}
+                               users={this.state.users}
                             />
                         )
                     } else {
