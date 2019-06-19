@@ -36,7 +36,7 @@ export default class JsForm extends Component {
      */
     constructNewEvent = e => {
         e.preventDefault();
-        // let userId = sessionStorage.getItem('userId')
+         let userId = sessionStorage.getItem('userId')
         if (this.state.noteTypes === "") {
             window.alert("Please select technology")
         } else {
@@ -45,8 +45,8 @@ export default class JsForm extends Component {
                 URL: this.state.jsURL,
                 snippet: this.state.jsSnippet,
                 note: this.state.jsNotes,
-                noteTypeId: parseInt(this.state.noteTypeId)
-                // userId: parseInt(userId)
+                noteTypeId: parseInt(this.state.noteTypeId),
+                userId: parseInt(userId)
             };
 
             // Create the article and redirect user to article list
