@@ -15,6 +15,7 @@ import BootstrapEditForm from "./components/bootstrapFile/BootstrapEditForm";
 import SearchResults from "./components/search/SearchResults"
 import Login from "./components/Auth/Login"
 import Registration from "./components/Auth/Registration"
+import OtherList from "./components/othersCard/OtherList"
 const remoteURL = "http://localhost:5002";
 const usersURL = `${remoteURL}/users`
 
@@ -49,6 +50,8 @@ class ApplicationViews extends Component {
                 .then(react => (newState.react = react))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
                 .then(bootstrap => (newState.bootstrap = bootstrap))
+                .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+                .then(others => (newState.others = others))
                 .then(() => fetch("http://localhost:5002/users").then(r => r.json()))
                 .then(users => (newState.users = users))
                 .then(() => this.setState(newState))
@@ -89,6 +92,15 @@ class ApplicationViews extends Component {
             .delete(id, `${remoteURL}/notes`)
             .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
             .then(notes => (newState.notes = notes))
+            .then(() => this.setState(newState));
+        };
+
+        deleteOthers = id => {
+            const newState = {};
+            dbCalls
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+            .then(others => (newState.others = others))
             .then(() => this.setState(newState));
         };
         deleteReact = id => {
@@ -142,6 +154,7 @@ class ApplicationViews extends Component {
         console.log("react state", this.state.react)
         console.log("bootstrap state", this.state.bootstrap)
         console.log("javascript state",this.state.notes)
+        console.log("others", this.state.others)
         return (
             <React.Fragment>
                   <Route exact path="/login" render={(props) => {
@@ -288,6 +301,22 @@ class ApplicationViews extends Component {
                     return <BootstrapDetails
                         bootstrap={bootstrap}
                       />
+                }} />
+
+<Route exact path="/others" render={(props) => {
+                    if (this.isAuthenticated()) {
+                           return (  <OtherList
+                                {...props}
+                                deleteOthers={this.deleteOthers}
+                               updateReact={this.updateReact}
+                               users={this.state.users}
+                               others={this.state.others}
+                               notes={this.state.notes}
+                            />
+                        )
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
 
 <Route

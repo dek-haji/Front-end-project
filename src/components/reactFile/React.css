@@ -15,7 +15,7 @@
 .JsForm{
     width: 500px;
     height: 700px;
-}  
+}
 pre{
     display: block;
     font-family: monospace;
@@ -34,7 +34,6 @@ pre{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 
 }
 .card-body{
