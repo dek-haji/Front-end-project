@@ -16,6 +16,7 @@ import SearchResults from "./components/search/SearchResults"
 import Login from "./components/Auth/Login"
 import Registration from "./components/Auth/Registration"
 import OtherList from "./components/othersCard/OtherList"
+import OtherDetails from "./components/othersCard/OtherDetails"
 const remoteURL = "http://localhost:5002";
 const usersURL = `${remoteURL}/users`
 
@@ -233,6 +234,21 @@ class ApplicationViews extends Component {
 
                     return <ReactDetails
                         react={react}
+                      />
+                }} />
+
+<Route exact path="/others/:othersId(\d+)" render={(props) => {
+                    // Find the others with the id of the route parameter
+                    let others = this.state.others.find(reacct =>
+                        reacct.id === parseInt(props.match.params.othersId)
+                        )
+                    // If the note wasn't found, create a default one
+                    if (!others){
+                        others = { id: 505, title: "505"}
+                    }
+
+                    return <OtherDetails
+                        others={others}
                       />
                 }} />
 
