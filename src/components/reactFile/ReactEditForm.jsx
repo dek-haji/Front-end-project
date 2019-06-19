@@ -13,13 +13,13 @@ class ReactEditForm extends Component {
         notes: "",
       noteTypeId: "",
      }
-    
+
      handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
      }
-    
+
     updateNewEvent = e => {
         e.preventDefault();
         // let userId = sessionStorage.getItem('userId')

@@ -17,6 +17,8 @@ import Login from "./components/Auth/Login"
 import Registration from "./components/Auth/Registration"
 import OtherList from "./components/othersCard/OtherList"
 import OtherDetails from "./components/othersCard/OtherDetails"
+import OtherEditForm from "./components/othersCard/OtherEditForm"
+
 const remoteURL = "http://localhost:5002";
 const usersURL = `${remoteURL}/users`
 
@@ -127,6 +129,17 @@ class ApplicationViews extends Component {
                     this.props.history.push("/notes")
                     this.setState({
                 notes: notes
+              })
+            });
+        };
+    
+        updateOthers = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+                .then(others => {
+                    this.props.history.push("/others")
+                    this.setState({
+                others: others
               })
             });
         };
@@ -301,6 +314,14 @@ class ApplicationViews extends Component {
                         return <BootstrapEditForm {...props}
                             notes={this.state.notes}
                             updateBootstrap={this.updateBootstrap}
+                            noteTypes={this.state.noteTypes}/>
+                    }} />
+
+<Route
+                    exact path="/others/:othersId(\d+)/edit" render={props => {
+                        return <OtherEditForm {...props}
+                            notes={this.state.notes}
+                            updateOthers={this.updateOthers}
                             noteTypes={this.state.noteTypes}/>
                     }} />
 
