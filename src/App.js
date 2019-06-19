@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews"
 import dbCalls from "./modules/dbCalls"
+import Footer from "./components/footer/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -25,6 +26,7 @@ class App extends Component {
                     searchResults={this.state.searchResults}
                         />
                 <ApplicationViews searchResults={this.state.searchResults}/>
+                <Footer />
             </React.Fragment>
         )
     }

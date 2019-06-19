@@ -5,11 +5,18 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+
+
+    <link href="scripts/highlightjs/styles/github-gist.css" rel="stylesheet" />
+    <script src="scripts/highlightjs/highlight.pack.js"></script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/railscasts.css" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,6 +31,18 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+
+    <script>
+      function highlightCode() {
+          var pres = document.querySelectorAll("pre>code");
+          for (var i = 0; i < pres.length; i++) {
+              hljs.highlightBlock(pres[i]);
+          }
+      }
+      highlightCode();
+      </script>
+      
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

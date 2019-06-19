@@ -14,8 +14,8 @@ class BootstrapList extends Component {
         // console.log('this is the props in notes List',this.props)
         return (
             <>
-            <section className="boots">
                     <h1>Bootstrap notes</h1>
+            <section className="boots">
                 {
                     this.props.bootstrap.map(note=>
                     <Card key={note.id}>

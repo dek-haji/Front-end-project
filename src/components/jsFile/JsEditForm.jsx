@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
-
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 class JsEditForm extends Component {
      // Set initial state
      state = {
@@ -12,13 +12,11 @@ class JsEditForm extends Component {
         notes: "",
       noteTypeId: "",
      }
-    
      handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
      }
-    
     updateNewEvent = e => {
         e.preventDefault();
         // let userId = sessionStorage.getItem('userId')
@@ -58,7 +56,6 @@ class JsEditForm extends Component {
         stateToChange[event.target.id] = event.target.value.split("v=")[1].split("&list=")[0]
         console.log(stateToChange)
         this.setState(stateToChange);
-    
     }
     render() {
         return (
@@ -122,13 +119,13 @@ class JsEditForm extends Component {
                     ))}
                   </select>
                 </div>
-                <button variant="outlined" color="primary" size="large"
+                <Button variant="outlined" color="facebook" size="large"
                   type="submit"
                   onClick={this.updateNewEvent}
                   className="btn btn-primary"
                 >
                   edit
-                </button>
+                </Button>
               </form>
             </React.Fragment>
           );

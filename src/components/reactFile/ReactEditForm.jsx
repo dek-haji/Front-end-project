@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
 class ReactEditForm extends Component {
      // Set initial state
@@ -123,13 +124,13 @@ class ReactEditForm extends Component {
                     ))}
                   </select>
                 </div>
-                <button variant="outlined" color="primary" size="large"
+                <Button variant="outlined" color="primary" size="large"
                   type="submit"
                   onClick={this.updateNewEvent}
                   className="btn btn-primary"
                 >
                   update
-                </button>
+                </Button>
               </form>
             </React.Fragment>
           );
