@@ -27,7 +27,7 @@ class ReactEditForm extends Component {
             window.alert("Please select technology")
         } else {
             const editedObj = {
-                id: this.props.match.params.reactId,
+                id: this.props.match.params.othersId,
                 title: this.state.title,
                 URL: this.state.URL,
                 snippet: this.state.snippet,
@@ -37,11 +37,11 @@ class ReactEditForm extends Component {
             };
 
             // Create the article and redirect user to article list
-            this.props.updateReact(editedObj)
+            this.props.updateOthers(editedObj)
         }
     };
     componentDidMount() {
-        dbCalls.get("http://localhost:5002/notes",this.props.match.params.reactId)
+        dbCalls.get("http://localhost:5002/notes",this.props.match.params.othersId)
         .then(note => {
             this.setState({
             title: note.title,
@@ -60,7 +60,7 @@ class ReactEditForm extends Component {
         stateToChange[event.target.id] = event.target.value.split("v=")[1].split("&list=")[0]
         console.log(stateToChange)
         this.setState(stateToChange);
-    
+
     }
     render() {
         return (

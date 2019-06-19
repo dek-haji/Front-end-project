@@ -15,6 +15,10 @@ import BootstrapEditForm from "./components/bootstrapFile/BootstrapEditForm";
 import SearchResults from "./components/search/SearchResults"
 import Login from "./components/Auth/Login"
 import Registration from "./components/Auth/Registration"
+import OtherList from "./components/othersCard/OtherList"
+import OtherDetails from "./components/othersCard/OtherDetails"
+import OtherEditForm from "./components/othersCard/OtherEditForm"
+
 const remoteURL = "http://localhost:5002";
 const usersURL = `${remoteURL}/users`
 
@@ -49,6 +53,8 @@ class ApplicationViews extends Component {
                 .then(react => (newState.react = react))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
                 .then(bootstrap => (newState.bootstrap = bootstrap))
+                .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+                .then(others => (newState.others = others))
                 .then(() => fetch("http://localhost:5002/users").then(r => r.json()))
                 .then(users => (newState.users = users))
                 .then(() => this.setState(newState))
@@ -91,6 +97,15 @@ class ApplicationViews extends Component {
             .then(notes => (newState.notes = notes))
             .then(() => this.setState(newState));
         };
+
+        deleteOthers = id => {
+            const newState = {};
+            dbCalls
+            .delete(id, `${remoteURL}/notes`)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+            .then(others => (newState.others = others))
+            .then(() => this.setState(newState));
+        };
         deleteReact = id => {
             const newState = {};
             dbCalls
@@ -114,6 +129,17 @@ class ApplicationViews extends Component {
                     this.props.history.push("/notes")
                     this.setState({
                 notes: notes
+              })
+            });
+        };
+    
+        updateOthers = (editedNotesObject) => {
+            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+                .then(others => {
+                    this.props.history.push("/others")
+                    this.setState({
+                others: others
               })
             });
         };
@@ -142,6 +168,7 @@ class ApplicationViews extends Component {
         console.log("react state", this.state.react)
         console.log("bootstrap state", this.state.bootstrap)
         console.log("javascript state",this.state.notes)
+        console.log("others", this.state.others)
         return (
             <React.Fragment>
                   <Route exact path="/login" render={(props) => {
@@ -223,6 +250,21 @@ class ApplicationViews extends Component {
                       />
                 }} />
 
+<Route exact path="/others/:othersId(\d+)" render={(props) => {
+                    // Find the others with the id of the route parameter
+                    let others = this.state.others.find(reacct =>
+                        reacct.id === parseInt(props.match.params.othersId)
+                        )
+                    // If the note wasn't found, create a default one
+                    if (!others){
+                        others = { id: 505, title: "505"}
+                    }
+
+                    return <OtherDetails
+                        others={others}
+                      />
+                }} />
+
 <Route
                     exact path="/notes/:noteId(\d+)/edit" render={props => {
                         return <JsEditForm {...props}
@@ -275,6 +317,14 @@ class ApplicationViews extends Component {
                             noteTypes={this.state.noteTypes}/>
                     }} />
 
+<Route
+                    exact path="/others/:othersId(\d+)/edit" render={props => {
+                        return <OtherEditForm {...props}
+                            notes={this.state.notes}
+                            updateOthers={this.updateOthers}
+                            noteTypes={this.state.noteTypes}/>
+                    }} />
+
     <Route exact path="/bootstrap/:bootstrapId(\d+)" render={(props) => {
                     // Find the bootstrap with the id of the route parameter
                     let bootstrap = this.state.bootstrap.find(boots =>
@@ -288,6 +338,22 @@ class ApplicationViews extends Component {
                     return <BootstrapDetails
                         bootstrap={bootstrap}
                       />
+                }} />
+
+<Route exact path="/others" render={(props) => {
+                    if (this.isAuthenticated()) {
+                           return (  <OtherList
+                                {...props}
+                                deleteOthers={this.deleteOthers}
+                               updateReact={this.updateReact}
+                               users={this.state.users}
+                               others={this.state.others}
+                               notes={this.state.notes}
+                            />
+                        )
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
 
 <Route
