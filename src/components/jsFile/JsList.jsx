@@ -18,7 +18,7 @@ class JsList extends Component {
             <section className="Js-notes">
                 {
                     this.props.notes.map(note=>
-                    <Card key={note.id}>
+                    <Card key={note.id} >
                     <Card.Content>
                             <h3>{note.title}</h3>
                             </Card.Content>

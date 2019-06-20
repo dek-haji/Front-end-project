@@ -189,6 +189,23 @@
       "noteTypeId": 1,
       "userId": 9,
       "id": 107
+    },
+    {
+      "id": 108,
+      "title": "java . stuff",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "for loops yeah loops ",
+      "notes": "sfsfgsdgsdfgsfdgsfdgsfdg",
+      "noteTypeId": 1
+    },
+    {
+      "title": "test",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": ".ui.card{     -webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important;  /* background-color: red !important */ }",
+      "note": "eweqweqw",
+      "noteTypeId": 1,
+      "userId": 9,
+      "id": 109
     }
   ],
   "noteTypes": [

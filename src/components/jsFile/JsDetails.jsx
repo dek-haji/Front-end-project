@@ -18,14 +18,14 @@ class JsDetails extends Component {
             <div key={this.props.note.id} className="card">
                 <div className="card-body">
                         <Embed id={this.props.note.URL} placeholder= {js} source='youtube' />
-                    <h2 className="card-title">
+                    <h1 className="card-title">
                         {this.props.note.title }
-                        </h2>
+                        </h1>
                         <Highlight language={"jsx"} className="note-snippet">{this.props.note.snippet}</Highlight>
                         <Modal trigger={<Button>Show Modal</Button>}>
                         <Highlight language={"jsx"} className="note-snippet">{this.props.note.snippet}</Highlight>
                     </Modal>
-                            <p>{this.props.note.notes}</p>
+                            <div className = "notess"><p>{this.props.note.note}</p></div>
 
                 </div>
             </div>

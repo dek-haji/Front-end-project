@@ -1,5 +1,6 @@
 .registerContainer{
-    color:rgb(75, 89, 167);
+    color:white
+    
 }
 
 @media (max-width: 500px) {
@@ -84,7 +85,7 @@
     .signUp{
         padding-top:20px;
         margin-left: 20px;
-        color: rgb(75, 89, 167)
+        color: white
     }
 
     .signUpLink{
@@ -106,10 +107,10 @@
         margin-left: 30px;
     }
     .registerContainer{
-        background-color: white
+        
     }
     h2{
-        color: rgb(75, 89, 167)
+        color: white
     }
     /* .header{
         font-family: Luminari, fantasy

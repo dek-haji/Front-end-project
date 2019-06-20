@@ -60,9 +60,9 @@ export default class JsForm extends Component {
 
     return (
       <React.Fragment >
-      <h2>Start Your Note Taking</h2>
+      <h1>Start Your Note Taking</h1>
         <form className="JsForm">
-          <div className="form-group">
+          <div className="form-group1">
             <label htmlFor="jsTitle">Title:</label>
             <input
               type="text"
