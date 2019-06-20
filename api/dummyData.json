@@ -28,184 +28,20 @@
   ],
   "notes": [
     {
-      "title": "new boosttrap man",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
-      "noteTypeId": 3,
-      "id": 45
-    },
-    {
-      "id": 64,
-      "title": "for in Loops",
-      "URL": "s9wW2PpJsmQ",
-      "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); } var sum = 0; for (var i = 0; i < a.length; i++) {     sum + = a[i]; }               // parsing an array html = \"\"; for (var i of custOrder) {     html += \"<li>\" + i + \"</li>\"; }",
-      "noteTypeId": 3
-    },
-    {
-      "id": 74,
-      "title": "react strap",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "jhaflksehfals safkjhalsdkf adslkfjha;sdlf asfjhasdl fasdfnasdl fasdkljjfha sdflasdkjhfa asljhf;asd fasdfhas dfas;dlfjshf;sda .  skjfdhsad fasdf sdfjha;sd fasd",
-      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
-      "noteTypeId": 2
-    },
-    {
-      "title": "constructor",
-      "URL": "3b07XMGs0hM",
-      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
-      "note": "Text in a pre element\nis displayed in a fixed-width\nfont, and it preserves\nboth      spaces and\nline breaks",
-      "noteTypeId": 2,
-      "id": 79
-    },
-    {
-      "id": 80,
-      "title": "render",
-      "URL": "",
-      "snippet": "render() {   return <div />; }",
-      "notes": "tretert etetyeter etetertetwertre",
-      "noteTypeId": 2
-    },
-    {
-      "title": "componentWillReceiveProps",
-      "URL": "",
-      "snippet": "componentWillReceiveProps(nextProps) {   // invoked every time component recieves new props.   // does not before initial 'render' }",
-      "note": "one green house",
-      "noteTypeId": 2,
-      "id": 81
-    },
-    {
-      "title": "navBar",
-      "URL": "",
-      "snippet": "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">   <a class=\"navbar-brand\" href=\"#\">Navbar</a>   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">     <span class=\"navbar-toggler-icon\"></span>   </button>    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">     <ul class=\"navbar-nav mr-auto\">       <li class=\"nav-item active\">         <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>       </li>       <li class=\"nav-item\">         <a class=\"nav-link\" href=\"#\">Link</a>       </li>       <li class=\"nav-item\">         <a class=\"nav-link disabled\" href=\"#\">Disabled</a>       </li>     </ul>     <form class=\"form-inline my-2 my-lg-0\">       <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">       <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>     </form>   </div> </nav>",
-      "note": "this note is for you to check it",
-      "noteTypeId": 3,
-      "id": 82
-    },
-    {
-      "title": "nav-brand",
-      "URL": "",
-      "snippet": "<nav class=\"navbar navbar-light bg-light\">   <a class=\"navbar-brand\" href=\"#!\">Navbar</a> </nav>",
-      "note": "this is navbar ",
-      "noteTypeId": 3,
-      "id": 83
-    },
-    {
-      "title": "react baby",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": ",mweflwefnwlef wnflwekfj lkfw;lfjqew;l qkfqwl;efkwe wf;wlefwe; kfjw;lfjsd;lf sldkajfasdfas afkj;sdfjads sdkfjadslkf",
-      "note": "fnjsdkfjasd;lkf sadfas;dlkfna asdfknas;dklfasd sdafna;sdfads sdkfnads;kfnads asdknfa;sdnfas asdklfn;daslfndsa",
-      "noteTypeId": 2,
-      "id": 92
-    },
-    {
-      "title": "yoooow",
-      "URL": "Mtb-Q9N3GRY",
-      "snippet": "klasjdf;lkds;f asdfna;dskfla ask;dfads;lkf fasdfna;dslkf aks;dfas;dlfks sdfas;dkfnasd",
-      "note": "dsfnasdnfasd, sdfnas;dlkf asdknfasd;f laskdfadslkfas dsnf;asdnfads sdjnfa;dsnfasd",
-      "noteTypeId": 2,
-      "id": 93
-    },
-    {
-      "title": "normal",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "fdsfsdf sdfnsdlkf sdfkasd;f asdfskdf asdfa;sdkf adsfads;lkfas;df dsafn;sdfsd sdfkna;sdf",
-      "note": "asldfa;sdlfk asdfn;asdf sdfnsd;fnasd fsadfn;sdlkfsad fsadfna;sd fasdf daskfjnasd;kfj asdfas;dknfsad;fnas asdfn;dsanfasd;fnsd sdfn;asdnfsda; d;jnas;df;sdlf",
-      "noteTypeId": 2,
-      "id": 94
-    },
-    {
-      "title": "react 123",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
-      "note": "ddsadsds",
-      "noteTypeId": 2,
-      "id": 98
-    },
-    {
-      "title": "react test test test test test tt",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "import React, { Component } from 'react'; import { Embed } from 'semantic-ui-react' import \"./React.css\" import react from \"./react.png\" import Highlight from 'react-highlight' class ReactDetails extends Component {     state = {         saveDisabled: false //initail state of the button before it clicks     }      render() {         return (              <section className=\"notes\">               <div key={this.props.react.id} className=\"card\">                 <div className=\"card-body\">                         <Embed id={this.props.react.URL} placeholder= {react} source='youtube' />                     <h2 className=\"card-title\">                         {this.props.react.title }                         </h2>                         <Highlight language={\"javascript\"}>{this.props.react.snippet}</Highlight>                             <pre>{this.props.react.note}</pre>                     {/* <h6 className=\"card-title\">{ this.props.react.snippet }</h6> */}                     {/* <button onClick={                             () => {                                 this.setState(                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,                                     () => this.props.deleteReact(this.props.react.id)                                 )                             }                         }                         disabled={ this.state.saveDisabled }                         className=\"card-link\">Delete</button> */}                 </div>             </div>         </section>         );     } }  export default ReactDetails;",
-      "note": "yeah so this is a test so lets see.",
-      "noteTypeId": 2,
-      "id": 99
-    },
-    {
-      "title": "React Array",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "function DataList({ isOrdered, data }) {   const list = data.map((val, i) => <li key={`${i}_${val}`}>{val}</li>);   return isOrdered ? <ol>{list}</ol> : <ul>{list}</ul>; }",
-      "note": "Use the value of the isOrdered prop to conditionally render a <ol> or <ul> list.\nUse Array.prototype.map to render every item in data as a <li> element, give it a key produced from the concatenation of the its index and value.\nOmit the isOrdered prop to render a <ul> list by default.",
-      "noteTypeId": 2,
-      "id": 100
-    },
-    {
-      "title": "React lovers",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "function DataList({ isOrdered, data }) {   const list = data.map((val, i) => <li key={`${i}_${val}`}>{val}</li>);   return isOrdered ? <ol>{list}</ol> : <ul>{list}</ul>; }",
-      "note": "joe",
-      "noteTypeId": 2,
-      "id": 101
-    },
-    {
-      "title": "cuno iyo ruxi",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "caawinaad ubaahde",
-      "note": "hahahhaha",
-      "noteTypeId": 4,
-      "id": 103
-    },
-    {
-      "title": "mililico",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "fsdfsdf fsdfdsf f dsfds f sdf sd fsd f sd fsdf ds",
-      "noteTypeId": 4,
-      "userId": 9,
-      "id": 104
-    },
-    {
-      "title": "uunsi",
-      "URL": "LnJvHtEL6kk",
-      "snippet": "import React from 'react' import ReactDOM from 'react-dom' import { BrowserRouter as Router } from \"react-router-dom\" import App from './App' import 'semantic-ui-css/semantic.min.css' import Footer from \"./components/footer/Footer\";  import './index.css'  ReactDOM.render(     <Router>         <App />         <Footer />     </Router>     , document.getElementById('root'))",
-      "note": "zdfsdfdsf dgsdgsgd",
-      "noteTypeId": 2,
-      "userId": 9,
-      "id": 105
-    },
-    {
-      "title": "asfasdfasdf",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "asdfasdfasdf",
-      "note": "dfasdfasdfasdf",
-      "noteTypeId": 1,
-      "userId": 9,
-      "id": 106
-    },
-    {
+      "id": 1,
       "title": "yoooow",
       "URL": "d0eUMnJ5kTA",
       "snippet": "for loops yeah loops ",
-      "note": "mnbkblnbl",
-      "noteTypeId": 1,
-      "userId": 9,
-      "id": 107
-    },
-    {
-      "id": 108,
-      "title": "java . stuff",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "for loops yeah loops ",
-      "notes": "sfsfgsdgsdfgsfdgsfdgsfdg",
+      "note": "jjjjjj",
       "noteTypeId": 1
     },
     {
-      "title": "test",
+      "id": 3,
+      "title": "klgkjhgkjhgkjhgkj",
       "URL": "d0eUMnJ5kTA",
-      "snippet": ".ui.card{     -webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important;  /* background-color: red !important */ }",
-      "note": "eweqweqw",
-      "noteTypeId": 1,
-      "userId": 9,
-      "id": 109
+      "snippet": "for loops yeah loops ",
+      "note": "khgkjhgjhjhgkjhgkjhgkhj .  nbmnmnbmnbmnbkgkjhgkj",
+      "noteTypeId": 3
     }
   ],
   "noteTypes": [

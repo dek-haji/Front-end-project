@@ -9,7 +9,7 @@ class BootstrapEditForm extends Component {
         title: "",
         URL: "",
         snippet: "",
-        notes: "",
+        note: "",
       noteTypeId: "",
      }
     
@@ -30,7 +30,7 @@ class BootstrapEditForm extends Component {
                 title: this.state.title,
                 URL: this.state.URL,
                 snippet: this.state.snippet,
-                notes: this.state.notes,
+                note: this.state.note,
                 noteTypeId: parseInt(this.state.noteTypeId)
                 // userId: parseInt(userId)
             };
@@ -46,7 +46,7 @@ class BootstrapEditForm extends Component {
             title: note.title,
               URL: note.URL,
               "snippet": note.snippet,
-            "notes": note.note,
+            "note": note.note,
             noteTypeId: note.noteTypeId
           });
         });
@@ -103,8 +103,8 @@ class BootstrapEditForm extends Component {
                     required
                     className="form-control"
                     onChange={this.handleFieldChange}
-                    id="notes"
-                    value = {this.state.notes}
+                    id="note"
+                    value = {this.state.note}
                   />
                       </div>
                       <div className="form-group">

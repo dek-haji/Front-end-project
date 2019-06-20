@@ -63,3 +63,7 @@ h1{
 box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; 
 /* background-color: red !important */
 }
+.modal-test{
+    width: 50% !important;
+    height: 50% !important;
+}

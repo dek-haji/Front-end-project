@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./Login.css"
-
+import logo from "./logo.jpeg"
 import { Link } from "react-router-dom"
 // import ccc from "../Auth/ccc.png"
 
@@ -81,6 +81,7 @@ export default class Login extends Component {
         return (
              //The onSubmit handler of the form is used to execute the class method
             <section className="login">
+               <img src = {logo}></img>
                 <form className="registerContainer" onSubmit={this.handleLogin}>
                 {/* <img src={ccc} className="acornIcon" alt="acornIcon" height="100" width="100"></img> */}
                     <h2 className="header">Please sign in</h2>

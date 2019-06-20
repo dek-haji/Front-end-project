@@ -2,24 +2,23 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
-class ReactEditForm extends Component {
+class OtherEditForm extends Component {
      // Set initial state
      state = {
         title: "",
         URL: "",
         snippet: "",
-        notes: "",
+        note: "",
       noteTypeId: "",
      }
-
+    
      handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
      }
-
+    
     updateNewEvent = e => {
         e.preventDefault();
         // let userId = sessionStorage.getItem('userId')
@@ -31,7 +30,7 @@ class ReactEditForm extends Component {
                 title: this.state.title,
                 URL: this.state.URL,
                 snippet: this.state.snippet,
-                notes: this.state.notes,
+                note: this.state.note,
                 noteTypeId: parseInt(this.state.noteTypeId)
                 // userId: parseInt(userId)
             };
@@ -47,7 +46,7 @@ class ReactEditForm extends Component {
             title: note.title,
               URL: note.URL,
               "snippet": note.snippet,
-            "notes": note.note,
+            "note": note.note,
             noteTypeId: note.noteTypeId
           });
         });
@@ -104,8 +103,8 @@ class ReactEditForm extends Component {
                     required
                     className="form-control"
                     onChange={this.handleFieldChange}
-                    id="notes"
-                    value = {this.state.notes}
+                    id="note"
+                    value = {this.state.note}
                   />
                       </div>
                       <div className="form-group">
@@ -124,17 +123,17 @@ class ReactEditForm extends Component {
                     ))}
                   </select>
                 </div>
-                <Button variant="outlined" color="primary" size="large"
+                <button variant="outlined" color="primary" size="large"
                   type="submit"
                   onClick={this.updateNewEvent}
                   className="btn btn-primary"
                 >
                   update
-                </Button>
+                </button>
               </form>
             </React.Fragment>
           );
     }
 }
 
-export default ReactEditForm;
+export default OtherEditForm;
