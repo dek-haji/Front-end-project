@@ -2,33 +2,31 @@ import React, { Component } from 'react';
 import { Embed } from 'semantic-ui-react'
 import js from  "./js.jpg"
 import "./Js.css"
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import Highlight from 'react-highlight'
+import { Card, Icon, Image, Button, Modal } from 'semantic-ui-react'
 class JsDetails extends Component {
     state = {
         saveDisabled: false //initail state of the button before it clicks
     }
+
     render() {
         return (
-            <section className="notes">
+
+            <section className="dek-notes">
+
+
             <div key={this.props.note.id} className="card">
                 <div className="card-body">
-                        <Embed id = {this.props.note.URL} placeholder= {js} source='youtube' />
-                    <h4 className="card-title">
+                        <Embed id={this.props.note.URL} placeholder= {js} source='youtube' />
+                    <h2 className="card-title">
                         {this.props.note.title }
-                        </h4>
-                            <p className = "snippet">{this.props.note.snippet}</p>
-                            <pre>{this.props.note.note}</pre>
-                    {/* <h6 className="card-title">{ this.props.note.snippet }</h6> */}
-                    {/* <Button onClick={
-                            () => {
-                                this.setState(
-                                    { saveDisabled: true }, //clicking the button updates the button state from false to true,
-                                    () => this.props.deletejs(this.props.note.id)
-                                )
-                            }
-                        }
-                        disabled={ this.state.saveDisabled }
-                        className="card-link">Delete</Button> */}
+                        </h2>
+                        <Highlight language={"jsx"} className="note-snippet">{this.props.note.snippet}</Highlight>
+                        <Modal trigger={<Button>Show Modal</Button>}>
+                        <Highlight language={"jsx"} className="note-snippet">{this.props.note.snippet}</Highlight>
+                    </Modal>
+                            <p>{this.props.note.notes}</p>
+
                 </div>
             </div>
         </section>
@@ -36,4 +34,7 @@ class JsDetails extends Component {
     }
 }
 
+
 export default JsDetails;
+
+

@@ -60,6 +60,7 @@ export default class JsForm extends Component {
 
     return (
       <React.Fragment >
+      <h2>Start Your Note Taking</h2>
         <form className="JsForm">
           <div className="form-group">
             <label htmlFor="jsTitle">Title:</label>
@@ -84,15 +85,15 @@ export default class JsForm extends Component {
                 pattern="https://.*"
             />
           </div>
-          <div className="form-group-snippet">
+          <div className="form-group">
             <label htmlFor="jsSnippet">Snippet</label>
             <input
               type="text"
               required
-              className="form-control"
+              className="form-control-snippet"
               onChange={this.handleFieldChange}
               id="jsSnippet"
-              placeholder="snippet"
+              // placeholder="snippet"
             />
                 </div>
                 <div className="form-group">
