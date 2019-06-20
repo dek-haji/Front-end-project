@@ -36,7 +36,7 @@ export default class JsForm extends Component {
      */
     constructNewEvent = e => {
         e.preventDefault();
-        // let userId = sessionStorage.getItem('userId')
+         let userId = sessionStorage.getItem('userId')
         if (this.state.noteTypes === "") {
             window.alert("Please select technology")
         } else {
@@ -45,8 +45,8 @@ export default class JsForm extends Component {
                 URL: this.state.jsURL,
                 snippet: this.state.jsSnippet,
                 note: this.state.jsNotes,
-                noteTypeId: parseInt(this.state.noteTypeId)
-                // userId: parseInt(userId)
+                noteTypeId: parseInt(this.state.noteTypeId),
+                userId: parseInt(userId)
             };
 
             // Create the article and redirect user to article list
@@ -60,6 +60,7 @@ export default class JsForm extends Component {
 
     return (
       <React.Fragment >
+      <h2>Start Your Note Taking</h2>
         <form className="JsForm">
           <div className="form-group">
             <label htmlFor="jsTitle">Title:</label>
@@ -84,15 +85,15 @@ export default class JsForm extends Component {
                 pattern="https://.*"
             />
           </div>
-          <div className="form-group-snippet">
+          <div className="form-group">
             <label htmlFor="jsSnippet">Snippet</label>
             <input
               type="text"
               required
-              className="form-control"
+              className="form-control-snippet"
               onChange={this.handleFieldChange}
               id="jsSnippet"
-              placeholder="snippet"
+              // placeholder="snippet"
             />
                 </div>
                 <div className="form-group">

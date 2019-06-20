@@ -191,6 +191,7 @@ class ApplicationViews extends Component {
                     react={this.state.react}
                     addForm={this.addForm}
                     noteTypes={this.state.noteTypes}
+                    users={this.state.users}
               />
             )
         } else {

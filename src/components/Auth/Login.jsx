@@ -38,7 +38,7 @@ export default class Login extends Component {
         console.log(this.props.users)
         console.log(this.state)
         let authenticated = this.props.users.find(user =>   //The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
-            user.userName === this.state.username )
+            user.name === this.state.username )
             console.log(currentUser)
             console.log(this.props.users)
 

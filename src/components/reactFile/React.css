@@ -17,12 +17,12 @@
     height: 700px;
 }
 pre{
-    display: block;
+    /* display: block;
     font-family: monospace;
     border: 1px solid grey;
-     width: 600px;
+     width: 600px; */
     /* height: 500px;  */
-    padding: 20px;
+    padding: 2px;
      margin: 1px;
      white-space: pre-wrap;
      color: white;
@@ -37,8 +37,11 @@ pre{
 
 }
 .card-body{
-    width: 100%;
+    width: 50%;
     border: 1px solid lightgray;
+    display: block;
+    margin: 0 auto;
+
 }
 
 h1{
@@ -46,12 +49,11 @@ h1{
    text-align: center;
 }
 .react-snippet{
-    width: 600px;
+    width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: wrap;
-    padding: 10px;
+    padding: 1px;
     overflow: auto;
     position: relative
-} 
- 
+}

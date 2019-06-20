@@ -11,10 +11,13 @@
     width: 500px;
 }
 .JsForm{
-    width: 500px;
-    height: 700px;
-    border: 1px solid grey 
-    justify-items: center
+    justify-items: center;
+     border: 1px solid #D5D5D5;
+        padding: 5px;
+        border-radius: 6px;
+        text-align: center;
+        width: 20%;
+        margin-left: 20px;
 }
 pre{
     display: block;
@@ -29,14 +32,7 @@ pre{
       background-color: grey 
 }
 
-.Js-notes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
 
-}
 .card-body{
     width: 500px;
     border: 1px solid lightgray
@@ -53,3 +49,29 @@ pre{
 .form-control{
     background-color: lightgray
 } */
+
+.JsForm{
+    justify-items: center;
+     border: 1px solid #D5D5D5;
+        padding: 5px;
+        border-radius: 6px;
+        text-align: center;
+        width: 20%;
+        margin-left: 20px;
+        background-color: lightgray;
+        /* display: block;
+    margin: 0 auto; */
+}
+.form-control-snippet{
+    height: 200px;
+    width: 480px;
+}
+
+.Js-notes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
