@@ -56,11 +56,9 @@ pre{
         padding: 5px;
         border-radius: 6px;
         text-align: center;
-        width: 20%;
+        /* width: 20%; */
         margin-left: 20px;
-        background-color: lightgray;
-        /* display: block;
-    margin: 0 auto; */
+        background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);    margin: 0 auto; 
 }
 .form-control-snippet{
     height: 200px;
@@ -74,4 +72,8 @@ pre{
     justify-content: space-between;
     width: 100%;
 
+}
+
+.wakere{
+    background-color: red
 }
