@@ -3,6 +3,7 @@ import { Button } from 'semantic-ui-react'
 
 
 
+
 export default class JsForm extends Component {
 
   // Set initial state
@@ -29,7 +30,10 @@ export default class JsForm extends Component {
     console.log(stateToChange)
     this.setState(stateToChange);
 
-}
+  }
+  
+
+  
   /*
         Local method for validation, creating article object, and
         invoking the function reference passed from parent component
@@ -60,7 +64,8 @@ export default class JsForm extends Component {
 
     return (
       <React.Fragment >
-      <h1>Start Your Note Taking</h1>
+        <h1>Start Your Note Taking</h1>
+        
         <form className="JsForm">
           <div className="form-group1">
             <label htmlFor="jsTitle">Title:</label>
@@ -68,6 +73,7 @@ export default class JsForm extends Component {
               type="text"
               required
               className="form-control"
+              
               onChange={this.handleFieldChange}
               id="jsTitle"
               placeholder="title"

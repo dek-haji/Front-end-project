@@ -61,5 +61,33 @@ h1{
     -webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important;
 -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important;
 box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; 
-/* background-color: red !important */
+border-radius: 5% !important;
+height: 200px !important;
+}
+.modal-test{
+    width: 50% !important;
+    height: 50% !important;
+}
+h3{
+    font-family: "Aclonica";
+    color: black;
+    font-style: italic !important;
+    font-size: 30px !important;
+}
+h1{
+    font-family: "Aclonica";
+    color: black;
+    font-style: italic !important;
+    font-size: 50px !important;
+}
+.modal-test{
+    background-color: aquamarine !important
+}
+p{
+    border: 2px solid grey;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-family: "Aclonica";
+    font-size: 18px
 }

@@ -117,3 +117,8 @@
     } */
 
 }
+img{
+    width: 200px;
+    border-radius: 30%;
+    padding: 20px;
+}

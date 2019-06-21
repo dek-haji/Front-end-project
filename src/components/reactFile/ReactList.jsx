@@ -20,7 +20,7 @@ class ReactList extends Component {
                         <Card key={note.id}>
                         <Card.Content>
                         <i className="right floated like icon"></i>
-                                <h3>{note.title}</h3>
+                                <h4>{note.title}</h4>
                                 </Card.Content>
                             <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br />
                             <Button basic color='orange' onClick={()=> {this.props.deleteReact(note.id)}}> <i className="delete icon"></i> </Button>  

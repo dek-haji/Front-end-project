@@ -1,211 +1,152 @@
 {
   "users": [
     {
-      "name": "deek",
-      "email": "deeeqhaji@gmail.com",
-      "id": 5
-    },
-    {
       "name": "deeq",
-      "email": "deeeqhaji@gmail.com",
-      "id": 6
-    },
-    {
-      "name": "Haji",
-      "email": "haji@email.com",
-      "id": 7
-    },
-    {
-      "name": "dek.haji",
-      "email": "deeeqhaji@gmail.com",
-      "id": 8
-    },
-    {
-      "name": "haha",
-      "email": "haha@email.com",
-      "id": 9
+      "email": "deeq@email.com",
+      "id": 1
     }
   ],
   "notes": [
     {
-      "title": "new boosttrap man",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "yeah i think its another snippet",
+      "id": 1,
+      "title": "if else",
+      "URL": "6Bp6Z37TRfE&t=4s",
+      "snippet": "if (condition) {   //  block of code to be executed if the condition is true } else {    //  block of code to be executed if the condition is false }",
+      "note": "Use the else statement to specify a block of code to be executed if the condition is false.",
+      "noteTypeId": 1
+    },
+    {
+      "title": "Conditional (Ternary) Operator",
+      "URL": "",
+      "snippet": "variablename = (condition) ? value1:value2 ",
+      "note": "JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "The Boolean() Function",
+      "URL": "B4ZCFdrBmbE",
+      "snippet": "Boolean(10 > 9)        // returns true",
+      "note": "You can use the Boolean() function to find out if an expression (or a variable) is true:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "title": "Math.round()",
+      "URL": "c2nVqhQE9Is",
+      "snippet": "Math.round(4.7);    // returns 5 Math.round(4.4);    // returns 4",
+      "note": "Math.round(x) returns the value of x rounded to its nearest integer:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "Math.pow()",
+      "URL": "",
+      "snippet": "Math.pow(8, 2);      // returns 64",
+      "note": "Math.pow(x, y) returns the value of x to the power of y:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "Math.sqrt()",
+      "URL": "OMfaQcGFUQ4",
+      "snippet": "Math.sqrt(64);      // returns 8",
+      "note": "Math.sqrt(x) returns the square root of x:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "JavaScript Data Types",
+      "URL": "O9by2KcR2v4",
+      "snippet": "var length = 16;                               // Number var lastName = \"Johnson\";                      // String var x = {firstName:\"John\", lastName:\"Doe\"};    // Object",
+      "note": "JavaScript variables can hold many data types: numbers, strings, objects and more:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "title": "While Loop",
+      "URL": "PpbFyLTtpWI",
+      "snippet": "while (i < 10) {   text += \"The number is \" + i;   i++; }",
+      "note": "The while loop loops through a block of code as long as a specified condition is true.",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "title": "example of bootstrap",
+      "URL": "gqOEoUR5RHg",
+      "snippet": "<div class=\"jumbotron text-center\">   <h1>My First Bootstrap Page</h1>   <p>Resize this responsive page to see the effect!</p>  </div>  <div class=\"container\">   <div class=\"row\">     <div class=\"col-sm-4\">       <h3>Column 1</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 2</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 3</h3>        <p>Lorem ipsum dolor..</p>     </div>   </div> </div>",
+      "note": "Bootstrap 4 is the newest version of Bootstrap; with new components, faster stylesheet and more responsiveness.\n\nBootstrap 4 supports the latest, stable releases of all major browsers and platforms. However, Internet Explorer 9 and down is not supported.",
       "noteTypeId": 3,
-      "id": 45
+      "userId": 1,
+      "id": 9
     },
     {
-      "id": 64,
-      "title": "for in Loops",
-      "URL": "s9wW2PpJsmQ",
-      "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); } var sum = 0; for (var i = 0; i < a.length; i++) {     sum + = a[i]; }               // parsing an array html = \"\"; for (var i of custOrder) {     html += \"<li>\" + i + \"</li>\"; }",
-      "noteTypeId": 3
-    },
-    {
-      "id": 74,
-      "title": "react strap",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "jhaflksehfals safkjhalsdkf adslkfjha;sdlf asfjhasdl fasdfnasdl fasdkljjfha sdflasdkjhfa asljhf;asd fasdfhas dfas;dlfjshf;sda .  skjfdhsad fasdf sdfjha;sd fasd",
-      "notes": "yeah i think its another snippet anither snipyyerkn kslklk  ",
-      "noteTypeId": 2
+      "title": "render",
+      "URL": "q6wtD-bBGf8",
+      "snippet": "render() {   return <div />; }",
+      "note": "",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 10
     },
     {
       "title": "constructor",
-      "URL": "3b07XMGs0hM",
+      "URL": "3b07XMGs0hM&t",
       "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
-      "note": "Text in a pre element\nis displayed in a fixed-width\nfont, and it preserves\nboth      spaces and\nline breaks",
+      "note": "it's awesome.",
       "noteTypeId": 2,
-      "id": 79
+      "userId": 1,
+      "id": 11
     },
     {
-      "id": 80,
-      "title": "render",
+      "id": 12,
+      "title": "componentWillMount",
       "URL": "",
-      "snippet": "render() {   return <div />; }",
-      "notes": "tretert etetyeter etetertetwertre",
+      "snippet": "componentWillMount() {   }",
+      "note": " invoked once.   // fires before initial 'render' ",
       "noteTypeId": 2
+    },
+    {
+      "title": "componentDidMount",
+      "URL": "",
+      "snippet": "componentDidMount() {}",
+      "note": " good for AJAX: fetch, ajax, or subscriptions.\n\n   invoked once (client-side only). fires before initial 'render'",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 13
     },
     {
       "title": "componentWillReceiveProps",
       "URL": "",
-      "snippet": "componentWillReceiveProps(nextProps) {   // invoked every time component recieves new props.   // does not before initial 'render' }",
-      "note": "one green house",
+      "snippet": "componentWillReceiveProps(nextProps) {)",
+      "note": " invoked every time component recieves new props.\n  does not before initial 'render'\n}",
       "noteTypeId": 2,
-      "id": 81
+      "userId": 1,
+      "id": 14
     },
     {
-      "title": "navBar",
+      "title": "componentWillUpdate",
       "URL": "",
-      "snippet": "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">   <a class=\"navbar-brand\" href=\"#\">Navbar</a>   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">     <span class=\"navbar-toggler-icon\"></span>   </button>    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">     <ul class=\"navbar-nav mr-auto\">       <li class=\"nav-item active\">         <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>       </li>       <li class=\"nav-item\">         <a class=\"nav-link\" href=\"#\">Link</a>       </li>       <li class=\"nav-item\">         <a class=\"nav-link disabled\" href=\"#\">Disabled</a>       </li>     </ul>     <form class=\"form-inline my-2 my-lg-0\">       <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">       <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>     </form>   </div> </nav>",
-      "note": "this note is for you to check it",
-      "noteTypeId": 3,
-      "id": 82
+      "snippet": "componentWillUpdate(nextProps, nextState) {}",
+      "note": " invoked immediately before update (new props or state).\n   does not fire before initial 'render'.\n\n (see componentWillReceiveProps if you need to call setState)",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 15
     },
     {
-      "title": "nav-brand",
+      "id": 16,
+      "title": "setState ",
       "URL": "",
-      "snippet": "<nav class=\"navbar navbar-light bg-light\">   <a class=\"navbar-brand\" href=\"#!\">Navbar</a> </nav>",
-      "note": "this is navbar ",
-      "noteTypeId": 3,
-      "id": 83
-    },
-    {
-      "title": "react baby",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": ",mweflwefnwlef wnflwekfj lkfw;lfjqew;l qkfqwl;efkwe wf;wlefwe; kfjw;lfjsd;lf sldkajfasdfas afkj;sdfjads sdkfjadslkf",
-      "note": "fnjsdkfjasd;lkf sadfas;dlkfna asdfknas;dklfasd sdafna;sdfads sdkfnads;kfnads asdknfa;sdnfas asdklfn;daslfndsa",
-      "noteTypeId": 2,
-      "id": 92
-    },
-    {
-      "title": "yoooow",
-      "URL": "Mtb-Q9N3GRY",
-      "snippet": "klasjdf;lkds;f asdfna;dskfla ask;dfads;lkf fasdfna;dslkf aks;dfas;dlfks sdfas;dkfnasd",
-      "note": "dsfnasdnfasd, sdfnas;dlkf asdknfasd;f laskdfadslkfas dsnf;asdnfads sdjnfa;dsnfasd",
-      "noteTypeId": 2,
-      "id": 93
-    },
-    {
-      "title": "normal",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "fdsfsdf sdfnsdlkf sdfkasd;f asdfskdf asdfa;sdkf adsfads;lkfas;df dsafn;sdfsd sdfkna;sdf",
-      "note": "asldfa;sdlfk asdfn;asdf sdfnsd;fnasd fsadfn;sdlkfsad fsadfna;sd fasdf daskfjnasd;kfj asdfas;dknfsad;fnas asdfn;dsanfasd;fnsd sdfn;asdnfsda; d;jnas;df;sdlf",
-      "noteTypeId": 2,
-      "id": 94
-    },
-    {
-      "title": "react 123",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
-      "note": "ddsadsds",
-      "noteTypeId": 2,
-      "id": 98
-    },
-    {
-      "title": "react test test test test test tt",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "import React, { Component } from 'react'; import { Embed } from 'semantic-ui-react' import \"./React.css\" import react from \"./react.png\" import Highlight from 'react-highlight' class ReactDetails extends Component {     state = {         saveDisabled: false //initail state of the button before it clicks     }      render() {         return (              <section className=\"notes\">               <div key={this.props.react.id} className=\"card\">                 <div className=\"card-body\">                         <Embed id={this.props.react.URL} placeholder= {react} source='youtube' />                     <h2 className=\"card-title\">                         {this.props.react.title }                         </h2>                         <Highlight language={\"javascript\"}>{this.props.react.snippet}</Highlight>                             <pre>{this.props.react.note}</pre>                     {/* <h6 className=\"card-title\">{ this.props.react.snippet }</h6> */}                     {/* <button onClick={                             () => {                                 this.setState(                                     { saveDisabled: true }, //clicking the button updates the button state from false to true,                                     () => this.props.deleteReact(this.props.react.id)                                 )                             }                         }                         disabled={ this.state.saveDisabled }                         className=\"card-link\">Delete</button> */}                 </div>             </div>         </section>         );     } }  export default ReactDetails;",
-      "note": "yeah so this is a test so lets see.",
-      "noteTypeId": 2,
-      "id": 99
-    },
-    {
-      "title": "React Array",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "function DataList({ isOrdered, data }) {   const list = data.map((val, i) => <li key={`${i}_${val}`}>{val}</li>);   return isOrdered ? <ol>{list}</ol> : <ul>{list}</ul>; }",
-      "note": "Use the value of the isOrdered prop to conditionally render a <ol> or <ul> list.\nUse Array.prototype.map to render every item in data as a <li> element, give it a key produced from the concatenation of the its index and value.\nOmit the isOrdered prop to render a <ul> list by default.",
-      "noteTypeId": 2,
-      "id": 100
-    },
-    {
-      "title": "React lovers",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "function DataList({ isOrdered, data }) {   const list = data.map((val, i) => <li key={`${i}_${val}`}>{val}</li>);   return isOrdered ? <ol>{list}</ol> : <ul>{list}</ul>; }",
-      "note": "joe",
-      "noteTypeId": 2,
-      "id": 101
-    },
-    {
-      "title": "cuno iyo ruxi",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "caawinaad ubaahde",
-      "note": "hahahhaha",
-      "noteTypeId": 4,
-      "id": 103
-    },
-    {
-      "title": "mililico",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "another snippet",
-      "note": "fsdfsdf fsdfdsf f dsfds f sdf sd fsd f sd fsdf ds",
-      "noteTypeId": 4,
-      "userId": 9,
-      "id": 104
-    },
-    {
-      "title": "uunsi",
-      "URL": "LnJvHtEL6kk",
-      "snippet": "import React from 'react' import ReactDOM from 'react-dom' import { BrowserRouter as Router } from \"react-router-dom\" import App from './App' import 'semantic-ui-css/semantic.min.css' import Footer from \"./components/footer/Footer\";  import './index.css'  ReactDOM.render(     <Router>         <App />         <Footer />     </Router>     , document.getElementById('root'))",
-      "note": "zdfsdfdsf dgsdgsgd",
-      "noteTypeId": 2,
-      "userId": 9,
-      "id": 105
-    },
-    {
-      "title": "asfasdfasdf",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "asdfasdfasdf",
-      "note": "dfasdfasdfasdf",
-      "noteTypeId": 1,
-      "userId": 9,
-      "id": 106
-    },
-    {
-      "title": "yoooow",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "for loops yeah loops ",
-      "note": "mnbkblnbl",
-      "noteTypeId": 1,
-      "userId": 9,
-      "id": 107
-    },
-    {
-      "id": 108,
-      "title": "java . stuff",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "for loops yeah loops ",
-      "notes": "sfsfgsdgsdfgsfdgsfdgsfdg",
-      "noteTypeId": 1
-    },
-    {
-      "title": "test",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": ".ui.card{     -webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important; box-shadow: 4px 4px 3px 0px rgba(0,0,0,1) !important;  /* background-color: red !important */ }",
-      "note": "eweqweqw",
-      "noteTypeId": 1,
-      "userId": 9,
-      "id": 109
+      "snippet": "this.setState({mykey: 'my new value'});",
+      "note": "fires after setState\n prefer componentDidUpdate",
+      "noteTypeId": 2
     }
   ],
   "noteTypes": [
