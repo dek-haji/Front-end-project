@@ -4,6 +4,11 @@
       "name": "deeq",
       "email": "deeq@email.com",
       "id": 1
+    },
+    {
+      "name": "deeq",
+      "email": "deeq@email.com",
+      "id": 2
     }
   ],
   "notes": [
@@ -147,6 +152,14 @@
       "snippet": "this.setState({mykey: 'my new value'});",
       "note": "fires after setState\n prefer componentDidUpdate",
       "noteTypeId": 2
+    },
+    {
+      "id": 17,
+      "title": "json-server!",
+      "URL": "",
+      "snippet": "json-server -w 5002 -p database.json",
+      "note": "make sure u change the database name and the path.",
+      "noteTypeId": 4
     }
   ],
   "noteTypes": [

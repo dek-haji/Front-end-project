@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from 'semantic-ui-react'
-
+import note from "./note.png"
 
 
 
@@ -65,7 +65,7 @@ export default class JsForm extends Component {
     return (
       <React.Fragment >
         <h1>Start Your Note Taking</h1>
-        
+        <div className="test1">
         <form className="JsForm">
           <div className="form-group1">
             <label htmlFor="jsTitle">Title:</label>
@@ -137,6 +137,10 @@ export default class JsForm extends Component {
             Submit New File
           </Button>
         </form>
+        
+          <img className="imagesss" src={note}></img>
+          
+          </div>
       </React.Fragment>
     );
   }
