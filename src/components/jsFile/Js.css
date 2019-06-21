@@ -73,4 +73,13 @@ pre{
     width: 100%;
 
 }
+.test1{
+    display: flex;
 
+}
+.imagesss{
+    height: 600px;
+    width: 700px;
+    border-radius: 1%;
+    margin: 100px;
+}
