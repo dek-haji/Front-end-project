@@ -56,13 +56,13 @@ pre{
         padding: 5px;
         border-radius: 6px;
         text-align: center;
-        /* width: 20%; */
         margin-left: 20px;
-        background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);  height: 100vh;
+        background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);  height: 10000vh;
     }
 .form-control-snippet{
     height: 200px;
     width: 480px;
+    
 }
 
 .Js-notes{

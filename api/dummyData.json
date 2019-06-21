@@ -1,47 +1,152 @@
 {
   "users": [
     {
-      "name": "deek",
-      "email": "deeeqhaji@gmail.com",
-      "id": 5
-    },
-    {
       "name": "deeq",
-      "email": "deeeqhaji@gmail.com",
-      "id": 6
-    },
-    {
-      "name": "Haji",
-      "email": "haji@email.com",
-      "id": 7
-    },
-    {
-      "name": "dek.haji",
-      "email": "deeeqhaji@gmail.com",
-      "id": 8
-    },
-    {
-      "name": "haha",
-      "email": "haha@email.com",
-      "id": 9
+      "email": "deeq@email.com",
+      "id": 1
     }
   ],
   "notes": [
     {
       "id": 1,
-      "title": "yoooow",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "for loops yeah loops ",
-      "note": "jjjjjj",
+      "title": "if else",
+      "URL": "6Bp6Z37TRfE&t=4s",
+      "snippet": "if (condition) {   //  block of code to be executed if the condition is true } else {    //  block of code to be executed if the condition is false }",
+      "note": "Use the else statement to specify a block of code to be executed if the condition is false.",
       "noteTypeId": 1
     },
     {
-      "id": 3,
-      "title": "klgkjhgkjhgkjhgkj",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "for loops yeah loops ",
-      "note": "khgkjhgjhjhgkjhgkjhgkhj .  nbmnmnbmnbmnbkgkjhgkj",
-      "noteTypeId": 3
+      "title": "Conditional (Ternary) Operator",
+      "URL": "",
+      "snippet": "variablename = (condition) ? value1:value2 ",
+      "note": "JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "The Boolean() Function",
+      "URL": "B4ZCFdrBmbE",
+      "snippet": "Boolean(10 > 9)        // returns true",
+      "note": "You can use the Boolean() function to find out if an expression (or a variable) is true:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "title": "Math.round()",
+      "URL": "c2nVqhQE9Is",
+      "snippet": "Math.round(4.7);    // returns 5 Math.round(4.4);    // returns 4",
+      "note": "Math.round(x) returns the value of x rounded to its nearest integer:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "Math.pow()",
+      "URL": "",
+      "snippet": "Math.pow(8, 2);      // returns 64",
+      "note": "Math.pow(x, y) returns the value of x to the power of y:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "Math.sqrt()",
+      "URL": "OMfaQcGFUQ4",
+      "snippet": "Math.sqrt(64);      // returns 8",
+      "note": "Math.sqrt(x) returns the square root of x:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "JavaScript Data Types",
+      "URL": "O9by2KcR2v4",
+      "snippet": "var length = 16;                               // Number var lastName = \"Johnson\";                      // String var x = {firstName:\"John\", lastName:\"Doe\"};    // Object",
+      "note": "JavaScript variables can hold many data types: numbers, strings, objects and more:",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "title": "While Loop",
+      "URL": "PpbFyLTtpWI",
+      "snippet": "while (i < 10) {   text += \"The number is \" + i;   i++; }",
+      "note": "The while loop loops through a block of code as long as a specified condition is true.",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "title": "example of bootstrap",
+      "URL": "gqOEoUR5RHg",
+      "snippet": "<div class=\"jumbotron text-center\">   <h1>My First Bootstrap Page</h1>   <p>Resize this responsive page to see the effect!</p>  </div>  <div class=\"container\">   <div class=\"row\">     <div class=\"col-sm-4\">       <h3>Column 1</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 2</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 3</h3>        <p>Lorem ipsum dolor..</p>     </div>   </div> </div>",
+      "note": "Bootstrap 4 is the newest version of Bootstrap; with new components, faster stylesheet and more responsiveness.\n\nBootstrap 4 supports the latest, stable releases of all major browsers and platforms. However, Internet Explorer 9 and down is not supported.",
+      "noteTypeId": 3,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "title": "render",
+      "URL": "q6wtD-bBGf8",
+      "snippet": "render() {   return <div />; }",
+      "note": "",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "title": "constructor",
+      "URL": "3b07XMGs0hM&t",
+      "snippet": "constructor(props) {   super(props);   this.state = {     list: props.initialList   }; }  // where props aren't used in constructor  constructor() {   super();   this.state = {     list: []   }; }",
+      "note": "it's awesome.",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "title": "componentWillMount",
+      "URL": "",
+      "snippet": "componentWillMount() {   }",
+      "note": " invoked once.   // fires before initial 'render' ",
+      "noteTypeId": 2
+    },
+    {
+      "title": "componentDidMount",
+      "URL": "",
+      "snippet": "componentDidMount() {}",
+      "note": " good for AJAX: fetch, ajax, or subscriptions.\n\n   invoked once (client-side only). fires before initial 'render'",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "componentWillReceiveProps",
+      "URL": "",
+      "snippet": "componentWillReceiveProps(nextProps) {)",
+      "note": " invoked every time component recieves new props.\n  does not before initial 'render'\n}",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "title": "componentWillUpdate",
+      "URL": "",
+      "snippet": "componentWillUpdate(nextProps, nextState) {}",
+      "note": " invoked immediately before update (new props or state).\n   does not fire before initial 'render'.\n\n (see componentWillReceiveProps if you need to call setState)",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "id": 16,
+      "title": "setState ",
+      "URL": "",
+      "snippet": "this.setState({mykey: 'my new value'});",
+      "note": "fires after setState\n prefer componentDidUpdate",
+      "noteTypeId": 2
     }
   ],
   "noteTypes": [

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { Input, Menu, Segment } from 'semantic-ui-react'
  import "bootstrap/dist/css/bootstrap.min.css"
 import "./NavBar.css"
+import logo from "./logo.jpeg"
 
 export default class NavBar extends Component {
 //   
@@ -15,7 +16,8 @@ export default class NavBar extends Component {
     }
     render() {
         return (
-            <nav className="navbar  flex-md-nowrap p-0 shadow">
+          <nav className="navbar  flex-md-nowrap p-0 shadow">
+            <img className= "image-nav"src = {logo}></img>
                 <ul className="nav nav-pills">
               <li className="nav-item">
                 <Link color="primary" variant="body1" className="nav-link" to="/">Home</Link>

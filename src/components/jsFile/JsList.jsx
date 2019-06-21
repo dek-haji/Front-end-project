@@ -20,7 +20,7 @@ class JsList extends Component {
                     this.props.notes.map(note=>
                     <Card key={note.id} >
                     <Card.Content>
-                            <h3>{note.title}</h3>
+                            <h4>{note.title}</h4>
                             </Card.Content>
                             <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
                         <Button basic color='orange' onClick={()=> {this.props.deletejs(note.id)}} >DELETE</Button>

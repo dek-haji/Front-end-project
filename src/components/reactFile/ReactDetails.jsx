@@ -23,7 +23,7 @@ class ReactDetails extends Component {
                         {this.props.react.title }
                         </h2>
                         <Highlight language={"jsx"} className="react-snippet">{this.props.react.snippet}</Highlight>
-                        <Modal trigger={<Button>Show</Button>} content="Content"  className="modal-test">
+                        <Modal trigger={<Button>Show</Button>} content="Content" >
                         <Highlight language={"jsx"} className="react-snippet">{this.props.react.snippet}</Highlight>
                         </Modal>
                       

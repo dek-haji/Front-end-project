@@ -102,7 +102,7 @@ export default class Login extends Component {
                         <br></br>
                     <button onClick={this.props.getUserData} type="submit" className="btn btn-primary signIn" >Sign in </button>
 
-                    <p className="signUp">Don't have an account? <Link className="nav-link signUpLink" to="/register">Sign Up</Link></p>
+                    <h5 className="signUp">Don't have an account? <Link className="nav-link signUpLink" to="/register">Sign Up</Link></h5>
                 </form>
             </section>
         )
