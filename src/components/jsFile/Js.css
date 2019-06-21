@@ -78,8 +78,10 @@ pre{
 
 }
 .imagesss{
-    height: 600px;
+    height: 500px;
     width: 700px;
     border-radius: 1%;
-    margin: 100px;
+   
+    margin-left: 400px;
+    margin-bottom: 4000px
 }

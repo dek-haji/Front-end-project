@@ -25,8 +25,7 @@ class App extends Component {
                     getSearchResults={this.getSearchResults}
                     searchResults={this.state.searchResults}
                         />
-                <ApplicationViews searchResults={this.state.searchResults}/
-                >
+                <ApplicationViews searchResults={this.state.searchResults}/>
             </React.Fragment>
         )
     }
