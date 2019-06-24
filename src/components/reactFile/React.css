@@ -91,3 +91,6 @@ p{
     font-family: "Aclonica";
     font-size: 18px
 }
+.card{
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%); ;
+}
