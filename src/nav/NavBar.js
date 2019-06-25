@@ -6,11 +6,12 @@ import "./NavBar.css"
 import logo from "./logo.jpeg"
 
 export default class NavBar extends Component {
-//   
+
     handleSearch(input) {
         if (input.keyCode === 13) {
             console.log("HANDLE SEARCH - INPUT TARGET VALUE:", input.target.value);
-            this.props.getSearchResults(input.target.value);
+          this.props.getSearchResults(input.target.value);
+          
             // this.props.history.push("/search");
         }
     }
@@ -26,13 +27,13 @@ export default class NavBar extends Component {
                 <Link color="primary" variant="body1" className="nav-link" to="/notes">JS</Link>
               </li>
               <li className="nav-item">
-                <Link color="primary" variant="body1" className="nav-link" to="/react">React</Link>
+                <Link color="primary" variant="bpdy3" className="nav-link" to="/react">React</Link>
               </li>
               <li className="nav-item">
-                <Link color="primary" variant="body1" className="nav-link" to="/bootstrap">Bootstrap</Link>
+                <Link color="primary" variant="bpdy3" className="nav-link" to="/bootstrap">Bootstrap</Link>
               </li>
               <li className="nav-item">
-                <Link color="primary" variant="body1" className="nav-link" to="/others">Others</Link>
+                <Link color="primary" variant="body3" className="nav-link" to="/others">Others</Link>
               </li>
                     <li className="ui search">
                     <div className="ui icon input">
@@ -50,15 +51,4 @@ export default class NavBar extends Component {
         )
     }
 }
-// import React from 'react';
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import IconButton from '@material-ui/core/IconButton';
-// import Typography from '@material-ui/core/Typography';
-// import InputBase from '@material-ui/core/InputBase';
-// import { fade } from '@material-ui/core/styles/colorManipulator';
-// import { makeStyles } from '@material-ui/core/styles';
-// import { Link } from 'react-router-dom'
-// import "./NavBar.css"
-
 

@@ -20,7 +20,8 @@ export default class JsForm extends Component {
     const stateToChange = {};
     stateToChange[event.target.id] = event.target.value;
     console.log(stateToChange)
-    this.setState(stateToChange);
+    this.setState(stateToChange)
+    let dek = () => {}
   };
 
   embedURL = (event) => {
