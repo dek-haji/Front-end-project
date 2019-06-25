@@ -17,9 +17,9 @@ class OtherDetails
             <div key={this.props.others.id} className="card">
                 <div className="card-body">
                         <Embed id={this.props.others.URL} placeholder= {others} source='youtube' />
-                    <h2 className="card-title">
+                    <h1 className="card-title">
                         {this.props.others.title }
-                        </h2>
+                        </h1>
                         <Highlight language={"jsx"} className="others-snippet">{this.props.others.snippet}</Highlight>
                         <Modal trigger={<Button>Show Modal</Button>}>
                         <Highlight language={"jsx"} className="others-snippet">{this.props.others.snippet}</Highlight>
