@@ -10,7 +10,8 @@ class SearchResults extends Component {
             {this.props.searchResults.map(result =>
             <Card key={result.id}>
             <Card.Content>
-                    <h4>{result.title}</h4>
+                  <h4>{result.title}</h4>
+                  <p>{result.note}</p>
                 </Card.Content>
                 {this.props.noteTypes.filter(note => {
                   if (note.id === result.noteTypeId) {
