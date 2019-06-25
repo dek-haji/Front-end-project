@@ -4,11 +4,6 @@
       "name": "deeq",
       "email": "deeq@email.com",
       "id": 1
-    },
-    {
-      "name": "deeq",
-      "email": "deeq@email.com",
-      "id": 2
     }
   ],
   "notes": [
@@ -75,13 +70,12 @@
       "id": 7
     },
     {
-      "title": "While Loop",
+      "id": 8,
+      "title": "While Loop.",
       "URL": "PpbFyLTtpWI",
       "snippet": "while (i < 10) {   text += \"The number is \" + i;   i++; }",
       "note": "The while loop loops through a block of code as long as a specified condition is true.",
-      "noteTypeId": 1,
-      "userId": 1,
-      "id": 8
+      "noteTypeId": 1
     },
     {
       "title": "example of bootstrap",
@@ -161,12 +155,13 @@
       "noteTypeId": 4
     },
     {
-      "id": 19,
-      "title": "wwwwwwww",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "wwwwww",
-      "note": "wwwwwwwwwwqqqqq",
-      "noteTypeId": 1
+      "title": "test",
+      "URL": "",
+      "snippet": "class SearchResults extends Component {   render() {     return (         <section className=\"searchResults\">         <h1>Search Results</h1>             {this.props.searchResults.map(result =>             <Card key={result.id}>             <Card.Content>                   <h4>{result.title}</h4>                   <Highlight language={\"jsx\"} className=\"react-snippet\">{result.snippet}</Highlight>                  </Card.Content>                 {this.props.noteTypes.filter(note => {                   if (note.id === result.noteTypeId) {                     return true                   } else {                     return false                   }                 }).map(noteType =>                   <Link className=\"nav-link\" key= {result.id} to={`/${noteType.name}/${result.id}`}>Details</Link>                  ) }             {/* <Button basic color='orange' onClick={()=> {this.props.deleteReact(result.id)}} >DELETE</Button>             <Button basic color='teal' type=\"button\"             className=\"btn btn-info\"             onClick={() => {                 this.props.history.push(`/react/${result.id}/edit`);             }}>             Edit             </Button> */}         </Card>         )         }          </section>     );   } }",
+      "note": "yep",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 20
     }
   ],
   "noteTypes": [
