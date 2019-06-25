@@ -34,18 +34,12 @@ export default class NavBar extends Component {
               <li className="nav-item">
                 <Link color="primary" variant="body1" className="nav-link" to="/others">Others</Link>
               </li>
-                    <li className="nav-item">
-            <div className="input-group input-group-sm mb-2 mt-1 ml-4">
+                    <li className="ui search">
+                    <div className="ui icon input">
             <Link className="nav-link" to="/search" >
-      <i className="search icon"  ></i></Link>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search..."
-                aria-label="Small"
-                aria-describedby="inputGroup-sizing-sm"
-                onKeyUp={e => this.handleSearch(e)}
-              />
+                    <i className="search icon"  ></i></Link>
+                    <input className="prompt" type="text" placeholder="Search..."  onKeyUp={e => this.handleSearch(e)}></input>
+
             </div>
           </li>
                 </ul>

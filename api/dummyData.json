@@ -160,6 +160,23 @@
       "snippet": "json-server -w 5002 -p database.json",
       "note": "make sure u change the database name and the path.",
       "noteTypeId": 4
+    },
+    {
+      "title": "sahra abuukat",
+      "URL": "7whJwhImv6g",
+      "snippet": "",
+      "note": "sahra hasaaaaaan",
+      "noteTypeId": 2,
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "id": 19,
+      "title": "wwwwwwww",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "wwwwww",
+      "note": "wwwwwwwwwwqqqqq",
+      "noteTypeId": 1
     }
   ],
   "noteTypes": [
