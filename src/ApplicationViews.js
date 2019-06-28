@@ -124,7 +124,7 @@ class ApplicationViews extends Component {
         };
         updateJs = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
                 .then(notes => {
                     this.props.history.push("/javascript")
                     this.setState({
@@ -135,7 +135,7 @@ class ApplicationViews extends Component {
     
         updateOthers = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=4"))
                 .then(others => {
                     this.props.history.push("/others")
                     this.setState({
@@ -156,7 +156,7 @@ class ApplicationViews extends Component {
 
         updateBootstrap = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=3"))
                 .then(bootstrap => {
                     this.props.history.push("/bootstrap")
                     this.setState({
@@ -213,22 +213,20 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route exact path="/notes/:noteId(\d+)" render={(props) => {
-                    // Find the notes with the id of the route parameter
-                    let note = this.state.notes.find(note =>
-                        note.id === parseInt(props.match.params.noteId)
+                <Route exact path="/javascript/:javascriptId(\d+)" render={(props) => {
+                    // Find the javascript with the id of the route parameter
+                    let javascript = this.state.javascript.find(note =>
+                        note.id === parseInt(props.match.params.javascriptId)
                     )
-                    let react = this.state.react.find(reacct =>
-                        reacct.id === parseInt(props.match.params.reactId)
-                        )
+        
                     // If the note wasn't found, create a default one
-                    if (!note && !react){
-                        note = { id: 404, title: "404" }
-                        react = { id: 505, title: "505"}
+                    if (!javascript ){
+                        javascript = { id: 404, title: "404" }
+                       
                     }
                     if (this.isAuthenticated()) {
-                    return <JsDetails note={note}
-                        react={react}
+                    return <JsDetails javascript={javascript}
+                        
                         updateJs={this.updateJs} />
                     } else {
                         return <Redirect to="/login" />
@@ -310,7 +308,9 @@ class ApplicationViews extends Component {
                          bootstrap={this.state.bootstrap}
                          notes={this.state.notes}
                                 deleteBootstrap={this.deleteBootstrap}
-                                updateBootstrap={this.updateBootstrap}/>
+                        updateBootstrap={this.updateBootstrap}
+                        addForm={this.addForm}
+                                />
                     )
                 } else {
                         return <Redirect to="/login" />

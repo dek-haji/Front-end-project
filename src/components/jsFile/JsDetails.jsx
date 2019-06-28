@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Embed } from 'semantic-ui-react'
+import { Embed, Button, Modal  } from 'semantic-ui-react'
 import js from  "./js.jpg"
 import "./Js.css"
 import Highlight from 'react-highlight'
-import { Card, Icon, Image, Button, Modal } from 'semantic-ui-react'
 class JsDetails extends Component {
     state = {
         saveDisabled: false //initail state of the button before it clicks
@@ -15,17 +14,17 @@ class JsDetails extends Component {
             <section className="dek-notes">
 
 
-            <div key={this.props.note.id} className="card">
+            <div key={this.props.javascript.id} className="card">
                 <div className="card-body">
-                        <Embed id={this.props.note.URL} placeholder= {js} source='youtube' />
+                        <Embed id={this.props.javascript.URL} placeholder= {js} source='youtube' />
                     <h1 className="card-title">
-                        {this.props.note.title }
+                        {this.props.javascript.title }
                         </h1>
-                        <Highlight language={"jsx"} className="note-snippet">{this.props.note.snippet}</Highlight>
+                        <Highlight language={"jsx"} className="javascript-snippet">{this.props.javascript.snippet}</Highlight>
                         <Modal trigger={<Button>Show Modal</Button>}>
-                        <Highlight language={"jsx"} className="note-snippet">{this.props.note.snippet}</Highlight>
+                        <Highlight language={"jsx"} className="javascript-snippet">{this.props.javascript.snippet}</Highlight>
                     </Modal>
-                            <div className = "notess"><p>{this.props.note.note}</p></div>
+                            <div className = "notess"><p>{this.props.javascript.note}</p></div>
 
                 </div>
             </div>
