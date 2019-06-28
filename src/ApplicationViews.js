@@ -26,6 +26,7 @@ class ApplicationViews extends Component {
     isAuthenticated = () => sessionStorage.getItem("username") !== null
     state = {
         notes: [],
+        javascript: [],
         noteTypes: [],
         users: [],
         react: [],
@@ -38,17 +39,17 @@ class ApplicationViews extends Component {
             // ;
             console.log("didmount fired up")
             const newState = {};
-            let sessionId = sessionStorage.getItem("userId")
+            // let sessionId = sessionStorage.getItem("userId")
             dbCalls
                 .all("http://localhost:5002/notes?noteTypeId=1")
-                .then(notes => (newState.notes = notes))
+                .then(javascript => (newState.javascript = javascript))
                 .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
                 .then(noteTypes => (newState.noteTypes = noteTypes))
                 .then((console.log(this.state.noteTypes)))
                 .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
                 .then(users => (newState.users = users))
                 .then(() => fetch("http://localhost:5002/notes").then(r => r.json()))
-                .then(allNotes => (newState.allNotes = allNotes))
+                .then(notes => (newState.notes = notes))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
                 .then(react => (newState.react = react))
                 .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
@@ -64,10 +65,9 @@ class ApplicationViews extends Component {
         const newState = {};
         return dbCalls.post(newObj, "http://localhost:5002/notes")
         .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
-        .then(notes => (newState.notes = notes))
+        .then(javascript => (newState.javascript = javascript))
         .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
         .then(noteTypes => (newState.noteTypes = noteTypes))
-        .then((console.log(this.state.noteTypes)))
         .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
         .then(users => (newState.users = users))
         .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
@@ -94,7 +94,7 @@ class ApplicationViews extends Component {
             dbCalls
             .delete(id, `${remoteURL}/notes`)
             .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
-            .then(notes => (newState.notes = notes))
+            .then(javascript => (newState.javascript = javascript))
             .then(() => this.setState(newState));
         };
 
@@ -124,18 +124,18 @@ class ApplicationViews extends Component {
         };
         updateJs = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
                 .then(notes => {
-                    this.props.history.push("/notes")
+                    this.props.history.push("/javascript")
                     this.setState({
-                notes: notes
+                javascript: notes
               })
             });
         };
     
         updateOthers = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=4"))
                 .then(others => {
                     this.props.history.push("/others")
                     this.setState({
@@ -143,20 +143,20 @@ class ApplicationViews extends Component {
               })
             });
         };
-        updateReact = (editedNotesObject) => {
+    updateReact = (editedNotesObject) => {
+        const newState = {};
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
-                .then(react => {
-                    this.props.history.push("/react")
-                    this.setState({
-                react: react
-              })
-            });
-        };
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=2"))
+                .then(react => (newState.react = react))
+                .then(() => this.setState(newState))
+                .then(( this.props.history.push("/react")))
+                   
+            }
+        
 
         updateBootstrap = (editedNotesObject) => {
             return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=3"))
                 .then(bootstrap => {
                     this.props.history.push("/bootstrap")
                     this.setState({
@@ -167,7 +167,7 @@ class ApplicationViews extends Component {
     render() {
         console.log("react state", this.state.react)
         console.log("bootstrap state", this.state.bootstrap)
-        console.log("javascript state",this.state.notes)
+        console.log("javascript state",this.state.javascript)
         console.log("others", this.state.others)
         return (
             <React.Fragment>
@@ -198,36 +198,36 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route exact path="/notes" render={(props) => {
+                <Route exact path="/javascript" render={(props) => {
                     if (this.isAuthenticated()) {
                         return (
                             <JsList
                                 {...props}
-                                notes={this.state.notes}
+                                javascript={this.state.javascript}
                                 updateJs={this.updateJs}
                                 deletejs={this.deletejs}
+                                addForm={this.addForm}
+                                notes={this.state.notes}
                             />
                         )
                     } else {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route exact path="/notes/:noteId(\d+)" render={(props) => {
-                    // Find the notes with the id of the route parameter
-                    let note = this.state.notes.find(note =>
-                        note.id === parseInt(props.match.params.noteId)
+                <Route exact path="/javascript/:javascriptId(\d+)" render={(props) => {
+                    // Find the javascript with the id of the route parameter
+                    let javascript = this.state.javascript.find(note =>
+                        note.id === parseInt(props.match.params.javascriptId)
                     )
-                    let react = this.state.react.find(reacct =>
-                        reacct.id === parseInt(props.match.params.reactId)
-                        )
+        
                     // If the note wasn't found, create a default one
-                    if (!note && !react){
-                        note = { id: 404, title: "404" }
-                        react = { id: 505, title: "505"}
+                    if (!javascript ){
+                        javascript = { id: 404, title: "404" }
+                       
                     }
                     if (this.isAuthenticated()) {
-                    return <JsDetails note={note}
-                        react={react}
+                    return <JsDetails javascript={javascript}
+                        
                         updateJs={this.updateJs} />
                     } else {
                         return <Redirect to="/login" />
@@ -267,18 +267,22 @@ class ApplicationViews extends Component {
                 }} />
 
 <Route
-                    exact path="/notes/:noteId(\d+)/edit" render={props => {
+                    exact path="/javascript/:javascriptId(\d+)/edit" render={props => {
                         return <JsEditForm {...props}
                             notes={this.state.notes}
                             updateJs={this.updateJs}
-                            noteTypes={this.state.noteTypes}/>
+                            noteTypes={this.state.noteTypes}
+                            addForm={this.addForm}
+                            />
                     }} />
                 <Route
                     exact path="/react/:reactId(\d+)/edit" render={props => {
                         return <ReactEditForm {...props}
                             notes={this.state.notes}
                             updateReact={this.updateReact}
-                            noteTypes={this.state.noteTypes}/>
+                            noteTypes={this.state.noteTypes}
+                            addForm={this.addForm}
+                            />
                     }} />
 
                 <Route exact path="/react" render={(props) => {
@@ -290,6 +294,7 @@ class ApplicationViews extends Component {
                                 deleteReact={this.deleteReact}
                                updateReact={this.updateReact}
                                users={this.state.users}
+                               addForm={this.addForm}
                             />
                         )
                     } else {
@@ -304,7 +309,9 @@ class ApplicationViews extends Component {
                          bootstrap={this.state.bootstrap}
                          notes={this.state.notes}
                                 deleteBootstrap={this.deleteBootstrap}
-                                updateBootstrap={this.updateBootstrap}/>
+                        updateBootstrap={this.updateBootstrap}
+                        addForm={this.addForm}
+                                />
                     )
                 } else {
                         return <Redirect to="/login" />

@@ -21,7 +21,6 @@ export default class JsForm extends Component {
     stateToChange[event.target.id] = event.target.value;
     console.log(stateToChange)
     this.setState(stateToChange)
-    let dek = () => {}
   };
 
   embedURL = (event) => {
@@ -54,10 +53,8 @@ export default class JsForm extends Component {
                 userId: parseInt(userId)
             };
 
-            // Create the article and redirect user to article list
             this.props.addForm(newObj)
-              .then(() => this.props.history.push("/notes"))
-              // .then(() => this.props.history.push("/react"));
+              .then(() => this.props.history.push("/javascript"))
         }
     };
 

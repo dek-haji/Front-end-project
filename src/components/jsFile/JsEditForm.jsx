@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import {Button } from 'semantic-ui-react'
 class JsEditForm extends Component {
      // Set initial state
      state = {
@@ -10,7 +10,8 @@ class JsEditForm extends Component {
         URL: "",
         snippet: "",
         note: "",
-      noteTypeId: "",
+       noteTypeId: "",
+       userId: "",
      }
      handleFieldChange = evt => {
         const stateToChange = {}
@@ -19,26 +20,27 @@ class JsEditForm extends Component {
      }
     updateNewEvent = e => {
         e.preventDefault();
-        // let userId = sessionStorage.getItem('userId')
+        let userId = sessionStorage.getItem('userId')
         if (this.state.noteTypes === "") {
             window.alert("Please select technology")
         } else {
             const editedObj = {
-                id: this.props.match.params.noteId,
+                id: this.props.match.params.javascriptId,
                 title: this.state.title,
                 URL: this.state.URL,
                 snippet: this.state.snippet,
                 note: this.state.note,
-                noteTypeId: parseInt(this.state.noteTypeId)
+              noteTypeId: parseInt(this.state.noteTypeId),
+                userId: parseInt(userId)
                 // userId: parseInt(userId)
             };
-
+console.log(this.state.userId)
             // Create the article and redirect user to article list
             this.props.updateJs(editedObj)
         }
     };
     componentDidMount() {
-        dbCalls.get("http://localhost:5002/notes",this.props.match.params.noteId)
+        dbCalls.get("http://localhost:5002/notes",this.props.match.params.javascriptId)
         .then(note => {
             this.setState({
             title: note.title,
@@ -111,7 +113,7 @@ class JsEditForm extends Component {
                     id="noteTypeId"
                     onChange={this.handleFieldChange}
                   >
-                    <option value="">Selectuh</option>
+                    <option value="">Select</option>
                     {this.props.noteTypes.map(e => (
                       <option key={e.id} id={e.id} value={e.id}>
                         {e.name}

@@ -13,7 +13,7 @@ class SearchResults extends Component {
             <Card key={result.id}>
             <Card.Content>
                   <h4>{result.title}</h4>
-                  <Highlight language={"jsx"} className="react-snippet">{result.snippet}</Highlight>
+                  {/* <Highlight language={"jsx"} className="react-snippet">{result.snippet}</Highlight> */}
 
                 </Card.Content>
                 {this.props.noteTypes.filter(note => {
