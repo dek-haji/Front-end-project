@@ -24,7 +24,7 @@ export default class NavBar extends Component {
                 <Link color="primary" variant="body1" className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link color="primary" variant="body1" className="nav-link" to="/notes">JS</Link>
+                <Link color="primary" variant="body1" className="nav-link" to="/javascript">JS</Link>
               </li>
               <li className="nav-item">
                 <Link color="primary" variant="bpdy3" className="nav-link" to="/react">React</Link>

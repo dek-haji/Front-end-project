@@ -17,18 +17,18 @@ class JsList extends Component {
                     <h1>JS notes</h1>
             <section className="Js-notes">
                 {
-                    this.props.notes.map(note=>
+                    this.props.javascript.map(note=>
                     <Card key={note.id} >
                     <Card.Content>
                             <h4>{note.title}</h4>
                             </Card.Content>
-                            <Link className="nav-link" to={`/notes/${note.id}`}>Details</Link> <br/>
+                            <Link className="nav-link" to={`/javascript/${note.id}`}>Details</Link> <br/>
                         <Button basic color='orange' onClick={()=> {this.props.deletejs(note.id)}} >DELETE</Button>
 
                         <Button basic color='teal' type="button"
                         className="btn btn-info"
                         onClick={() => {
-                            this.props.history.push(`/notes/${note.id}/edit`);
+                            this.props.history.push(`/javascript/${note.id}/edit`);
                         }}>
                         Edit
                         </Button>

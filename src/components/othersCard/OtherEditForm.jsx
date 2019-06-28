@@ -21,7 +21,7 @@ class OtherEditForm extends Component {
     
     updateNewEvent = e => {
         e.preventDefault();
-        // let userId = sessionStorage.getItem('userId')
+         let userId = sessionStorage.getItem('userId')
         if (this.state.noteTypes === "") {
             window.alert("Please select technology")
         } else {

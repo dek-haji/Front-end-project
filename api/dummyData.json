@@ -4,17 +4,19 @@
       "name": "deeq",
       "email": "deeq@email.com",
       "id": 1
+    },
+    {
+      "name": "haji",
+      "email": "haji@email.com",
+      "id": 2
+    },
+    {
+      "name": "ali",
+      "email": "ali@email.com",
+      "id": 3
     }
   ],
   "notes": [
-    {
-      "id": 1,
-      "title": "if else",
-      "URL": "6Bp6Z37TRfE&t=4s",
-      "snippet": "if (condition) {   //  block of code to be executed if the condition is true } else {    //  block of code to be executed if the condition is false }",
-      "note": "Use the else statement to specify a block of code to be executed if the condition is false.",
-      "noteTypeId": 1
-    },
     {
       "title": "Conditional (Ternary) Operator",
       "URL": "",
@@ -70,14 +72,6 @@
       "id": 7
     },
     {
-      "id": 8,
-      "title": "While Loop.",
-      "URL": "PpbFyLTtpWI",
-      "snippet": "while (i < 10) {   text += \"The number is \" + i;   i++; }",
-      "note": "The while loop loops through a block of code as long as a specified condition is true.",
-      "noteTypeId": 1
-    },
-    {
       "title": "example of bootstrap",
       "URL": "gqOEoUR5RHg",
       "snippet": "<div class=\"jumbotron text-center\">   <h1>My First Bootstrap Page</h1>   <p>Resize this responsive page to see the effect!</p>  </div>  <div class=\"container\">   <div class=\"row\">     <div class=\"col-sm-4\">       <h3>Column 1</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 2</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 3</h3>        <p>Lorem ipsum dolor..</p>     </div>   </div> </div>",
@@ -85,14 +79,6 @@
       "noteTypeId": 3,
       "userId": 1,
       "id": 9
-    },
-    {
-      "id": 10,
-      "title": "render",
-      "URL": "q6wtD-bBGf8",
-      "snippet": "render() {   return <div />; }",
-      "note": "this is how render works",
-      "noteTypeId": 2
     },
     {
       "title": "constructor",
@@ -104,21 +90,12 @@
       "id": 11
     },
     {
-      "id": 12,
-      "title": "componentWillMount",
-      "URL": "",
-      "snippet": "componentWillMount() {   }",
-      "note": " invoked once.   // fires before initial 'render' ",
-      "noteTypeId": 2
-    },
-    {
+      "id": 13,
       "title": "componentDidMount",
       "URL": "",
       "snippet": "componentDidMount() {}",
       "note": " good for AJAX: fetch, ajax, or subscriptions.\n\n   invoked once (client-side only). fires before initial 'render'",
-      "noteTypeId": 2,
-      "userId": 1,
-      "id": 13
+      "noteTypeId": 1
     },
     {
       "title": "componentWillReceiveProps",
@@ -137,36 +114,12 @@
       "noteTypeId": 2,
       "userId": 1,
       "id": 15
-    },
-    {
-      "id": 16,
-      "title": "setState ",
-      "URL": "",
-      "snippet": "this.setState({mykey: 'my new value'});",
-      "note": "fires after setState\n prefer componentDidUpdate",
-      "noteTypeId": 2
-    },
-    {
-      "id": 17,
-      "title": "json-server!",
-      "URL": "",
-      "snippet": "json-server -w 5002 -p database.json",
-      "note": "make sure u change the database name and the path.",
-      "noteTypeId": 4
-    },
-    {
-      "title": "test",
-      "URL": "",
-      "snippet": "class SearchResults extends Component {   render() {     return (         <section className=\"searchResults\">         <h1>Search Results</h1>             {this.props.searchResults.map(result =>             <Card key={result.id}>             <Card.Content>                   <h4>{result.title}</h4>                   <Highlight language={\"jsx\"} className=\"react-snippet\">{result.snippet}</Highlight>                  </Card.Content>                 {this.props.noteTypes.filter(note => {                   if (note.id === result.noteTypeId) {                     return true                   } else {                     return false                   }                 }).map(noteType =>                   <Link className=\"nav-link\" key= {result.id} to={`/${noteType.name}/${result.id}`}>Details</Link>                  ) }             {/* <Button basic color='orange' onClick={()=> {this.props.deleteReact(result.id)}} >DELETE</Button>             <Button basic color='teal' type=\"button\"             className=\"btn btn-info\"             onClick={() => {                 this.props.history.push(`/react/${result.id}/edit`);             }}>             Edit             </Button> */}         </Card>         )         }          </section>     );   } }",
-      "note": "yep",
-      "noteTypeId": 2,
-      "userId": 1,
-      "id": 20
     }
+    
   ],
   "noteTypes": [
     {
-      "name": "notes",
+      "name": "javascript",
       "id": 1
     },
     {
