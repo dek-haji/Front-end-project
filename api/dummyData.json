@@ -18,22 +18,22 @@
   ],
   "notes": [
     {
-      "title": "Conditional (Ternary) Operator",
+      "id": 2,
+      "title": "Conditional (Ternary) Operatorsss",
       "URL": "",
       "snippet": "variablename = (condition) ? value1:value2 ",
       "note": "JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.",
       "noteTypeId": 1,
-      "userId": 1,
-      "id": 2
+      "userId": 3
     },
     {
-      "title": "The Boolean() Function",
+      "id": 3,
+      "title": "The Boolean() Function..",
       "URL": "B4ZCFdrBmbE",
       "snippet": "Boolean(10 > 9)        // returns true",
       "note": "You can use the Boolean() function to find out if an expression (or a variable) is true:",
       "noteTypeId": 1,
-      "userId": 1,
-      "id": 3
+      "userId": 3
     },
     {
       "title": "Math.round()",
@@ -72,13 +72,13 @@
       "id": 7
     },
     {
-      "title": "example of bootstrap",
+      "id": 9,
+      "title": "example of bootstrapsss",
       "URL": "gqOEoUR5RHg",
       "snippet": "<div class=\"jumbotron text-center\">   <h1>My First Bootstrap Page</h1>   <p>Resize this responsive page to see the effect!</p>  </div>  <div class=\"container\">   <div class=\"row\">     <div class=\"col-sm-4\">       <h3>Column 1</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 2</h3>       <p>Lorem ipsum dolor..</p>     </div>     <div class=\"col-sm-4\">       <h3>Column 3</h3>        <p>Lorem ipsum dolor..</p>     </div>   </div> </div>",
       "note": "Bootstrap 4 is the newest version of Bootstrap; with new components, faster stylesheet and more responsiveness.\n\nBootstrap 4 supports the latest, stable releases of all major browsers and platforms. However, Internet Explorer 9 and down is not supported.",
       "noteTypeId": 3,
-      "userId": 1,
-      "id": 9
+      "userId": 1
     },
     {
       "title": "constructor",
@@ -107,38 +107,56 @@
       "id": 14
     },
     {
-      "title": "componentWillUpdate",
+      "id": 15,
+      "title": "componentWillUpdatess",
       "URL": "",
       "snippet": "componentWillUpdate(nextProps, nextState) {}",
       "note": " invoked immediately before update (new props or state).\n   does not fire before initial 'render'.\n\n (see componentWillReceiveProps if you need to call setState)",
       "noteTypeId": 2,
-      "userId": 1,
-      "id": 15
+      "userId": 1
     },
     {
-      "id": 16,
-      "title": "heeeeyeeeees",
+      "title": "new one",
       "URL": "d0eUMnJ5kTA",
-      "snippet": "sdfsdfsd",
-      "note": "sdfsdf",
+      "snippet": "dsdsdsds",
+      "note": "asdasdasdsa",
+      "noteTypeId": 1,
+      "userId": 3,
+      "id": 16
+    },
+    {
+      "title": "lets js test",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "ffff",
+      "note": "fffff",
+      "noteTypeId": 1,
+      "userId": 3,
+      "id": 18
+    },
+    {
+      "title": "user ID 3",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "ffff",
+      "note": "ffff",
+      "noteTypeId": 1,
+      "userId": 3,
+      "id": 20
+    },
+    {
+      "id": 22,
+      "title": "new reactssss",
+      "URL": "d0eUMnJ5kTA",
+      "snippet": "fefe",
+      "note": "werwe",
       "noteTypeId": 2
     },
     {
-      "title": "react tess",
+      "id": 23,
+      "title": "new othersssss",
       "URL": "d0eUMnJ5kTA",
-      "snippet": "",
-      "note": "",
-      "noteTypeId": 2,
-      "userId": 3,
-      "id": 17
-    },
-    {
-      "id": 18,
-      "title": "nnnnnnwnw",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "",
-      "note": "heeeey",
-      "noteTypeId": 1,
+      "snippet": "sss",
+      "note": "sss",
+      "noteTypeId": 4,
       "userId": 1
     }
   ],

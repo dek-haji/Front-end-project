@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import {Button } from 'semantic-ui-react'
 class JsEditForm extends Component {
      // Set initial state
      state = {
@@ -11,6 +11,7 @@ class JsEditForm extends Component {
         snippet: "",
         note: "",
        noteTypeId: "",
+       userId: "",
      }
      handleFieldChange = evt => {
         const stateToChange = {}

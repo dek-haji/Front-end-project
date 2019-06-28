@@ -10,7 +10,8 @@ class OtherEditForm extends Component {
         URL: "",
         snippet: "",
         note: "",
-      noteTypeId: "",
+       noteTypeId: "",
+      userId: ""
      }
     
      handleFieldChange = evt => {
@@ -20,7 +21,7 @@ class OtherEditForm extends Component {
      }
     
     updateNewEvent = e => {
-        e.preventDefault();
+      e.preventDefault();
         let userId = sessionStorage.getItem('userId')
         if (this.state.noteTypes === "") {
             window.alert("Please select technology")
@@ -31,8 +32,8 @@ class OtherEditForm extends Component {
                 URL: this.state.URL,
                 snippet: this.state.snippet,
                 note: this.state.note,
-                noteTypeId: parseInt(this.state.noteTypeId)
-                // userId: parseInt(userId)
+                noteTypeId: parseInt(this.state.noteTypeId),
+                 userId: parseInt(userId)
             };
 
             // Create the article and redirect user to article list
@@ -47,7 +48,7 @@ class OtherEditForm extends Component {
               URL: note.URL,
               "snippet": note.snippet,
             "note": note.note,
-            noteTypeId: note.noteTypeId
+            noteTypeId: note.noteTypeId,
           });
         });
       }

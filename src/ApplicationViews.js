@@ -207,6 +207,7 @@ class ApplicationViews extends Component {
                                 updateJs={this.updateJs}
                                 deletejs={this.deletejs}
                                 addForm={this.addForm}
+                                notes={this.state.notes}
                             />
                         )
                     } else {

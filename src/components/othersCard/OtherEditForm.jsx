@@ -10,7 +10,8 @@ class OtherEditForm extends Component {
         URL: "",
         snippet: "",
         note: "",
-      noteTypeId: "",
+       noteTypeId: "",
+      userId: "",
      }
     
      handleFieldChange = evt => {
@@ -31,8 +32,8 @@ class OtherEditForm extends Component {
                 URL: this.state.URL,
                 snippet: this.state.snippet,
                 note: this.state.note,
-                noteTypeId: parseInt(this.state.noteTypeId)
-                // userId: parseInt(userId)
+                noteTypeId: parseInt(this.state.noteTypeId),
+                 userId: parseInt(userId)
             };
 
             // Create the article and redirect user to article list
