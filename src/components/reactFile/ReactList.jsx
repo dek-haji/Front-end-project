@@ -1,6 +1,6 @@
 import React, { Component, useDebugValue } from 'react';
 import { Link } from "react-router-dom";
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import { Card, Icon, Image, Button, } from 'semantic-ui-react'
 import "./React.css"
 class ReactList extends Component {
 
@@ -40,15 +40,15 @@ class ReactList extends Component {
                             <Link className="nav-link" to={`/react/${note.id}`}>Details</Link> <br />
                             {this.userCard(note) ?
                                 <>
-                                    <Button basic color='orange' onClick={() => { this.props.deleteReact(note.id) }}> <i className="delete icon"></i> </Button>
+                                    <Link  basic color='black' onClick={() => { this.props.deleteReact(note.id) }}> <i className="trash alternate icon"></i> </Link>
 
-                                    <Button basic color='teal' type="button"
+                                    <Link basic color='teal' type="button"
                                         className="btn btn-info"
                                         onClick={() => {
                                             this.props.history.push(`/react/${note.id}/edit`);
                                         }}>
                                         <i className="edit icon"></i>
-                                    </Button>
+                                    </Link>
                                 </>
                                 : null}
                     <div className="ui star rating" data-rating="3"></div>

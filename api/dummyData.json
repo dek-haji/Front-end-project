@@ -116,33 +116,6 @@
       "userId": 1
     },
     {
-      "title": "new one",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "dsdsdsds",
-      "note": "asdasdasdsa",
-      "noteTypeId": 1,
-      "userId": 3,
-      "id": 16
-    },
-    {
-      "title": "lets js test",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "ffff",
-      "note": "fffff",
-      "noteTypeId": 1,
-      "userId": 3,
-      "id": 18
-    },
-    {
-      "title": "user ID 3",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "ffff",
-      "note": "ffff",
-      "noteTypeId": 1,
-      "userId": 3,
-      "id": 20
-    },
-    {
       "id": 22,
       "title": "new reactssss",
       "URL": "d0eUMnJ5kTA",
@@ -151,11 +124,164 @@
       "noteTypeId": 2
     },
     {
-      "id": 23,
-      "title": "new othersssss",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "sss",
-      "note": "sss",
+      "id": 26,
+      "title": "for loop",
+      "URL": "rTDAAhUgJZM",
+      "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); }",
+      "note": "for loops",
+      "noteTypeId": 1,
+      "userId": 1
+    },
+    {
+      "id": 27,
+      "title": "Data types",
+      "URL": "808eYu9B9Yw",
+      "snippet": "1. var age = 18;                          2. var name = \"Jane\";                      3. var name = {first:\"Jane\", last:\"Doe\"};   4.var truth = false;                    5. var sheets = [\"HTML\",\"CSS\",\"JS\"];      6. var a; typeof a;                        7.var a = null;                         ",
+      "note": "1. returns number 2. returns string . 3. returns an object . 4. returns boolean . 5. returns an array .  6. returns undefined . 7. returns null. ",
+      "noteTypeId": 1,
+      "userId": 3
+    },
+    {
+      "id": 28,
+      "title": "events onClick.",
+      "URL": "mlxi1WUSO_8",
+      "snippet": "<button onclick=\"myFunction();\">    Click here </button>",
+      "note": "whenever the button clicked do something.",
+      "noteTypeId": 1,
+      "userId": 3
+    },
+    {
+      "title": "get time ",
+      "URL": "",
+      "snippet": "var d = new Date()",
+      "note": "",
+      "noteTypeId": null,
+      "userId": 3,
+      "id": 29
+    },
+    {
+      "title": "bootstrap install",
+      "URL": "",
+      "snippet": "npm install bootstrap",
+      "note": "make sure you are in the root directory.",
+      "noteTypeId": 3,
+      "userId": 3,
+      "id": 30
+    },
+    {
+      "title": "Bootstrap CDN",
+      "URL": "xCGPPimXgJU",
+      "snippet": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\"> <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>",
+      "note": "Skip the download with BootstrapCDN to deliver cached version of Bootstrap’s compiled CSS and JS to your project.",
+      "noteTypeId": 3,
+      "userId": 3,
+      "id": 31
+    },
+    {
+      "id": 32,
+      "title": "bootstrap css",
+      "URL": "",
+      "snippet": "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">",
+      "note": "Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load our CSS.",
+      "noteTypeId": 3,
+      "userId": 3
+    },
+    {
+      "title": "starter template",
+      "URL": "",
+      "snippet": "<!doctype html> <html lang=\"en\">   <head>     <!-- Required meta tags -->     <meta charset=\"utf-8\">     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">      <!-- Bootstrap CSS -->     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">      <title>Hello, world!</title>   </head>   <body>     <h1>Hello, world!</h1>      <!-- Optional JavaScript -->     <!-- jQuery first, then Popper.js, then Bootstrap JS -->     <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>   </body> </html>",
+      "note": "Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:",
+      "noteTypeId": 3,
+      "userId": 3,
+      "id": 33
+    },
+    {
+      "title": "box sizing",
+      "URL": "",
+      "snippet": ".selector-for-some-widget {   box-sizing: content-box; }",
+      "note": "With the above snippet, nested elements—including generated content via ::before and ::after—will all inherit the specified box-sizing for that .selector-for-some-widget.",
+      "noteTypeId": 3,
+      "userId": 3,
+      "id": 34
+    },
+    {
+      "id": 35,
+      "title": "semantic UI in HTML",
+      "URL": "5Bytq6LNDO4",
+      "snippet": "<link rel=\"stylesheet\" type=\"text/css\" href=\"semantic/dist/semantic.min.css\"> <script   src=\"https://code.jquery.com/jquery-3.1.1.min.js\"   integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\"   crossorigin=\"anonymous\"></script> <script src=\"semantic/dist/semantic.min.js\"></script>",
+      "note": "Running the gulp build tools will compile CSS and Javascript for use in your project. Just link to these files in your HTML along with the latest jQuery.",
+      "noteTypeId": 4,
+      "userId": 3
+    },
+    {
+      "title": "include external css file",
+      "URL": "QT_lIti-8Zk",
+      "snippet": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\" />",
+      "note": "add that line above in your html header.",
+      "noteTypeId": 4,
+      "userId": 3,
+      "id": 36
+    },
+    {
+      "title": "image tag in html",
+      "URL": "",
+      "snippet": "<img src=\"/demo.jpg\" alt=\"description\"  height=\"48\" width=\"100\" longdesc=\"desc.txt\" />",
+      "note": "",
+      "noteTypeId": 4,
+      "userId": 3,
+      "id": 37
+    },
+    {
+      "title": "link tag",
+      "URL": "",
+      "snippet": "<a href=\"https://htmlg.com/\" target=\"_blank\" rel=\"external\" hreflang=\"en\" type=\"text/html\">     Link </a>",
+      "note": "",
+      "noteTypeId": 4,
+      "userId": 3,
+      "id": 38
+    },
+    {
+      "title": "audio tag",
+      "URL": "",
+      "snippet": " <audio controls>     <source src=\"sound.ogg\" type=\"audio/ogg\">     <source src=\"sound.mp3\" type=\"audio/mpeg\">     No audio support. </audio> ",
+      "note": "",
+      "noteTypeId": 4,
+      "userId": 3,
+      "id": 39
+    },
+    {
+      "title": "blank html",
+      "URL": "",
+      "snippet": "<!DOCTYPE html> <html lang=\"en\">   <head>     <meta charset=\"utf-8\">     <title>Page Title</title>     <meta name=\"description\" content=\"Roughly 155 characters\">     <link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>     <script src=\"script.js\"></script>   </head>   <body>     <!-- Content -->   </body> </html>",
+      "note": "",
+      "noteTypeId": 4,
+      "userId": 3,
+      "id": 40
+    },
+    {
+      "id": 41,
+      "title": "install json-server",
+      "URL": "",
+      "snippet": " npm install -g json-server",
+      "note": " By adding the -g option we make sure that the package is installed globally on your system.",
+      "noteTypeId": 4,
+      "userId": 3
+    },
+    {
+      "title": "json-server run",
+      "URL": "",
+      "snippet": "json-server -w 5002 -p database.json",
+      "note": "make sure you check the database name and the route",
+      "noteTypeId": 4,
+      "userId": 3,
+      "id": 42
+    },
+    {
+      "id": 43,
+      "title": "get all fetch call",
+      "URL": "",
+      "snippet": "getAll: { value: function (URL) { return fetch(`${URL}`).then(e => e.json()) }}",
+      "note": "check the URL ",
       "noteTypeId": 4,
       "userId": 1
     }

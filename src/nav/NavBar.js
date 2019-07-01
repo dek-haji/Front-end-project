@@ -1,11 +1,12 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import { Input, Menu, Segment } from 'semantic-ui-react'
  import "bootstrap/dist/css/bootstrap.min.css"
 import "./NavBar.css"
 import logo from "./logo.jpeg"
 
-export default class NavBar extends Component {
+class NavBar extends Component {
+  isAuthenticated = () => sessionStorage.getItem("userId") !== null
 
     handleSearch(input) {
         if (input.keyCode === 13) {
@@ -15,10 +16,13 @@ export default class NavBar extends Component {
             // this.props.history.push("/search");
         }
     }
+
     render() {
+      if (this.props.history.location.pathname
+        !== '/login') {
         return (
           <nav className="navbar  flex-md-nowrap p-0 shadow">
-            <img className= "image-nav"src = {logo}></img>
+            <img className= "image-nav"src = {logo} alt= ""></img>
                 <ul className="nav nav-pills">
               <li className="nav-item">
                 <Link color="primary" variant="body1" className="nav-link" to="/">Home</Link>
@@ -39,7 +43,7 @@ export default class NavBar extends Component {
                     <div className="ui icon input">
             <Link className="nav-link" to="/search" >
                     <i className="search icon"  ></i></Link>
-                    <input className="prompt" type="text" placeholder="Search..."  onKeyUp={e => this.handleSearch(e)}></input>
+                    <Input className="prompt" type="text" ref= "" placeholder="Search..."  onKeyUp={e => this.handleSearch(e)}></Input>
 
             </div>
           </li>
@@ -49,6 +53,9 @@ export default class NavBar extends Component {
               </li>
             </nav>
         )
+    }else {
+      return null
     }
 }
-
+}
+export default withRouter(NavBar)
