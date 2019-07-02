@@ -35,20 +35,20 @@ class OtherList extends Component {
                         <Card key={note.id}>
                         <Card.Content>
                         <i className="right floated like icon"></i>
-                                <h3>{note.title}</h3>
+                                <h4>{note.title}</h4>
                                 </Card.Content>
                             <Link className="nav-link" to={`/others/${note.id}`}>Details</Link> <br />
                             {this.userCard(note) ?
                     <>
-                            <Button basic color='orange' onClick={()=> {this.props.deleteOthers(note.id)}}> <i className="delete icon"></i> </Button>  
+                    <Link  basic color='black' onClick={() => { this.props.deleteOthers(note.id) }}> <i className="trash alternate icon"></i> </Link>
 
-                        <Button basic color='teal' type="button"
+                        <Link basic color='teal' type="button"
                         className="btn btn-info"
                         onClick={() => {
                             this.props.history.push(`/others/${note.id}/edit`);
                         }}>
                         <i className="edit icon"></i>
-                                    </Button>
+                                    </Link>
                                     </>
                                 : null }
                     <div className="ui star rating" data-rating="3"></div>

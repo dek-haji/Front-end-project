@@ -31,9 +31,7 @@ export default class JsForm extends Component {
     this.setState(stateToChange);
 
   }
-  
 
-  
   /*
         Local method for validation, creating article object, and
         invoking the function reference passed from parent component
@@ -127,17 +125,16 @@ export default class JsForm extends Component {
               ))}
             </select>
           </div>
-          <Button variant="outlined" color="facebook" size="large"
+          <button variant="outlined" color="facebook" size="large"
             type="submit"
             onClick={this.constructNewEvent}
             className="btn btn-primary"
           >
             Submit New File
-          </Button>
+          </button>
         </form>
-        
           <img className="imagesss" src={note}></img>
-          
+
           </div>
       </React.Fragment>
     );

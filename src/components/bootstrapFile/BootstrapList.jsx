@@ -41,17 +41,18 @@ class BootstrapList extends Component {
                             <Link className="nav-link" to={`/bootstrap/${note.id}`}>Details</Link> <br/>
                             {this.userCard(note) ?
                     <>
-                        <Button basic color='orange' onClick={()=> {this.props.deleteBootstrap(note.id)}} >DELETE</Button>
+                        <Link  basic color='black' onClick={() => { this.props.deleteBootstrap(note.id) }}> <i className="trash alternate icon"></i> </Link>
 
-                        <Button basic color='teal'  type="button"
+                        <Link basic color='teal'  type="button"
                         className="btn btn-info"
                         onClick={() => {
                             this.props.history.push(`/bootstrap/${note.id}/edit`);
                         }}>
-                        Edit
-                        </Button>
+                        <i className="edit icon"></i>
+                        </Link>
                         </>
-                                : null }
+                                : null}
+                                <div className="ui star rating" data-rating="3"></div>
                 </Card>
                 )
            }

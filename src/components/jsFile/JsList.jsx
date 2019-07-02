@@ -47,17 +47,18 @@ class JsList extends Component {
                             <Link className="nav-link" to={`/javascript/${note.id}`}>Details</Link> <br />
                             {this.userCard(note) ?
                     <>
-                                <Button basic color='orange' onClick={() => { this.props.deletejs(note.id) }} >DELETE</Button>
+                                    <Link  basic color='black' onClick={() => { this.props.deletejs(note.id) }}>  <i className="trash alternate icon"></i> </Link>
 
-                                <Button basic color='teal' type="button"
+                                <Link basic color='teal' type="button"
                                     className="btn btn-info"
                                     onClick={() => {
                                         this.props.history.push(`/javascript/${note.id}/edit`);
                                     }}>
                                     Edit
-                        </Button>
+                        </Link>
                                 </>
                                 : null }
+                                <div className="ui star rating" data-rating="3"></div>
                 </Card>
                 )
            }
