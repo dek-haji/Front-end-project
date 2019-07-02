@@ -116,15 +116,6 @@
       "userId": 1
     },
     {
-      "title": "new one",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "dsdsdsds",
-      "note": "asdasdasdsa",
-      "noteTypeId": 1,
-      "userId": 3,
-      "id": 16
-    },
-    {
       "title": "lets js test",
       "URL": "d0eUMnJ5kTA",
       "snippet": "ffff",
@@ -132,15 +123,6 @@
       "noteTypeId": 1,
       "userId": 3,
       "id": 18
-    },
-    {
-      "title": "user ID 3",
-      "URL": "d0eUMnJ5kTA",
-      "snippet": "ffff",
-      "note": "ffff",
-      "noteTypeId": 1,
-      "userId": 3,
-      "id": 20
     },
     {
       "id": 22,
