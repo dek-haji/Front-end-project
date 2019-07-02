@@ -21,9 +21,9 @@ class JsDetails extends Component {
                         {this.props.javascript.title }
                         </h1>
                         <Highlight language={"jsx"} className="javascript-snippet">{this.props.javascript.snippet}</Highlight>
-                        <Modal trigger={<Button>Show Modal</Button>}>
+                        {/* <Modal trigger={<Button>Show Modal</Button>}>
                         <Highlight language={"jsx"} className="javascript-snippet">{this.props.javascript.snippet}</Highlight>
-                    </Modal>
+                    </Modal> */}
                             <div className = "notess"><p>{this.props.javascript.note}</p></div>
 
                 </div>

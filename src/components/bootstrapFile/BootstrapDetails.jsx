@@ -22,9 +22,9 @@ class BootstrapDetails extends Component
                         {this.props.bootstrap.title }
                         </h2>
                         <Highlight language={"jsx"} className="bootstrap-snippet">{this.props.bootstrap.snippet}</Highlight>
-                        <Modal trigger={<Button>Show Modal</Button>}>
+                        {/* <Modal trigger={<Button>Show Modal</Button>}>
                         <Highlight language={"jsx"} className="bootstrap-snippet">{this.props.bootstrap.snippet}</Highlight>
-                    </Modal>
+                    </Modal> */}
                             <p>{this.props.bootstrap.note}</p>
 
                 </div>

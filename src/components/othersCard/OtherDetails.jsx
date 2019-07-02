@@ -21,9 +21,9 @@ class OtherDetails
                         {this.props.others.title }
                         </h1>
                         <Highlight language={"jsx"} className="others-snippet">{this.props.others.snippet}</Highlight>
-                        <Modal trigger={<Button>Show Modal</Button>}>
+                        {/* <Modal trigger={<Button>Show Modal</Button>}>
                         <Highlight language={"jsx"} className="others-snippet">{this.props.others.snippet}</Highlight>
-                    </Modal>
+                    </Modal> */}
                             <p>{this.props.others.note}</p>
 
                 </div>

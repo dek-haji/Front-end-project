@@ -7,13 +7,14 @@ import "./Search.css"
 class SearchResults extends Component {
   render() {
     return (
-        <section className="searchResults">
+      <>
         <h1>Search Results</h1>
+      <section className="searchResults">
             {this.props.searchResults.map(result =>
             <Card key={result.id}>
             <Card.Content>
                   <h4>{result.title}</h4>
-                  {/* <Highlight language={"jsx"} className="react-snippet">{result.snippet}</Highlight> */}
+                  <Highlight language={"jsx"} className="react-snippet">{result.snippet}</Highlight>
 
                 </Card.Content>
                 {this.props.noteTypes.filter(note => {
@@ -25,19 +26,12 @@ class SearchResults extends Component {
                 }).map(noteType =>
                   <Link className="nav-link" key= {result.id} to={`/${noteType.name}/${result.id}`}>Details</Link>
                  ) }
-            {/* <Button basic color='orange' onClick={()=> {this.props.deleteReact(result.id)}} >DELETE</Button>
-            <Button basic color='teal' type="button"
-            className="btn btn-info"
-            onClick={() => {
-                this.props.history.push(`/react/${result.id}/edit`);
-            }}>
-            Edit
-            </Button> */}
         </Card>
         )
         }
 
         </section>
+        </>
     );
   }
 }
