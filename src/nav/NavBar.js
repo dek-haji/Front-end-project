@@ -18,8 +18,7 @@ class NavBar extends Component {
     }
 
     render() {
-      if (this.props.history.location.pathname
-        !== '/login') {
+      if (this.props.history.location.pathname!== '/login' && (this.props.history.location.pathname !== '/register')){
         return (
           <nav className="navbar  flex-md-nowrap p-0 shadow">
             <img className= "image-nav"src = {logo} alt= ""></img>
