@@ -36,13 +36,13 @@
       "userId": 3
     },
     {
+      "id": 4,
       "title": "Math.round()",
       "URL": "c2nVqhQE9Is",
       "snippet": "Math.round(4.7);    // returns 5 Math.round(4.4);    // returns 4",
       "note": "Math.round(x) returns the value of x rounded to its nearest integer:",
       "noteTypeId": 1,
-      "userId": 1,
-      "id": 4
+      "userId": 1
     },
     {
       "title": "Math.pow()",
@@ -61,15 +61,6 @@
       "noteTypeId": 1,
       "userId": 1,
       "id": 6
-    },
-    {
-      "title": "JavaScript Data Types",
-      "URL": "O9by2KcR2v4",
-      "snippet": "var length = 16;                               // Number var lastName = \"Johnson\";                      // String var x = {firstName:\"John\", lastName:\"Doe\"};    // Object",
-      "note": "JavaScript variables can hold many data types: numbers, strings, objects and more:",
-      "noteTypeId": 1,
-      "userId": 1,
-      "id": 7
     },
     {
       "id": 9,
@@ -109,7 +100,7 @@
     {
       "id": 15,
       "title": "componentWillUpdatess",
-      "URL": "",
+      "URL": "JPT3bFIwJYA",
       "snippet": "componentWillUpdate(nextProps, nextState) {}",
       "note": " invoked immediately before update (new props or state).\n   does not fire before initial 'render'.\n\n (see componentWillReceiveProps if you need to call setState)",
       "noteTypeId": 2,
@@ -128,7 +119,7 @@
       "title": "for loop",
       "URL": "rTDAAhUgJZM",
       "snippet": "for (var i = 0; i < 10; i++) {     document.write(i + \": \" + i*3 + \"<br />\"); }",
-      "note": "for loops",
+      "note": "Loops in JavaScript are used to execute the same block of code a specified number of times or while a specified condition is true. Very often when you write code, you want the same block of code to run over and over again in a row.",
       "noteTypeId": 1,
       "userId": 1
     },
@@ -149,15 +140,6 @@
       "note": "whenever the button clicked do something.",
       "noteTypeId": 1,
       "userId": 3
-    },
-    {
-      "title": "get time ",
-      "URL": "",
-      "snippet": "var d = new Date()",
-      "note": "",
-      "noteTypeId": null,
-      "userId": 3,
-      "id": 29
     },
     {
       "title": "bootstrap install",
@@ -268,21 +250,30 @@
       "userId": 3
     },
     {
+      "id": 42,
       "title": "json-server run",
-      "URL": "",
+      "URL": "iiADhChRriM",
       "snippet": "json-server -w 5002 -p database.json",
       "note": "make sure you check the database name and the route",
       "noteTypeId": 4,
-      "userId": 3,
-      "id": 42
+      "userId": 3
     },
     {
-      "id": 43,
-      "title": "get all fetch call",
-      "URL": "",
-      "snippet": "getAll: { value: function (URL) { return fetch(`${URL}`).then(e => e.json()) }}",
-      "note": "check the URL ",
-      "noteTypeId": 4,
+      "title": "arrays",
+      "URL": "cSdrCK6g7GE",
+      "snippet": "var cars = [\"Saab\", \"Volvo\", \"BMW\"];",
+      "note": "JavaScript arrays are used to store multiple values in a single variable.",
+      "noteTypeId": 1,
+      "userId": 1,
+      "id": 43
+    },
+    {
+      "id": 44,
+      "title": "functions",
+      "URL": "KWk9BNBtFtg",
+      "snippet": "function myFunction(p1, p2) {   return p1 * p2;   }",
+      "note": "A JavaScript function is a block of code designed to perform a particular task.\n\nA JavaScript function is executed when \"something\" invokes it (calls it)",
+      "noteTypeId": 1,
       "userId": 1
     }
   ],
