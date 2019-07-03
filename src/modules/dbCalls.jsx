@@ -10,13 +10,13 @@ const remoteURL = process.env.NODE_ENV === 'production'
 export default Object.create(null, {
     get: {
         value: function (URL, id) {
-            return fetch(`${URL}/${id}`).then(e => e.json())
+            return fetch(`${URL}${id}`).then(e => e.json())
         }
     },
 
     getNoteType: {
         value: function (remoteURL, id) {
-            return fetch(`${remoteURL}/notes?noteTypeId=${id}`).then(e => e.json())
+            return fetch(`${remoteURL}notes?noteTypeId=${id}`).then(e => e.json())
         }
     },
     all: {
@@ -28,7 +28,7 @@ export default Object.create(null, {
     specific: {
         value: function (category) {
             let sessionId = sessionStorage.getItem("userId")
-            return fetch(`${remoteURL}/${category}?userId=${sessionId}`).then(e => e.json())
+            return fetch(`${remoteURL}${category}?userId=${sessionId}`).then(e => e.json())
         }
     },
     delete: {
@@ -76,15 +76,15 @@ export default Object.create(null, {
     },
     getUsers: {
         value: function(sessionId) {
-        return fetch(`http://localhost:5002/users?userId=${sessionId}`).then(e => e.json());
+        return fetch(`${remoteURL}users?userId=${sessionId}`).then(e => e.json());
     }},
     getAllUsers: {
         value: function () {
-            return fetch(`${remoteURL}/users`).then(e => e.json());
+            return fetch(`${remoteURL}users`).then(e => e.json());
         },
         postUser: {
             value: function (newUser) {
-                return fetch(`${remoteURL}/users`, {
+                return fetch(`${remoteURL}users`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -96,6 +96,6 @@ export default Object.create(null, {
     },
     search: {
         value: function(input) {
-      return fetch(`${remoteURL}/notes?title_like=${input}`).then(e => e.json());
+      return fetch(`${remoteURL}notes?title_like=${input}`).then(e => e.json());
     }
   }})
