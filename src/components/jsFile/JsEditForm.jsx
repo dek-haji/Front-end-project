@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import dbCalls from '../../modules/dbCalls';
-import {Button } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
+
+
+
+const remoteURL = process.env.NODE_ENV === 'production'
+    ? '/api/'
+    : "http://localhost:5002/api/";
 class JsEditForm extends Component {
      // Set initial state
      state = {
@@ -40,7 +46,7 @@ console.log(this.state.userId)
         }
     };
     componentDidMount() {
-        dbCalls.get("http://localhost:5002/notes",this.props.match.params.javascriptId)
+        dbCalls.get(`${remoteURL}notes/`,this.props.match.params.javascriptId)
         .then(note => {
             this.setState({
             title: note.title,
