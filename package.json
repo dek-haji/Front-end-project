@@ -6,6 +6,7 @@
     "@material-ui/core": "^4.0.2",
     "bootstrap": "^4.3.1",
     "highlight.js": "^9.15.8",
+    "json-server": "^0.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-highlight": "^0.12.0",
@@ -16,7 +17,9 @@
     "semantic-ui-react": "^0.87.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && npm run json-serve",
+    "json-serve": "node server.js",
+    "start:dev": "concurrently \"npm run json-serve\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1"
   }
 }
