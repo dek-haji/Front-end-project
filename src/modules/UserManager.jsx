@@ -57,7 +57,9 @@ to be the other user.
 */
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
-const url = 'http://localhost:5002/users';
+const remoteURL = process.env.NODE_ENV === 'production'
+    ? '/api/'
+    : "http://localhost:5002/api/";;
 
 
 const setUserInLocalStorage = (user) => {
@@ -88,7 +90,7 @@ export const login = (email, password) => {
       }))
 }
 export const saveUserToJsonServer = (user) => {
-  return fetch(url, {
+  return fetch(`${remoteURL}users`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -104,7 +106,7 @@ export const saveUserToJsonServer = (user) => {
 
 
 export const getUser = (userId) => {
-  return fetch(`${url}/${userId}`)
+  return fetch(`${remoteURL}users/${userId}`)
     .then(res => res.json());
 }
 

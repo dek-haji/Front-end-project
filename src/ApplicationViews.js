@@ -22,7 +22,7 @@ import OtherEditForm from "./components/othersCard/OtherEditForm"
 const remoteURL = process.env.NODE_ENV === 'production'
     ? '/api/'
     : "http://localhost:5002/api/";
-const usersURL = `${remoteURL}/users`
+const usersURL = `${remoteURL}users`
 
 class ApplicationViews extends Component {
     isAuthenticated = () => sessionStorage.getItem("username") !== null
@@ -94,8 +94,8 @@ class ApplicationViews extends Component {
         deletejs = id => {
             const newState = {};
             dbCalls
-            .delete(id, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=1`))
+            .delete(id, `${remoteURL}notes`)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=1`))
             .then(javascript => (newState.javascript = javascript))
             .then(() => this.setState(newState));
         };
@@ -103,24 +103,24 @@ class ApplicationViews extends Component {
         deleteOthers = id => {
             const newState = {};
             dbCalls
-            .delete(id, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=4`))
+            .delete(id, `${remoteURL}notes`)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=4`))
             .then(others => (newState.others = others))
             .then(() => this.setState(newState));
         };
         deleteReact = id => {
             const newState = {};
             dbCalls
-            .delete(id, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=2`))
+            .delete(id, `${remoteURL}notes`)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=2`))
             .then(react => (newState.react = react))
             .then(() => this.setState(newState));
         };
         deleteBootstrap = id => {
             const newState = {};
             dbCalls
-            .delete(id, `${remoteURL}/notes`)
-            .then(() => dbCalls.all(`${remoteURL}/notes?noteTypeId=3`))
+            .delete(id, `${remoteURL}notes`)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=3`))
             .then(bootstrap => (newState.bootstrap = bootstrap))
             .then(() => this.setState(newState));
         };
