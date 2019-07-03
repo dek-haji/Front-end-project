@@ -19,7 +19,9 @@ import OtherList from "./components/othersCard/OtherList"
 import OtherDetails from "./components/othersCard/OtherDetails"
 import OtherEditForm from "./components/othersCard/OtherEditForm"
 
-const remoteURL = "http://localhost:5002";
+const remoteURL = process.env.NODE_ENV === 'production'
+    ? '/api/'
+    : "http://localhost:5002/api/";
 const usersURL = `${remoteURL}/users`
 
 class ApplicationViews extends Component {
@@ -41,40 +43,40 @@ class ApplicationViews extends Component {
             const newState = {};
             // let sessionId = sessionStorage.getItem("userId")
             dbCalls
-                .all("http://localhost:5002/notes?noteTypeId=1")
+                .all(`${remoteURL}notes?noteTypeId=1`)
                 .then(javascript => (newState.javascript = javascript))
-                .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
+                .then(() => fetch(`${remoteURL}noteTypes`).then(r => r.json()))
                 .then(noteTypes => (newState.noteTypes = noteTypes))
                 .then((console.log(this.state.noteTypes)))
-                .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
+                .then(() => fetch(`${remoteURL}users`).then(r => r.json()))
                 .then(users => (newState.users = users))
-                .then(() => fetch("http://localhost:5002/notes").then(r => r.json()))
+                .then(() => fetch(`${remoteURL}notes`).then(r => r.json()))
                 .then(notes => (newState.notes = notes))
-                .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
+                .then(() => fetch(`${remoteURL}notes?noteTypeId=2`).then(r => r.json()))
                 .then(react => (newState.react = react))
-                .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
+                .then(() => fetch(`${remoteURL}notes?noteTypeId=3`).then(r => r.json()))
                 .then(bootstrap => (newState.bootstrap = bootstrap))
-                .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+                .then(() => fetch(`${remoteURL}notes?noteTypeId=4`).then(r => r.json()))
                 .then(others => (newState.others = others))
-                .then(() => fetch("http://localhost:5002/users").then(r => r.json()))
+                .then(() => fetch(`${remoteURL}users`).then(r => r.json()))
                 .then(users => (newState.users = users))
                 .then(() => this.setState(newState))
     }
     
     addForm = newObj => {
         const newState = {};
-        return dbCalls.post(newObj, "http://localhost:5002/notes")
-        .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
+        return dbCalls.post(newObj, `${remoteURL}notes`)
+        .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=1`))
         .then(javascript => (newState.javascript = javascript))
-        .then(() => fetch("http://localhost:5002/noteTypes").then(r => r.json()))
+        .then(() => fetch(`${remoteURL}noteTypes`).then(r => r.json()))
         .then(noteTypes => (newState.noteTypes = noteTypes))
-        .then(() => fetch(`http://localhost:5002/users`).then(r => r.json()))
+        .then(() => fetch(`${remoteURL}users`).then(r => r.json()))
         .then(users => (newState.users = users))
-        .then(() => fetch("http://localhost:5002/notes?noteTypeId=2").then(r => r.json()))
+        .then(() => fetch(`${remoteURL}notes?noteTypeId=2`).then(r => r.json()))
         .then(react => (newState.react = react))
-        .then(() => fetch("http://localhost:5002/notes?noteTypeId=3").then(r => r.json()))
+        .then(() => fetch(`${remoteURL}notes?noteTypeId=3`).then(r => r.json()))
         .then(bootstrap => (newState.bootstrap = bootstrap))
-        .then(() => fetch("http://localhost:5002/notes?noteTypeId=4").then(r => r.json()))
+        .then(() => fetch(`${remoteURL}notes?noteTypeId=4`).then(r => r.json()))
         .then(others => (newState.others = others))
         .then(() => this.setState(newState))
     };
@@ -123,8 +125,8 @@ class ApplicationViews extends Component {
             .then(() => this.setState(newState));
         };
         updateJs = (editedNotesObject) => {
-            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=1"))
+            return dbCalls.put(`${remoteURL}notes`, editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=1`))
                 .then(notes => {
                     this.props.history.push("/javascript")
                     this.setState({
@@ -134,8 +136,8 @@ class ApplicationViews extends Component {
         };
     
         updateOthers = (editedNotesObject) => {
-            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=4"))
+            return dbCalls.put(`${remoteURL}notes`, editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=4`))
                 .then(others => {
                     this.props.history.push("/others")
                     this.setState({
@@ -145,8 +147,8 @@ class ApplicationViews extends Component {
         };
     updateReact = (editedNotesObject) => {
         const newState = {};
-            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=2"))
+            return dbCalls.put(`${remoteURL}notes`, editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=2`))
                 .then(react => (newState.react = react))
                 .then(() => this.setState(newState))
                 .then(( this.props.history.push("/react")))
@@ -155,8 +157,8 @@ class ApplicationViews extends Component {
         
 
         updateBootstrap = (editedNotesObject) => {
-            return dbCalls.put("http://localhost:5002/notes", editedNotesObject)
-            .then(() => dbCalls.all("http://localhost:5002/notes?noteTypeId=3"))
+            return dbCalls.put(`${remoteURL}notes`, editedNotesObject)
+            .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=3`))
                 .then(bootstrap => {
                     this.props.history.push("/bootstrap")
                     this.setState({
@@ -219,15 +221,15 @@ class ApplicationViews extends Component {
                     let javascript = this.state.javascript.find(note =>
                         note.id === parseInt(props.match.params.javascriptId)
                     )
-        
+
                     // If the note wasn't found, create a default one
                     if (!javascript ){
                         javascript = { id: 404, title: "404" }
-                       
+
                     }
                     if (this.isAuthenticated()) {
                     return <JsDetails javascript={javascript}
-                        
+
                         updateJs={this.updateJs} />
                     } else {
                         return <Redirect to="/login" />

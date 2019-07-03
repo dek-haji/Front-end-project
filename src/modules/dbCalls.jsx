@@ -1,4 +1,4 @@
-const remoteUrl = process.env.NODE_ENV === 'production'
+const remoteURL = process.env.NODE_ENV === 'production'
     ? '/api/'
     : "http://localhost:5002/api/";
 // const jsURL = `${remoteURL}/js`
@@ -28,7 +28,7 @@ export default Object.create(null, {
     specific: {
         value: function (category) {
             let sessionId = sessionStorage.getItem("userId")
-            return fetch(`${remoteUrl}/${category}?userId=${sessionId}`).then(e => e.json())
+            return fetch(`${remoteURL}/${category}?userId=${sessionId}`).then(e => e.json())
         }
     },
     delete: {
@@ -80,11 +80,11 @@ export default Object.create(null, {
     }},
     getAllUsers: {
         value: function () {
-            return fetch(`${remoteUrl}/users`).then(e => e.json());
+            return fetch(`${remoteURL}/users`).then(e => e.json());
         },
         postUser: {
             value: function (newUser) {
-                return fetch(`${remoteUrl}/users`, {
+                return fetch(`${remoteURL}/users`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -96,6 +96,6 @@ export default Object.create(null, {
     },
     search: {
         value: function(input) {
-      return fetch(`${remoteUrl}/notes?title_like=${input}`).then(e => e.json());
+      return fetch(`${remoteURL}/notes?title_like=${input}`).then(e => e.json());
     }
   }})
