@@ -42,13 +42,13 @@ class ReactList extends Component {
                                 <>
                                     <Link  basic color='black' onClick={() => { this.props.deleteReact(note.id) }}> <i className="trash alternate icon"></i> </Link>
 
-                                    <Link basic color='teal' type="button"
+                                    <Button basic color='teal' type="button"
                                         className="btn btn-info"
                                         onClick={() => {
                                             this.props.history.push(`/react/${note.id}/edit`);
                                         }}>
                                         <i className="edit icon"></i>
-                                    </Link>
+                                    </Button>
                                 </>
                                 : null}
                     <div className="ui star rating" data-rating="3"></div>

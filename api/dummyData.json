@@ -65,13 +65,13 @@
       "userId": 1
     },
     {
+      "id": 5,
       "title": "Math.pow()",
       "URL": "",
       "snippet": "Math.pow(8, 2);      // returns 64",
       "note": "Math.pow(x, y) returns the value of x to the power of y:",
       "noteTypeId": 1,
-      "userId": 1,
-      "id": 5
+      "userId": 1
     },
     {
       "title": "Math.sqrt()",
@@ -297,12 +297,12 @@
       "userId": 1
     },
     {
-      "title": "werwerwer",
+      "title": "boots",
       "URL": "",
-      "snippet": "",
-      "note": "",
-      "noteTypeId": 1,
-      "userId": 7,
+      "snippet": "sdsds",
+      "note": "dddddd",
+      "noteTypeId": 3,
+      "userId": 1,
       "id": 45
     }
   ],

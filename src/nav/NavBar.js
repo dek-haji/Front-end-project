@@ -12,7 +12,6 @@ class NavBar extends Component {
         if (input.keyCode === 13) {
             console.log("HANDLE SEARCH - INPUT TARGET VALUE:", input.target.value);
           this.props.getSearchResults(input.target.value);
-          
             // this.props.history.push("/search");
         }
     }
