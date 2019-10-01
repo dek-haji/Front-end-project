@@ -34,6 +34,21 @@
       "name": "admin12",
       "email": "admin12@email.com",
       "id": 7
+    },
+    {
+      "name": "david",
+      "email": "david@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "samuel",
+      "email": "samuel@email.com",
+      "id": 9
+    },
+    {
+      "name": "manuel",
+      "email": "manuel@email.com",
+      "id": 10
     }
   ],
   "notes": [
@@ -304,6 +319,15 @@
       "noteTypeId": 3,
       "userId": 1,
       "id": 45
+    },
+    {
+      "title": "react hooks",
+      "URL": "mxK8b99iJTg",
+      "snippet": "import React, { useState } from 'react';  function Example() {   // Declare a new state variable, which we'll call \"count\"   const [count, setCount] = useState(0);    return (     <div>       <p>You clicked {count} times</p>       <button onClick={() => setCount(count + 1)}>         Click me       </button>     </div>   ); }",
+      "note": "This new function useState is the first “Hook” we’ll learn about, but this example is just a teaser. Don’t worry if it doesn’t make sense yet!",
+      "noteTypeId": 2,
+      "userId": 10,
+      "id": 46
     }
   ],
   "noteTypes": [
