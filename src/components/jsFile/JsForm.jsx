@@ -69,7 +69,6 @@ export default class JsForm extends Component {
               type="text"
               required
               className="form-control"
-              
               onChange={this.handleFieldChange}
               id="jsTitle"
               placeholder="title"
