@@ -110,20 +110,6 @@ export const getUser = (userId) => {
     .then(res => res.json());
 }
 
-// export const login = (email) => {
-//   // NOTE: json-server will return an array, but we only expect one or none users to come back
-//   return fetch(`${url}?email=${email}`)
-//     .then(res => res.json())
-//     .then(matchingUsers => {
-//       if (!matchingUsers.length) {
-//         alert('No user exists with that email address');
-//         return;
-//       }
-//       const user = matchingUsers[0];
-//       setUserInLocalStorage(user);
-//       return user;
-//     });
-// }
 
 export const getUserFromLocalStorage = () => {
   const user = localStorage.getItem('user');

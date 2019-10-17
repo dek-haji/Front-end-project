@@ -1,11 +1,6 @@
 const remoteURL = process.env.NODE_ENV === 'production'
     ? '/api/'
     : "http://localhost:5002/api/";
-// const jsURL = `${remoteURL}/js`
-// const reactURL = `${remoteURL}/react`
-// const bootstrapURL = `${remoteURL}/bootstrap`
-// const othersURL = `${remoteURL}/others`
-
 
 export default Object.create(null, {
     get: {
