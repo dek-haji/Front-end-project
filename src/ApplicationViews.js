@@ -38,10 +38,8 @@ class ApplicationViews extends Component {
         sessionId: sessionStorage.getItem("userId")
     }
     componentDidMount() {
-            // ;
             console.log("didmount fired up")
             const newState = {};
-            // let sessionId = sessionStorage.getItem("userId")
             dbCalls
                 .all(`${remoteURL}notes?noteTypeId=1`)
                 .then(javascript => (newState.javascript = javascript))
