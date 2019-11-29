@@ -1,54 +1,3 @@
-/* .notes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 1px solid grey;
-    width: 100%;
-
-}
-.card-body{
-    width: 500px;
-}
-.JsForm{
-    justify-items: center;
-     border: 1px solid #D5D5D5;
-        padding: 5px;
-        border-radius: 6px;
-        text-align: center;
-        width: 20%;
-        margin-left: 20px;
-}
-pre{
-    display: block;
-    font-family: monospace;
-    border: 1px solid grey;
-    width: 462px;
-    height: 100px;
-    padding: 20px;
-     margin: 1px;
-     white-space: pre-wrap;
-     color: white;
-      background-color: grey 
-}
-
-
-.card-body{
-    width: 500px;
-    border: 1px solid lightgray
-}
-.snippet{
- display: block;
-    font-family: monospace;
-    white-space: pre-wrap;
-    margin: 1em 1; 
-    color: white;
-    background-color: black
-
-}
-.form-control{
-    background-color: lightgray
-} */
 
 .JsForm{
     justify-items: center;
@@ -62,7 +11,6 @@ pre{
 .form-control-snippet{
     height: 200px;
     width: 480px;
-    
 }
 
 .Js-notes{

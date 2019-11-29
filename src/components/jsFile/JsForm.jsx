@@ -94,12 +94,12 @@ export default class JsForm extends Component {
               className="form-control-snippet"
               onChange={this.handleFieldChange}
               id="jsSnippet"
-              // placeholder="snippet"
+              placeholder="snippet"
             />
                 </div>
                 <div className="form-group">
             <label htmlFor="jsNotes">Notes</label>
-            <textarea
+            <input
               type="text"
               required
               className="form-control"

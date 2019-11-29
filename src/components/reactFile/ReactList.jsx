@@ -11,7 +11,6 @@ class ReactList extends Component {
     }
 
     userCard = (note) => {
-        
         if (note.userId === parseInt(this.state.currentUser)) {
             return true
         } else {

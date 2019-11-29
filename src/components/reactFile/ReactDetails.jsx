@@ -7,10 +7,8 @@ class ReactDetails extends Component {
     state = {
         saveDisabled: false //initail state of the button before it clicks
     }
-    
 
     render() {
-        
         return (
 
             <section className="dek-notes">
