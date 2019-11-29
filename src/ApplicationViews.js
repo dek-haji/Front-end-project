@@ -60,7 +60,6 @@ class ApplicationViews extends Component {
                 .then(users => (newState.users = users))
                 .then(() => this.setState(newState))
     }
-    
     addForm = newObj => {
         const newState = {};
         return dbCalls.post(newObj, `${remoteURL}notes`)
