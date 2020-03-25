@@ -24,8 +24,8 @@ class SearchResults extends Component {
                     return false
                   }
                 }).map(noteType =>
-                  <Link className="nav-link" key= {result.id} to={`/${noteType.name}/${result.id}`}>Details</Link>
-                 ) }
+                  <Link className="nav-link" key={result.id} to={`/${noteType.name}/${result.id}`}>Details</Link>
+                )}
         </Card>
         )
         }
