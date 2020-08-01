@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link, withRouter } from "react-router-dom"
-import { Input, Menu, Segment } from 'semantic-ui-react'
+import { Input } from 'semantic-ui-react'
  import "bootstrap/dist/css/bootstrap.min.css"
 import "./NavBar.css"
 import logo from "./logo.jpeg"
@@ -12,7 +12,6 @@ class NavBar extends Component {
         if (input.keyCode === 13) {
             console.log("HANDLE SEARCH - INPUT TARGET VALUE:", input.target.value);
           this.props.getSearchResults(input.target.value);
-            // this.props.history.push("/search");
         }
     }
 

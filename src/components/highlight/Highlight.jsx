@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+giimport React, { Component } from 'react';
 
 class Highlight extends Component {
     function(hljs) {

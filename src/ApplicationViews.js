@@ -56,8 +56,6 @@ class ApplicationViews extends Component {
                 .then(bootstrap => (newState.bootstrap = bootstrap))
                 .then(() => fetch(`${remoteURL}notes?noteTypeId=4`).then(r => r.json()))
                 .then(others => (newState.others = others))
-                .then(() => fetch(`${remoteURL}users`).then(r => r.json()))
-                .then(users => (newState.users = users))
                 .then(() => this.setState(newState))
     }
     addForm = newObj => {

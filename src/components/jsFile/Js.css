@@ -22,14 +22,13 @@
 
 }
 .test1{
-    display: flex;
-
+     display: flex; 
+   
 }
 .imagesss{
     height: 500px;
     width: 700px;
     border-radius: 1%;
-   
     margin-left: 400px;
     margin-bottom: 4000px
 }

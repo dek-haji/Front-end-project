@@ -69,6 +69,11 @@
       "name": "deeq",
       "email": "deeeqhaji@gmail.com",
       "id": 14
+    },
+    {
+      "name": "camalow",
+      "email": "camalow@email.com",
+      "id": 15
     }
   ],
   "notes": [
@@ -330,15 +335,6 @@
       "note": "A JavaScript function is a block of code designed to perform a particular task.\n\nA JavaScript function is executed when \"something\" invokes it (calls it)",
       "noteTypeId": 1,
       "userId": 1
-    },
-    {
-      "title": "boots",
-      "URL": "",
-      "snippet": "sdsds",
-      "note": "dddddd",
-      "noteTypeId": 3,
-      "userId": 1,
-      "id": 45
     },
     {
       "title": "react hooks",

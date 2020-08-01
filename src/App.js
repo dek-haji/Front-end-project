@@ -13,14 +13,7 @@ class App extends Component {
   state = {
     searchResults: [],
     currentUser: sessionStorage.getItem("userId")
-  };
-  //   hideNav = () => {
-  //     if(sessionStorage.getItem("userId") !== null){
-  //         return true
-  //     } else {
-  //         return  false
-  //     }
-  // }
+  }
   getSearchResults = input => {
     console.log("GETSEARCH INPUT:", input);
     dbCalls.search(input).then(results => {
@@ -31,16 +24,15 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-             
         <NavBar
           getSearchResults={this.getSearchResults}
           searchResults={this.state.searchResults}
         />
-        <ApplicationViews searchResults={this.state.searchResults} />}
-          </React.Fragment>
+        <ApplicationViews searchResults={this.state.searchResults} />
+      </React.Fragment>
     )
   }
 }
-  
 
-export default App
+
+  export default App;
