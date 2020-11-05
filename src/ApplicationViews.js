@@ -129,7 +129,6 @@ class ApplicationViews extends Component {
               })
             });
         };
-    
         updateOthers = (editedNotesObject) => {
             return dbCalls.put(`${remoteURL}notes`, editedNotesObject)
             .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=4`))
@@ -146,10 +145,8 @@ class ApplicationViews extends Component {
             .then(() => dbCalls.all(`${remoteURL}notes?noteTypeId=2`))
                 .then(react => (newState.react = react))
                 .then(() => this.setState(newState))
-                .then(( this.props.history.push("/react")))
-                   
+                .then(( this.props.history.push("/react")))ww
             }
-        
 
         updateBootstrap = (editedNotesObject) => {
             return dbCalls.put(`${remoteURL}notes`, editedNotesObject)
